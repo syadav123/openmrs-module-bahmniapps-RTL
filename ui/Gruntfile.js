@@ -519,7 +519,6 @@ module.exports = function (grunt) {
         'preprocess',
         'imagemin',
         'htmlmin',
-        'cssmin',
         'copy:dist',
         'filerev',
         'usemin'
