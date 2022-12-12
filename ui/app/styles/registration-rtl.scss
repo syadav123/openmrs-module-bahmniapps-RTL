@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html {
+ direction: rtl;
+}
+
+
+@import "vendor-rtl/normalize";
+
+@import "bahmni-helper-rtl/variables";
+@import "bahmni-helper-rtl/base";
+@import "bahmni-helper-rtl/fonts";
+@import "bahmni-helper-rtl/font-awesome";
+
+@import "bahmni-components-rtl/uiHelper";
+@import "bahmni-components-rtl/grid";
+@import "bahmni-components-rtl/loader";
+@import "bahmni-components-rtl/header";
+@import "bahmni-components-rtl/navigation";
+@import "bahmni-components-rtl/forms";
+@import "bahmni-components-rtl/buttons";
+@import "bahmni-components-rtl/typography";
+@import "bahmni-components-rtl/loader";
+@import "bahmni-components-rtl/splitButton";
+@import "bahmni-components-rtl/table";
+@import "bahmni-components-rtl/typography";
+
+@import "bahmni-layout-rtl/layout";
+
+
+@import "common-rtl/bahmniGlobal";
+@import "common-rtl/notifications";
+@import "common-rtl/directives";
+@import "common-rtl/angularFix";
+@import "common-rtl/noTouch";
+
+
+
+
+//@import "clinical-rtl/observations";
+
+@import "registration-rtl/registration";
+
+
+//@import "common-rtl/noTouch";
+
+
+
+

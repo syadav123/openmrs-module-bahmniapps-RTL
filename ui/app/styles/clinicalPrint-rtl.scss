@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+html {
+ direction: rtl;
+}
+
+
+@import "clinical-rtl";
+@import "print-rtl";
+
+.dashboard-sections-wrapper .dashboard-sections.halfpage-container{
+  width: 100%;
+}

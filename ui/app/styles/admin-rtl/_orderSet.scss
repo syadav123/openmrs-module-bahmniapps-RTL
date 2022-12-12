@@ -1,0 +1,196 @@
+.orderSet-dashboard-container{
+  .section-title-wrapper{
+    padding-block-start: 5px;
+    padding-block-end: 1px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+  }
+  table.orderSet-list{
+    border: 0;
+    tr{
+      border: 0;
+      border-bottom: 1px solid $lighterGray;
+      th{
+        text-align: right;
+        border: 0;
+        border-bottom: 1px solid $lighterGray;
+        font-weight: 700;
+        background: $lighterGray;
+        color: #363463;
+        padding: 8px;
+      }
+      &:nth-child(even),&:nth-child(odd){
+        background:#fff!important;
+        padding-block-start:4px;
+        padding-block-end:4px;
+        padding-inline-start:8px;
+        padding-inline-end:8px;
+      }
+      td{
+        border: 0;
+        display: block;
+        a{
+          display: block;
+          padding-left: 15px;
+          padding-bottom: 5px;
+          font-size: 16px;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }
+}
+.orderSet-container{
+  .orderSet-form{
+    //padding: 0 20px 20px;
+    .new-orderSet-wrapper{
+      //padding: 20px 0;
+    }
+    .form-field{
+      float: right;
+      input[type="text"]{
+        padding-block-start: 2px;
+        padding-block-end: 2px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+      }
+      .field-attribute label{
+        width: auto;
+      }
+      textarea.order-set-additionalInstructions{
+        width: 770px;
+      }
+    }
+    .submit-btn-container{
+      margin-block-start: 0;
+      margin-block-end: 20px;
+      margin-inline-start: 20px;
+      margin-inline-end: 20px;
+      button[type="submit"]{
+        margin-right:10px;
+        background: linear-gradient(to bottom, $bahmniPrimaryBtnColor, $bahmniPrimaryBtnColorHover );
+        background-color: $bahmniPrimaryBtnColorHover ;
+        border:$bahmniPrimaryBtnColorHover  1px solid;
+        &:hover {
+          background: #8eb82a ;
+          border-color: #779b23 ;
+        }
+      }
+    }
+
+  }
+  .orderSetMember-wrapper{
+    .primary-section-grid{
+      margin-bottom: 15px;
+    }
+    .add-more-btn{
+      margin-block-start: 0;
+      margin-block-end: 20px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+    fieldset{
+      margin-bottom: 10px;
+      .form-field{
+        .field-attribute label{
+          width: auto;
+          float:right;
+          &.primaryDrug-text{
+            margin-left: 5px;
+          }
+        }
+        .field-value{
+          input[type="checkbox"]{
+            margin-top: 10px;
+          }
+        }
+      }
+      .remove-orderSet{
+        margin-right: 30px;
+      }
+      legend{
+        background: $lightestGray !important;
+        font-size: 14px;
+        width: 99.8%;
+        line-height: 16px;
+        margin-bottom: 20px;
+        padding-block-start: 3px;
+        padding-block-end: 3px;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        border-radius: 3px;
+        border: 1px solid $lightGray;
+        display: block;
+        span {
+          display: inline-block;
+          padding-block-start: 2px;
+          padding-block-end: 2px;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    .row{
+      float: right;
+      width: 100%;
+      .order-drug-option{
+        padding-block-start: 5px;
+        padding-block-end: 0;
+        padding-inline-start: 10px;
+        padding-inline-end: 5px;
+        &.column-container{
+          background: #F9F7F7;
+        }
+      }
+      .col{
+        padding-left: 13px;
+      }
+      .col4{
+        padding-left: 0;
+      }
+    }
+    .edit-drug-order{
+      padding-block-start: 10px;
+      padding-block-end: 10px;
+      padding-inline-start: 15px;
+      padding-inline-end: 15px;
+      .form-field .field-value{
+        margin-left: 15px;
+        input[type="number"]{
+          padding-block-start: 2px;
+          padding-block-end: 2px;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+        }
+      }
+    }
+  }
+}
+
+.orderSetMember-wrapper ,.new-orderSet-wrapper{
+  overflow: hidden;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  .row{
+    float: right;
+    width: 100%;
+    .column-container{
+      background: #F9F7F7;
+    }
+    .col{
+      padding-left: 13px;
+    }
+    .col4{
+      padding-left: 0;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+html {
+ direction: rtl;
+}
+
+
+/*BAHMNI css files*/
+@import "vendor-rtl/normalize";
+
+@import "bahmni-helper-rtl/variables";
+@import "bahmni-helper-rtl/base";
+@import "bahmni-helper-rtl/fonts";
+@import "bahmni-helper-rtl/font-awesome";
+@import "bahmni-helper-rtl/custom-fonts";
+
+@import "bahmni-layout-rtl/layout";
+@import "bahmni-layout-rtl/retroMode";
+
+@import "bahmni-components-rtl/grid";
+@import "bahmni-components-rtl/uiHelper";
+@import "bahmni-components-rtl/loader";
+@import "bahmni-components-rtl/header";
+@import "bahmni-components-rtl/navigation";
+@import "bahmni-components-rtl/forms";
+@import "bahmni-components-rtl/buttons";
+@import "bahmni-components-rtl/inPageTabs";
+@import "bahmni-components-rtl/ngDialog";
+@import "bahmni-components-rtl/gallery";
+@import "bahmni-components-rtl/templateController";
+@import "bahmni-components-rtl/patientControlPanel";
+@import "bahmni-components-rtl/tooltip";
+@import "bahmni-components-rtl/splitButton";
+
+
+@import "common-rtl/bahmniGlobal";
+@import "common-rtl/angularFix";
+@import "common-rtl/notifications";
+@import "home-rtl/home";
+@import "home-rtl/errorLogs";

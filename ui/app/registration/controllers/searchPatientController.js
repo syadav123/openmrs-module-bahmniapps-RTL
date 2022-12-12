@@ -48,7 +48,7 @@ angular.module('bahmni.registration')
                 $scope.searchParameters.registrationNumber = searchParameters.registrationNumber || "";
                 if (hasSearchParameters()) {
                     searching = true;
-                    var searchPromise = patientService.search(
+                    var searchPromise = patientService.searchByNameOrIdentifier(
                         $scope.searchParameters.name,
                         undefined,
                         $scope.addressSearchConfig.field,
@@ -61,11 +61,11 @@ angular.module('bahmni.registration')
                         $scope.addressSearchResultsConfig.fields,
                         $scope.personSearchResultsConfig.fields
                     ).then(function (response) {
-                        mapExtraIdentifiers(response);
-                        mapCustomAttributesSearchResults(response);
-                        mapAddressAttributesSearchResults(response);
-                        mapProgramAttributesSearchResults(response);
-                        return response;
+                        mapExtraIdentifiers(response.data);
+                        mapCustomAttributesSearchResults(response.data);
+                        mapAddressAttributesSearchResults(response.data);
+                        mapProgramAttributesSearchResults(response.data);
+                        return response.data;
                     });
                     searchPromise['finally'](function () {
                         searching = false;
@@ -259,22 +259,22 @@ angular.module('bahmni.registration')
                     personSearchResultsConfig: $scope.personSearchResultsConfig.fields
                 });
 
-                var searchPromise = patientService.search(undefined, patientIdentifier, $scope.addressSearchConfig.field,
+                var searchPromise = patientService.searchByIdentifier(undefined, patientIdentifier, $scope.addressSearchConfig.field,
                     undefined, undefined, undefined, $scope.customAttributesSearchConfig.fields,
                     $scope.programAttributesSearchConfig.field, $scope.searchParameters.programAttributeFieldValue,
                     $scope.addressSearchResultsConfig.fields, $scope.personSearchResultsConfig.fields,
                     $scope.isExtraIdentifierConfigured())
                     .then(function (data) {
-                        mapExtraIdentifiers(data);
-                        mapCustomAttributesSearchResults(data);
-                        mapAddressAttributesSearchResults(data);
-                        mapProgramAttributesSearchResults(data);
-                        if (data.pageOfResults.length === 1) {
-                            var patient = data.pageOfResults[0];
+                        mapExtraIdentifiers(data.data);
+                        mapCustomAttributesSearchResults(data.data);
+                        mapAddressAttributesSearchResults(data.data);
+                        mapProgramAttributesSearchResults(data.data);
+                        if (data.data.pageOfResults.length === 1) {
+                            var patient = data.data.pageOfResults[0];
                             var forwardUrl = appService.getAppDescriptor().getConfigValue("searchByIdForwardUrl") || "/patient/{{patientUuid}}";
                             $location.url(appService.getAppDescriptor().formatUrl(forwardUrl, {'patientUuid': patient.uuid}));
-                        } else if (data.pageOfResults.length > 1) {
-                            $scope.results = data.pageOfResults;
+                        } else if (data.data.pageOfResults.length > 1) {
+                            $scope.results = data.data.pageOfResults;
                             $scope.noResultsMessage = null;
                         } else {
                             $scope.patientIdentifier = {'patientIdentifier': patientIdentifier};

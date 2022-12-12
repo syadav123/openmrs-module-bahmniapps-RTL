@@ -1,0 +1,30 @@
+.disposition-wrapper{
+  .disposition-tab {
+    label {
+      float: right;
+      margin-left: 10px;
+    }
+    .dispositionNotesWrap{
+      @include clearfix();
+      clear: both;
+      label{
+        float: none;
+      }
+      textarea {
+        margin-block-start: 10px;
+        margin-block-end: 10px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        width: 98.1%;
+        @media (max-width : 1024px) {
+          width:97.7%;
+        }
+        @media (max-width : 768px) {
+          width: 94.9%;
+        }
+      }
+    }
+  }
+}
+
+

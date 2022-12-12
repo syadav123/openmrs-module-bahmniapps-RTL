@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+@import "common/print";
+
+@page {
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+}
+p, h1, h2, h3, table, tr, td, div, span, li {
+  margin: 0px;
+  padding: 0px;
+  font-size: 10pt!important;
+}
+.fl {
+  float: right;
+}
+.diagnosis-notes-title {
+  margin-left: 5px;
+}
+body pre {
+  word-wrap: break-word;
+  background: none;
+  border: 0;
+  margin: 0;
+}
+ul {
+  padding-right: 10px;
+  margin: 0;
+}
+ol {
+  padding-right: 25px;
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table tr td {border: 1px solid $lightGray; padding: 5px;}
+ul li {
+  list-style-type: none;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.print-center {
+  text-align: center;
+}
+
+.discharge-summary-print {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 10pt;
+  font-family: arial;
+}
+
+header {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  text-align: center;
+}
+header h1, header h2 {
+  text-transform: uppercase;
+}
+header h1 span {
+  display: block;
+}
+header h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.patient-info {
+  overflow: auto;
+  table {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    tr td {
+      .value {
+        font-weight: bold;
+        margin-right: 5px;
+        display: inline-block;
+      }
+    }
+  }
+}
+section.diagnosis-print, section.treatment-print {
+  table tr th {
+    text-align: left!important;
+    white-space: nowrap;
+  }
+  table td {
+    white-space: nowrap;
+  }
+}
+section {
+  clear: both;
+  text-align: right;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+section h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.logo {
+  width: 12mm; 
+  height: 12mm;
+  margin-top: 0;
+}
+.abnormal {
+  font-weight: bold;
+}
+.follow-up {
+  h3 {
+    float: right;
+  }
+}
+.diagnosis-print {
+  .diagnosis-name {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
+.lab-print {  
+  li.test-item {
+    border-bottom: 1px solid $lightGray;
+    padding-block-start: 5px;
+    padding-block-end: 5px;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    overflow: auto;
+    clear: both;
+  }
+  ol li {
+    .pending-status {
+      float: left;
+    }
+    .test-name {
+      width: 50%;
+      display: inline-block;
+    }
+    .test-date {
+      float: left;
+      width: 15%;
+      display: inline-block;
+      text-align: left;
+    }
+    .test-value {
+      width: 200px;
+      display: inline-block;
+      float: left;
+    }
+  }
+  .belongsToPanel {
+    margin-right: 15px;
+  }
+  .is-abnormal {
+    font-weight: bold;
+  }
+  .ipd-investigation {
+    th {
+      text-align: right;
+      border: 1px solid $lightGray;
+      font-size: 15px;
+      padding: 5px;
+      text-transform: uppercase;
+    }
+    th.test-name {
+      width: 40%;
+    }
+    th.initial-value, th.final-value {
+      width: 30%;
+    }
+  }
+  .date{
+    float: left;
+  }
+}
+
+.observations{
+  .date{
+    float: left;
+  }
+}
+
+section h3, .date {
+    white-space: nowrap;
+}

@@ -1,0 +1,61 @@
+.orderSet-order-container{
+  margin-block-start:20px;
+  margin-block-end:20px;
+  margin-inline-start:0;
+  margin-inline-end:0;
+ .orderSet-orders{
+   .section-title.orderSet-orderAnOrderSet{
+     font-size: 14px !important;
+     padding-block-start: 10px;
+     padding-block-end: 10px;
+     padding-inline-start: 5px;
+     padding-inline-end: 5px;
+     .button-group{
+       margin-top: -3px;
+       button{
+         padding-block-start: 6px;
+         padding-block-end: 6px;
+         padding-inline-start: 8px;
+         padding-inline-end: 8px;
+         font-size: 12px;
+       }
+     }
+   }
+  .dashboard-orderSet{
+    padding: 5px;
+    p{
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+ }
+}
+
+table.orderSet-table{
+  th{
+    background: $lightestGray;
+    color: $darkGray;
+    font-family: openSansSemiBold;
+    text-align: center;
+  }
+   th.drugName ,td.drugName{
+      width: 300px;
+     text-align: right;
+     span{
+       display: block;
+       width:240px;
+     }
+     input[type="checkbox"]{
+        width:20px;
+     }
+   }
+  td{
+    padding-block-start: 4px !important;
+    padding-block-end: 4px !important;
+    padding-inline-start: 7px !important;
+    padding-inline-end: 7px !important;
+    .button-group-wrapper{
+      width:auto;
+    }
+  }
+}

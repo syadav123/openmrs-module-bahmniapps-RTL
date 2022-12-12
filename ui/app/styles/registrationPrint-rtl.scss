@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+html {
+ direction: rtl;
+}
+
+
+/*BAHMNI css files*/
+
+@import "bahmni-helper-rtl/variables";
+@import "bahmni-components-rtl/typography";
+@import "common-rtl/angularFix";
+
+body{
+  pre{
+    margin: 0;
+  }
+}
+.print-wrapper {
+  clear: both;
+  ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol {
+    display: inline-block;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .fl, .left {float: left;}
+  .fr, .right {float: right;}
+  section.block, .dashboard-section{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+}
+@import "print-rtl";

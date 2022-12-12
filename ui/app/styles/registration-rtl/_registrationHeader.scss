@@ -1,0 +1,110 @@
+.reg-header-wrapper{
+  .reg-header{
+    ul.top-nav{
+      float: right;
+      li{
+        display: inline-block;
+        a{
+          color: #fff;
+          font-weight: 700;
+          cursor: pointer;
+          text-decoration: none;
+          display: block;
+          padding-block-start: 14px;
+          padding-block-end: 15px;
+          padding-inline-start: 0;
+          padding-inline-end: 15px;
+        }
+      }
+    }
+    .btn-user-info {
+      background: lighten($bahmniPrimaryColor, 10%);
+      padding-block-start: 17px;
+      padding-block-end: 17px;
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+      border: none;
+      border-radius: 0;
+      margin: 0;
+      color: $white;
+      &:focus {outline:0;}
+      i.mini {
+        font-size: .9em;
+      }
+      & + ul {
+        display: none;
+        &.active {
+          background: lighten($bahmniPrimaryColor, 10%);
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 50px;
+          z-index: 1000;
+          @media screen and (max-width: $max-page-width) {
+            left:10px;
+          }
+        }
+        li {
+          float: right;
+          clear: both;
+          text-align: right;
+          padding-right: 10px;
+          border-bottom: 1px solid lighten($bahmniPrimaryColor, 10%);
+          margin: 0;
+          padding-block-start: 10px;
+          padding-block-end: 10px;
+          padding-inline-start: 5px;
+          padding-inline-end: 10px;
+          color: $lightGray;
+          a{
+            color: $white;
+            &.disabled {
+              color: $lightGray;
+              .fa-user {
+                color: $lightGray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .split-button ul{
+    &.hidden-options{
+      @media (max-width: 768px) {
+        width: 300px;
+        li {
+          margin-right: 50px;
+        }
+      }
+    }
+    li{
+      &.primaryOption{
+        i{
+          display: none;
+          @media (max-width: 768px) {
+            display: inline-block;
+          }
+        }
+        span{
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+        .buttonClass{
+          @media (max-width: 768px) {
+            max-width: 60px;
+            float: left;
+            margin-left: 100px;
+            height: 36px;
+            padding: 0;
+            i.fa-print{
+              font-size: 23px;
+              padding-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

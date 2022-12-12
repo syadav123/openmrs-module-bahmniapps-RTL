@@ -1,0 +1,116 @@
+.bahmni-appointments .opd-header-wrapper header ul li a.back-btn-noIcon {
+  padding-block-start: 5px !important;
+  padding-block-end: 5px !important;
+  padding-inline-start: 10px !important;
+  padding-inline-end: 10px !important;
+  margin-block-start: 15px !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 10px !important;
+  margin-inline-end: 10px !important;
+  border-radius: 3px;
+  &.active {
+    background: rgba(0,0,0,0.5);
+    font-family: OpenSans;
+  }
+}
+/*------ page style-------*/
+
+.opd-wrapper.appointments-page-wrapper {
+  min-height: auto;
+  padding-block-start: 65px;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  overflow: visible;
+  background: #fff;
+  .appointments-content-wrapper {
+    max-width: 100%;
+  }
+}
+
+/*------ Base layout style-------*/
+
+.add-service-wrapper, .service-admin-wrapper {
+  border: 1px solid #95989A;
+  border-radius: 3px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  overflow: hidden;
+  height: calc(100vh - 78px);
+  background: #fff;
+  .service-title {
+    font-family: OpenSans, Arial, sans-serif;
+    padding: 10px;
+    margin-block-start: 0;
+    margin-block-end: 10px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-size: 16px;
+    clear: both;
+    background: #446565;
+    position: relative;
+    border-radius: 2px 2px 0 0;
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+  .add-service-btn, .service-save-btn {
+    float: left;
+    background: #99C915;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  .add-service-btn {
+    margin-block-start: 0;
+    margin-block-end: 10px;
+    margin-inline-start: 0;
+    margin-inline-end: 10px;
+  }
+  .service-save-btn {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    font-size: 14px;
+    padding-block-start: 5px;
+    padding-block-end: 5px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+}
+.app-patient-search {
+  position: absolute;
+  top: 63px;
+  z-index: 10;
+  left: 175px;
+  input {
+    color: #363463;
+    padding-block-start: 2px;
+    padding-block-end: 2px;
+    padding-inline-start: 10px;
+    padding-inline-end: 25px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 5px;
+    margin-inline-end: 0;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    box-sizing: border-box;
+    height: 37px;
+    border-radius: 5px;
+    width: 210px;
+  }
+  i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 2;
+    left: 5px;
+  }
+}

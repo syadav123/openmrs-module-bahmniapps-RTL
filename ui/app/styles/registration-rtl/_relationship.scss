@@ -1,0 +1,180 @@
+.relationships-container{
+  overflow: hidden;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  @media (max-width: 768px) {
+    margin-block-start: 20px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .row{
+    float: right;
+    width: 100%;
+    @media (max-width : 768px){
+      margin-bottom: 10px;
+    }
+    .col1 {
+      margin-top: 0;
+      label.add-new {margin-top: 10px; font-size: 12px;}
+      width: 30%;
+      float: right;
+      @media (max-width : 768px){
+        width: 100%;
+      }
+    }
+    .col2 {
+      width: 38%;
+      float: right;
+      text-align: right;
+      @media (max-width : 1024px){
+        width: 36%;
+      }
+      @media (max-width : 990px){
+        width: 31%;
+      }
+      @media (max-width : 768px){
+        width: 100%;
+      }
+    }
+    .col3 {
+      width: 25%;
+      float: right;
+      text-align: left;
+      @media (max-width : 1024px){
+        width: 28%;
+      }
+      @media (max-width : 990px){
+        width: 36%;
+      }
+      @media (max-width : 768px){
+        width: 100%;
+      }
+      .till-text{
+        display: inline-block;
+        float: right;
+        padding-left: 20px;
+        padding-top: 12px;
+        @media (max-width : 990px){
+          padding-left: 10px;
+        }
+        @media (max-width : 768px){
+          display: none;
+        }
+      }
+    }
+    .col4 {
+      width: 4%;
+      float: right;
+      margin-right: 2%;
+      button{
+        padding-block-start: 2px !important;
+        padding-block-end: 2px !important;
+        padding-inline-start: 4px !important;
+        padding-inline-end: 4px !important;
+      }
+      @media (max-width : 990px){
+        margin-right:0;
+        width: 3%;
+      }
+    }
+  }
+}
+.new-relationship{
+  overflow: hidden;
+  span {
+    &.no-person {
+      color: red;
+    }
+  }
+  .row{
+    .col4{
+       button{
+         margin-top: 4px;
+         @media (max-width : 768px) {
+           position: absolute;
+           top: 0;
+           left: 3px;
+         }
+       }
+    }
+    @media (max-width : 768px){
+      position: relative;
+    }
+  }
+}
+
+.relationships-container {
+  .row{
+    select, input{
+      min-width: 180px;
+    }
+
+  }
+  .history-relationship {
+    overflow: hidden;
+    .row{
+      &:nth-child(odd) {
+        background-color: #EFEFEF;
+        .col{
+          border: 1px solid #EFEFEF;
+        }
+      }
+      &:nth-child(even) {
+        background-color: #fff;
+        .col{
+          border: 1px solid #fff;
+        }
+      }
+      &:last-child{
+        margin-bottom: 15px;
+        border-bottom: 1px $lightGray solid;
+        padding-bottom: 15px;
+      }
+      padding-block-start: 3px;
+      padding-block-end: 3px;
+      padding-inline-start: 8px;
+      padding-inline-end: 3px;
+      line-height: 30px;
+      .col1{ width: 34% }
+      .col2{
+        width: 33.3%;
+        text-align: right;
+        @media (max-width : 1024px){
+          width: 31.3%;
+        }
+      }
+      .col3{
+        width: 26.4%;
+        text-align: right;
+        .till-text{
+          padding-top: 0;
+        }
+        @media (max-width : 1024px){
+          width: 29.4%;
+        }
+        @media (max-width : 768px){
+          width: 28.8%;
+        }
+      }
+      .col4{
+        margin-right: .5%;
+        button{
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+  .table-header {
+    border-radius: 5px 5px 0 0;
+    span {
+      font-size: 14px;
+      white-space: nowrap;
+      color: $mediumGray;
+      font-family: $OpenSansBoldFont;
+      font-weight: normal;
+    }
+  }
+}

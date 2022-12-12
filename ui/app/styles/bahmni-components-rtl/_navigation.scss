@@ -1,0 +1,245 @@
+.tabs{
+  margin-top:20px;
+  @include clearfix();
+  ul{
+    @media screen and (max-width: 1024px){
+      &.consultation-tabs{
+        li.tab-item{
+          a{
+            padding-block-start: 16px;
+            padding-block-end: 16px;
+            padding-inline-start: 15px;
+            padding-inline-end: 15px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    li.tab-item {
+        float:right;
+        margin-bottom: -1px;
+        a,button {
+            padding-block-start: 15px;
+            padding-block-end: 14px;
+            padding-inline-start: 15px;
+            padding-inline-end: 15px;
+            background: darken($bahmniSecondaryColor, 10%);
+            display:inline-block;
+            color: $white;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 3px;
+            border-radius: 5px 5px 0 0;
+            text-decoration: none;
+            line-height: 1.2em;
+            cursor: pointer;
+            font-size: 14px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .close {
+          display: none;
+        }
+
+      &.new-tab {
+        a, button {
+          border-top-right-radius: 15px;
+          cursor: pointer;
+        }
+      }
+
+      &.tab-removable {
+        position: relative;
+        a {
+          padding-left: 40px;
+        }
+        .close {
+          position: absolute;
+          z-index: 1;
+          left: 0px;
+          top: 0px;
+          padding: 10px;
+          display: inline-block;
+          cursor: pointer;
+          .close-icon {
+            padding: 0;
+            font-size: 12px;
+            border-radius: 100%;
+            width: 16px;
+            height: 16px;
+            line-height: 15px;
+            transition: all .3s ease;
+            text-align: center;
+            display: inline-block;
+            border: 1px solid $lightGray;
+            color: $lightGray;
+            font-family: Arial;
+            text-transform: lowercase;
+          }
+
+          &:hover .close-icon {
+            color: white;
+            background-color: $error;
+          }
+        }
+      }
+      .tab-submenu {
+        display: none;
+        width: 200px;
+        position: absolute;
+        top: 43px;
+        right: 0;
+        ul {
+          background: darken($bahmniSecondaryColor, 10%);
+          border: 1px solid darken($bahmniSecondaryColor, 10%);
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        .submenu-item {
+          display: block;
+          background: none;
+          border-radius: 0;
+          margin: 0;
+          color: white;
+          border-bottom: 1px solid darken($bahmniSecondaryColor, 10%);
+          &:hover {
+            color: white;
+          }
+        }
+        li:last-child .submenu-item {
+          border: 0;
+        }
+      }
+      &.tab-active {
+        position: relative;
+        .tab-submenu {
+          display: block;
+        }
+      }
+      button{
+            border-radius: 3px;
+            padding-block-start:8px;
+            padding-block-end:8px;
+            padding-inline-start:10px;
+            padding-inline-end:10px;
+        }
+        &.tab-selected a, &.tab-selected button{
+            position: relative;
+            background: $bahmniPageBg;
+            color: $bahmniPrimaryColor;
+            border: 1px solid $lightGray;
+            border-bottom: none;
+            outline: none;
+            &:hover {
+                opacity: 1;
+                cursor: default;
+            }
+        }
+        &.tab-selected button{
+            top:4px;
+            border-bottom-right-radius:0px;
+            border-bottom-left-radius:0px;
+        }
+    }
+  }
+
+}
+.tabs ul li a {
+    @media screen and (max-width: 959px) {
+        padding-block-start: 13px;
+        padding-block-end: 13px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: 14px;
+    }
+}
+
+.desktop-menu{
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: relative;
+  padding-top: 14px;
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .clinical-header {
+    a.mobile-menu-icon{
+      background: #669999;
+      border: 1px solid #527a7a;
+      padding-block-start: 9px;
+      padding-block-end: 9px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      color:$white;
+      i{
+        font-size: 18px;
+        margin-left:5px;
+      }
+    }
+    .header-tabs {
+      position: absolute;
+      width: 220px;
+      top: 52px;
+      margin: 0 !important;
+      padding-block-start: 10px;
+      padding-block-end: 10px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      background: darken($bahmniSecondaryColor, 10%);
+      border: 1px solid darken($bahmniSecondaryColor, 10%);
+      border-radius: 0px 0px 5px 5px;
+      li.tab-item {
+        float: none;
+        a {
+          display: block;
+          border-radius: 0;
+          margin: 0;
+        }
+        &.tab-selected a, &.tab-selected button {
+          border-bottom: 1px solid $lightGray;
+        }
+      }
+    }
+  }
+  .opd-header-wrapper a.btn--success{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .opd-header-wrapper a.btn--success{
+    font-size: 12px;
+    padding-block-start: 9px !important;
+    padding-block-end: 9px !important;
+    padding-inline-start: 5px !important;
+    padding-inline-end: 5px !important;
+    margin-left: 5px !important;
+  }
+  .clinical-header {
+    a.mobile-menu-icon{
+      padding-block-start: 7px;
+      padding-block-end: 7px;
+      padding-inline-start: 5px;
+      padding-inline-end: 5px;
+      font-size: 12px;
+      i{
+        font-size: 15px;
+      }
+    }
+  }
+  .mobile-menu {
+    padding-top: 12px;
+  }
+}
+
+
+

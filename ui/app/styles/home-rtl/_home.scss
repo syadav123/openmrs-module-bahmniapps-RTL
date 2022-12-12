@@ -1,0 +1,877 @@
+/*doc
+---
+title: Overlay Window
+name: overlay_window
+category: Layout - overlay
+---
+
+Overlay window is visible when page is loading.
+
+```html_example
+<div id="overlay">
+<div></div>
+</div>
+```
+
+
+*/
+
+$column-width: 100;
+$gutter-width: 0;
+$columns: 12;
+$total-width: 100%;
+
+@import "compass";
+
+/*** grid form elements css start ***/
+.form-field-inline {
+  .form-field {
+    float: right;
+    @include column(6);
+    margin-bottom: 10px;
+  }
+  @include clearfix();
+}
+
+.form-field {
+  margin-bottom: 10px;
+  @include clearfix();
+  .field-attribute {
+    float: right;
+    label {
+      width: 11em;
+      line-height: 20px;
+      float: right;
+      text-align: left;
+      margin-block-start: 8px;
+      margin-block-end: 8px;
+      margin-inline-start: 0px;
+      margin-inline-end: 0.8em;
+      font-size: 14px;
+    }
+  }
+  .field-value {
+    float: right;
+    font-size: 14px;
+    input[type="text"], input[type="password"] {
+      float: right;
+      width: 12.5em;
+      padding-block-start: 2px;
+      padding-block-end: 2px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+    }
+    input[type="number"] {
+      width: 8em;
+      padding-block-start: 5px;
+      padding-block-end: 5px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+    }
+    span.text-only {
+      display: inline-block;
+      margin-block-start: 8px;
+      margin-block-end: 8px;
+      margin-inline-start: 5px;
+      margin-inline-end: 5px;
+    }
+  }
+}
+
+.asterick {
+  color: red;
+}
+
+.input-prepend {
+  float: right;
+  input {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    float: right;
+    margin: 0px !important;
+  }
+  .add-on {
+    @extend input;
+    border-radius: 3px;
+    height: 21px;
+    min-width: 17px;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    background-color: $lightestGray;
+    border: 1px solid $lightGray;
+  }
+
+}
+
+.input-prepend .add-on:first-child, .input-prepend .btn:first-child {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-prepend .add-on, .input-prepend .btn {
+  margin-left: -1px;
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+  cursor: not-allowed;
+  background-color: $lightestGray;
+  &:focus {
+    cursor: not-allowed;
+    background-color: $lightestGray;
+    outline: none;
+  }
+}
+
+.fa-white {
+  color: $white;
+}
+
+/********************** overridding the common ui ***********************/
+.simple-form-ui {
+  form {
+    background: $white;
+    section {
+      display: block;
+      padding: 0px;
+      border-right: none;
+      background: $white;
+    }
+  }
+}
+
+p.caution {
+  color: red;
+  padding-block-start: 15px;
+  padding-block-end: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
+  background: $white;
+  text-align: center;
+}
+
+.button.confirm, button.confirm, input[type="submit"].confirm, input[type="button"].confirm, input[type="submit"].confirm, a.button.confirm {
+  padding-block-start: 7px;
+  padding-block-end: 7px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+.button, button, input[type="submit"], input[type="button"], input[type="submit"], a.button {
+  padding-block-start: 7px;
+  padding-block-end: 7px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+button[disabled], button[disabled]:hover, button.disabled, button.disabled:hover {
+  opacity: .65;
+  filter: alpha(opacity=65);
+  background: $lightestGray;
+  border: 1px solid $lightGray;
+  color: $darkGray;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+/*** grid form elements css end ***/
+body {
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  font-family: "OpenSans", Arial, sans-serif;
+}
+
+.reg-header {
+  @include clearfix;
+  height: 52px;
+}
+
+.remove-margin {
+  margin: 0px !important;
+}
+
+#overlay {
+  display: none;
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.6) url('../images/spinner.gif') no-repeat center center;
+  div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*** login specific css end ***/
+/*** search page css start ****/
+.reg-wrapper {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  height: 100%;
+
+  .inline-element, select, input, button {
+    display: inline-block;
+  }
+  select {
+    height: 35px;
+  }
+  header {
+    color: $lightGray;
+    height: 52px;
+    border-radius: 0;
+    line-height: 1em;
+    background: $bahmniSecondaryColor;
+    .header-logo {
+      display: block;
+      width: 35px;
+      margin-block-start: 8px;
+      margin-block-end: 8px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      img {
+        display: block;
+        width: 35px;
+        border-radius: 17px;
+        box-shadow: 0 8px 6px -7px $black;
+      }
+    }
+    ul {
+      //float:right;
+      li {
+        //margin:11px 15px 10px 0px;
+        display: inline-block;
+        a {
+          color: $white;
+          font-weight: bold;
+          cursor: pointer;
+          text-decoration: none;
+          .nav-link {
+            padding-right: 2px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reg-search-wrapper {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid $lightGray;
+    background: $white;
+    border-radius: 3px;
+    .reg-search {
+      margin-bottom: 10px;
+      @include clearfix;
+      .search-seperator-l {
+        @include column(5);
+        border-left: 2px dotted $lightGray;
+        select {
+          width: 80px;
+          min-width: 80px;
+          padding-block-start: 0 !important;
+          padding-block-end: 0 !important;
+          padding-inline-start: 10px !important;
+          padding-inline-end: 10px !important;
+        }
+      }
+      .search-seperator-r {
+        padding-block-start: 0px;
+        padding-block-end: 10px;
+        padding-inline-start: 20px;
+        padding-inline-end: 0px;
+        input {
+          margin-left: 5px;
+        }
+        .reg-srch-btn {
+          margin-top: 25px;
+        }
+      }
+    }
+    .note-container {
+      text-align: right;
+      .note {
+        padding-block-start: 6px;
+        padding-block-end: 6px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        .text {
+          p {
+            max-width: 100%;
+            top: 0px;
+            margin-left: 0
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** search page css end ***/
+.apps {
+  text-align: center;
+  li {
+    display: inline-block;
+    a {
+      padding-block-start: 20px;
+      padding-block-end: 20px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      width: 130px;
+      max-height: 90px;
+      vertical-align: top;
+      line-height: 1.3em;
+      margin: 10px;
+      text-align: center;
+      font-size: 1.3em;
+      &:hover {
+        background: $lightestGray;
+        border: 1px solid $lightGray;
+      }
+      i {
+        display: block;
+        font-size: 50px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+/*** Login Page Styles ***/
+/******************************************************************************/
+
+.login {
+  height: 300px;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 0.865em;
+  max-width: 500px;
+  form {
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 10px -10px $mediumGray;
+  }
+  header {
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 52px;
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    .left {
+      max-width: 150px;
+      overflow: hidden;
+    }
+    .locale-wrapper {
+      font-size: 14px;
+      max-width: 300px;
+      overflow: hidden;
+      .locale-text {
+        padding-left: 10px;
+        max-width: 130px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        float: right;
+      }
+      select {
+        background-color: #FFF;
+        border: 1px solid $lighterGray;
+        color: #363463;
+        height: 25px;
+        padding-block-start: 0px;
+        padding-block-end: 0px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        margin: 0;
+
+      }
+    }
+    a.back-btn {
+      line-height: initial !important;
+    }
+  }
+
+  .login-body {
+    background: $white;
+    border: 1px solid $lightGray;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    padding-top: 10px;
+    p.caution {
+      padding: 0px;
+    }
+    .note-container {
+      width: 95.1%;
+      margin: auto;
+      .note {
+        min-width: 10px;
+        display: block;
+        text-align: center;
+        &.error {
+          color: #ff0000;
+        }
+      }
+    }
+    .form-field {
+      display: block;
+      margin-block-start: 10px;
+      margin-block-end: 10px;
+      margin-inline-start: 17px;
+      margin-inline-end: 13px;
+      .field-attribute {
+        label {
+          text-align: right;
+          padding-right: 3px;
+          margin: 0;
+        }
+      }
+      .field-value {
+        clear: both;
+        float: none;
+        width: 100%;
+        input[type="text"], input[type="password"] {
+          width: 95%;
+          display: block;
+          margin: 0px;
+          min-width: 10%;
+          padding-block-start: 10px;
+          padding-block-end: 10px;
+          padding-inline-start: 10px;
+          padding-inline-end: 4px;
+        }
+        select {
+          width: 99%;
+        }
+      }
+    }
+    .form-footer {
+      margin-block-start: 10px;
+      margin-block-end: 10px;
+      margin-inline-start: 17px;
+      margin-inline-end: 13px;
+      button.confirm {
+        margin-block-start: 2px;
+        margin-block-end: 2px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        max-width: 100%;
+        width: 99%;
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    width: 500px;
+    .login-body {
+      padding-top: 10px;
+      .note-container .note {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      }
+      .form-field {
+        padding: 0;
+        .field-attribute {
+          label {
+            text-align: left;
+            margin-block-start: 8px;
+            margin-block-end: 8px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0.8em;
+            width: 11em;
+          }
+        }
+        .field-value {
+          clear: none;
+          float: right;
+          width: auto;
+          input[type="text"], input[type="password"] {
+            width: 15em;
+            display: inline-block;
+            margin: 2px;
+            min-width: 80%;
+            padding: 4px;
+          }
+          select {
+            width: 15.7em;
+          }
+        }
+      }
+      .form-footer {
+        padding-right: 13.8em;
+        button.confirm {
+          display: inline-block;
+          margin: 2px;
+          width: 73%;
+        }
+      }
+    }
+  }
+}
+
+.warning-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffac2e;
+  span {
+    font-weight: bolder;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  p {
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 25px;
+    padding-inline-end: 25px;
+  }
+}
+.emr-login-text {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: $bahmniSecondaryColor;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: 100%;
+}
+.bottom-logos-wrapper {
+  @media screen and (min-width: 1025px) {
+    width: 700px;
+    margin-right: -20%;
+  }
+  width:auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  img {
+    height: 60px;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+  }  
+}
+.power-by {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: #fafafa;
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #898989;
+  img {
+    width: 55px;
+    vertical-align: middle;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 1px;
+    margin-inline-end: 1px;
+  }
+  a {
+    color: #000;
+  }
+}
+.clint-logo-wrapper {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  img {
+    max-width: 200px;
+    vertical-align: middle;
+    max-height: 120px;
+  }
+  span {
+    vertical-align: middle;
+    color: #888;
+    font-size: 20px;
+  }
+}
+
+/*** Change Password Page Styles ***/
+/******************************************************************************/
+.login.change-password-wrap {
+  width: auto;
+  max-width: 765px;
+  .change-password {
+    width: 450px;
+    .field-value-buttons {
+      padding-block-start: 2px;
+      padding-block-end: 2px;
+      padding-inline-start: 2px;
+      padding-inline-end: 0;
+      button {
+        padding-block-start: 7px !important;
+        padding-block-end: 7px !important;
+        padding-inline-start: 13px !important;
+        padding-inline-end: 13px !important;
+        &.confirm {
+          margin-left: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 830px) {
+      width: 385px;
+    }
+    @media screen and (max-width: 720px) {
+      float: none !important;
+      clear: both;
+    }
+  }
+  @media screen and (max-width: 830px) {
+    max-width: 695px;
+  }
+  @media screen and (max-width: 720px) {
+    max-width: 400px;
+    height: auto;
+  }
+  .info {
+    width: 295px;
+    border-radius: 10px;
+    padding: 10px;
+    background: $white;
+    border: 1px solid $lightGray;
+    @include box-shadow-for-section();
+    box-sizing: border-box;
+    h3 {
+      margin-block-start: 0;
+      margin-block-end: 15px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+    ol {
+      line-height: 1.5;
+      padding-right: 15px;
+      li {
+        padding-bottom: 4px;
+      }
+    }
+    @media screen and (max-width: 720px) {
+      float: none !important;
+      clear: both;
+      width: 385px;
+      margin-top: 20px;
+    }
+
+  }
+}
+
+/*** Dashboard Styles ***/
+/******************************************************************************/
+
+.dashboard {
+  position: relative;
+  header {
+    .btn-user-info {
+      background: lighten($bahmniPrimaryColor, 10%);
+      padding-block-start: 17px;
+      padding-block-end: 17px;
+      padding-inline-start: 16px;
+      padding-inline-end: 16px;
+      border: none;
+      border-radius: 0;
+      &:focus {
+        outline: 0;
+      }
+      i.mini {
+        font-size: .9em;
+      }
+      & + ul {
+        display: none;
+        &.active {
+          background: lighten($bahmniPrimaryColor, 10%);
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 50px;
+        }
+        li {
+          float: right;
+          clear: both;
+          text-align: right;
+          padding-right: 10px;
+          border-bottom: 1px solid lighten($bahmniPrimaryColor, 10%);
+          margin: 0;
+          padding-block-start: 10px;
+          padding-block-end: 10px;
+          padding-inline-start: 5px;
+          padding-inline-end: 10px;
+          a.disabled {
+            color: $lightGray;
+            .fa-user {
+              color: $lightGray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .apps {
+    ul {
+      margin-block-start: 50px;
+      margin-block-end: 50px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      max-width: 520px;
+      li {
+        a {
+          width: 130px;
+          @include box-shadow-for-section();
+          padding-block-start: 10px;
+          padding-block-end: 20px;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+          i {
+            margin-bottom: 5px;
+          }
+          &.button {
+            min-height: 115px !important;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .apps {
+      ul {
+        max-width: 345px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .apps {
+      width: 560px;
+      margin-block-start: 80px;
+      margin-block-end: 80px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      //padding-bottom: 100px;
+      ul {
+        max-width: 600px;
+        li {
+          a {
+            width: 140px;
+            &.button {
+              min-height: 115px !important;
+            }
+            i {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.change-location {
+  padding-block-start: 7px;
+  padding-block-end: 7px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  select, select:focus {
+    background: lighten($bahmniPrimaryColor, 10%);
+    color: $white;
+    border: 1px solid lighten($bahmniPrimaryColor, 5%)
+  }
+}
+
+.orderSet-Create {
+  margin-top: 0 !important;
+}
+
+.syncStatusInfo {
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  position: fixed;
+  bottom: 13px;
+  font-style: italic;
+  color: #666;
+  .message {
+    font-style: normal;
+  }
+  .pending {
+    color: #FDA319;
+  }
+  .fail {
+    color: red;
+  }
+  .success {
+    color: #53B76D;
+  }
+  .inProgress {
+    color: black;
+  }
+  p {
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+}
+
+button.button-Errorlog {
+  color: $alert;
+  background: $alertBackground;
+  border-color: $alert;
+  margin-bottom: 10px;
+}
+
+.login.login-otp .login-body {
+  .form-field .field-attribute label {
+    width: 7em;
+  }
+  .form-field .field-value input[type="password"] {
+    min-width: initial;
+  }
+  .otp-button {
+    padding-block-start: 6px;
+    padding-block-end: 6px;
+    padding-inline-start: 14px;
+    padding-inline-end: 14px;
+    margin-block-start: 2px;
+    margin-block-end: 0;
+    margin-inline-start: 10px;
+    margin-inline-end: 0;
+  }
+  .form-footer {
+    padding-right: 9.3em;
+
+    button.confirm {
+      width: 220px;
+    }
+  }
+  .error.error_resend {
+    color: green;
+  }
+}
+

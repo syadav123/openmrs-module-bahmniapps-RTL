@@ -1,0 +1,169 @@
+.reg-search-wrapper{
+  padding:5px;
+  margin-top:5px;
+  border:1px solid $lightestGray;
+  background: $white;
+  border-radius: 3px;
+  @include box-shadow-for-section();
+  .reg-search{
+    button{
+      padding-block-start: 7px !important;
+      padding-block-end: 7px !important;
+      padding-inline-start: 20px !important;
+      padding-inline-end: 20px !important;
+    }
+    @include clearfix;
+    .search-seperator-l{
+      border-left:2px dotted $lightGray;
+      width: 30.5%;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 1.04167%;
+      margin-inline-end: 1.04167%;
+      float: right;
+      @media (max-width: 767px) {
+        @include column(12);
+        border-left : 0;
+        border-bottom:2px dotted $lightGray;
+        display: block;
+        padding-bottom: 10px;
+      }
+      .search-patient-id{
+        width: 100%;
+        .reg-srch-btn{
+          margin-top: 4px;
+        }
+      }
+      input[type="text"]{
+        margin-left:5px;
+        padding-block-start: 5px;
+        padding-block-end: 5px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        min-width: 40%;
+      }
+      select{
+        width:80px;
+        min-width:80px;
+        height: 32px;
+        padding-block-start: 0 !important;
+        padding-block-end: 0 !important;
+        padding-inline-start: 10px !important;
+        padding-inline-end: 10px !important;
+      }
+    }
+    .search-seperator-r{
+      width: 67%;
+      margin: 0;
+      float: right;
+      @media (max-width: 767px) {
+        @include column(12);
+        display: block;
+        padding-top: 5px;
+      }
+      input[type="text"]{
+        margin-left:5px;
+        padding-block-start: 5px;
+        padding-block-end: 5px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        /*@media (max-width: 1024px) {
+          padding-block-start: 5px;
+          padding-block-end: 5px;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+        }*/
+      }
+      button{
+        margin-block-start: 0px;
+        margin-block-end: 2px;
+        margin-inline-start: 2px;
+        margin-inline-end: 2px;
+      }
+      .reg-srch-btn{
+        margin-top:25px;
+      }
+    }
+  }
+  .note-container{
+    text-align:right;
+    .note {
+      padding-block-start:20px;
+      padding-block-end:6px;
+      padding-inline-start:10px;
+      padding-inline-end:10px;
+      .text{
+        p{
+          max-width:100%;
+          top:0px;
+          margin-left:0
+        }
+      }
+    }
+  }
+}
+.registraition-search-results-container{
+  padding: 5px;
+  overflow-x: auto;
+  table{
+    margin-top: 20px;
+    font-size: 0.7rem;
+    tr{
+      border: none;
+    }
+    td,th{
+      padding-block-start:4px;
+      padding-block-end:4px;
+      padding-inline-start:8px;
+      padding-inline-end:8px;
+      text-align:right;
+      @media screen and (max-width: 1024px){
+        padding-block-start:9px;
+        padding-block-end:9px;
+        padding-inline-start:8px;
+        padding-inline-end:8px;
+      }
+    }
+    tr:hover{
+      background: $lightestGray;
+    }
+  }
+  .slno_col{
+    width:40px;
+  }
+  .edit-col{
+    width:160px;
+    padding-block-start:2px;
+    padding-block-end:2px;
+    padding-inline-start:2px;
+    padding-inline-end:2px;
+    .split-button ul li button{
+      @media screen and (min-width: 1024px){
+        padding-block-start: 5px;
+        padding-block-end: 5px;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+        margin: 0;
+      }
+    }
+    a{
+      background:url("edit.png") top left no-repeat;
+      width:30px;
+      height:24px;
+      display:inline-block;
+      margin-left:2px;
+      cursor:pointer;
+    }
+    &.visible-small-screen{
+      position: absolute;
+      top: auto;
+      left: 6px;
+      width: 104px;
+      border-bottom: 0;
+      .split-button ul li button{
+        margin-left:0 ;
+        width: 98%;
+      }
+    }
+  }
+}
