@@ -248,7 +248,7 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.dist %>/styles/css/',
                 src: ['**/*.css', '!**/*.min.*.css'],
                 dest: '<%= yeoman.dist %>/styles/css/',
-                ext: '.min.*.css'
+                ext: '.min.css'
             }
         },
         htmlmin: {
@@ -549,7 +549,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('dev', ['build']);
-    grunt.registerTask('default', ['bundle', 'uglify-and-rename', 'preprocess:web']);
+    grunt.registerTask('default', ['bundle', 'preprocess:web']);
     grunt.registerTask('web', ['preprocess:web']);
 
     grunt.registerTask('yarn-install', 'install dependencies using yarn', function () {
