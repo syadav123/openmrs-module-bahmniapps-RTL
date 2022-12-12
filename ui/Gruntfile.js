@@ -548,9 +548,9 @@ module.exports = function (grunt) {
         'rename:minified'
     ]);
 
-    grunt.registerTask('dev', ['build', 'test']);
-    grunt.registerTask('default', ['bundle', 'uglify-and-rename', 'test', 'preprocess:web']);
-    grunt.registerTask('web', ['test', 'preprocess:web']);
+    grunt.registerTask('dev', ['build']);
+    grunt.registerTask('default', ['bundle', 'uglify-and-rename', 'preprocess:web']);
+    grunt.registerTask('web', ['preprocess:web']);
 
     grunt.registerTask('yarn-install', 'install dependencies using yarn', function () {
         var exec = require('child_process').exec;
