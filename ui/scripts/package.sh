@@ -11,7 +11,8 @@ mkdir -p $ROOT_DIR/target
 rm -rf $ROOT_DIR/target/${ZIP_FILE_NAME}*.zip
 
 yarn install --frozen-lock-file
-yarn bundle
+# yarn bundle
+yarn build
 # yarn uglify-and-rename
 
 cd $ROOT_DIR
@@ -28,7 +29,7 @@ XVFB_PID=$!
 echo "Starting Xvfb process $XVFB_PID"
 
 yarn web
-cd dist && zip -r ../target/${ZIP_FILE_NAME}.zip *
+cd app && zip -r ../target/${ZIP_FILE_NAME}.zip *
 
 
 echo "Killing Xvfb process $XVFB_PID"
