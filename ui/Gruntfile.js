@@ -177,7 +177,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     '<%= yeoman.dist %>/**/*.js',
-                    '<%= yeoman.dist %>/**/*.css',
+
                     '!<%= yeoman.dist %>/**/registrationPrint.css',
                     '!<%= yeoman.dist %>/initWorker.js',
                     '!<%= yeoman.dist %>/components/sw-toolbox/sw-toolbox.js',
@@ -207,8 +207,7 @@ module.exports = function (grunt) {
                 flow: {
                     html: {
                         steps: {
-                            js: ['concat'],
-                            css: ['cssmin']
+                            js: ['concat']
                         },
                         post: {}
                     }
@@ -239,18 +238,7 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        cssmin: {
-            options: {
-                banner: '/* Bahmni OPD minified CSS file */'
-            },
-            minify: {
-                expand: true,
-                cwd: '<%= yeoman.dist %>/styles/css/',
-                src: ['**/*.css', '!**/*.min.*.css'],
-                dest: '<%= yeoman.dist %>/styles/css/',
-                ext: '.min.css'
-            }
-        },
+        
         htmlmin: {
             dist: {
                 options: {
@@ -541,11 +529,6 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'yarn-install',
         'bundle'
-    ]);
-
-    grunt.registerTask('uglify-and-rename', [
-        'uglify',
-        'rename:minified'
     ]);
 
     grunt.registerTask('dev', ['build']);
