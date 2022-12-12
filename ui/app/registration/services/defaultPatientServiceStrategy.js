@@ -18,7 +18,7 @@ angular.module('bahmni.registration')
                 // .error(function (error) {
                     // defer.reject(error);
                 // });
-			$http.get(Bahmni.Common.Constants.bahmniCommonsSearchUrl + "/patient/lucene", {
+            $http.get(Bahmni.Common.Constants.bahmniCommonsSearchUrl + "/patient/lucene", {
                 method: "GET",
                 params: {
                     filterOnAllIdentifiers: true,
@@ -30,8 +30,8 @@ angular.module('bahmni.registration')
                 withCredentials: true
             }).success(onResults)
               .error(function (error) {
-				defer.reject(error);
-            });
+                  defer.reject(error);
+              });
             return defer.promise;
         };
 
