@@ -388,59 +388,9 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= yeoman.dist %>',
-                        src: ['clinical.*.css'],
-                        dest: '<%= yeoman.dist %>/clinical/'
-                    },
-                    {expand: true, cwd: '<%= yeoman.dist %>', src: ['adt.*.css'], dest: '<%= yeoman.dist %>/adt/'},
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['bedmanagement.*.css'],
-                        dest: '<%= yeoman.dist %>/bedmanagement/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['orders.*.css'],
-                        dest: '<%= yeoman.dist %>/orders/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['home.*.css'],
-                        dest: '<%= yeoman.dist %>/home/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['admin.*.css'],
-                        dest: '<%= yeoman.dist %>/admin/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
                         src: ['ot.*.js'],
                         dest: '<%= yeoman.dist %>/ot/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['reports.*.css'],
-                        dest: '<%= yeoman.dist %>/reports/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['registration.*.css'],
-                        dest: '<%= yeoman.dist %>/registration/'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= yeoman.dist %>',
-                        src: ['document-upload.*.css'],
-                        dest: '<%= yeoman.dist %>/document-upload/'
-                    },
-                    {expand: true, cwd: '<%= yeoman.dist %>', src: ['ot.*.css'], dest: '<%= yeoman.dist %>/ot/'}
+                    }
                 ]
             }
         },
