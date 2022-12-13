@@ -18,23 +18,22 @@
 @import "scrollable-tabs";
 
 body {
-    font-size: 14px;
-    //@media (max-width : 768px){
-    //  font-size: 15px;
-    //}
+  font-size: 14px;
+
+  //@media (max-width : 768px){
+  //  font-size: 15px;
+  //}
 }
 
 .consultation-content {
-    margin-top: 45px;
+  margin-top: 45px;
 
-    @media screen and (max-width: 768px) {
-        margin-top: 95px;
+  @media screen and (max-width: 768px) {
+    margin-top: 95px;
 
-        .template-control {
-            top: 150px;
-            box-shadow: none;
-        }
+    .template-control {
+      top: 150px;
+      box-shadow: none;
     }
-
-    
+  }
 }

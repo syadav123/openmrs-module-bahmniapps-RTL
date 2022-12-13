@@ -18,7 +18,7 @@
     white-space: nowrap;
   }
 
-  [class^="arrow"]  {
+  [class^="arrow"] {
     position: absolute;
     outline: none;
     border: 0;
@@ -51,8 +51,8 @@
   .arrow-left {
     right: 0;
 
-    &:before{
-      background: linear-gradient(to right, #527a7a 0%, rgba(255,255,255,0) 95%);
+    &:before {
+      background: linear-gradient(to right, #527a7a 0%, rgba(255, 255, 255, 0) 95%);
       right: 25px;
     }
   }
@@ -60,8 +60,8 @@
   .arrow-right {
     left: 0;
 
-    &:before{
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%, #527a7a 95%);
+    &:before {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #527a7a 95%);
       left: 25px;
     }
   }

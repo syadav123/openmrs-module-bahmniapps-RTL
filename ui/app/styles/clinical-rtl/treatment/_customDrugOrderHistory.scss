@@ -87,48 +87,59 @@ If each of a table rows have multiple possible actions associated with them, use
 
 */
 
-.drugOrderHistorySectionContainer{
-  .drugOrderTable{
-    width:100%;
+.drugOrderHistorySectionContainer {
+  .drugOrderTable {
+    width: 100%;
     position: relative !important;
-    clear:both;
+    clear: both;
     overflow: hidden;
   }
-  .drugOrderTableScroll{
+
+  .drugOrderTableScroll {
     width: auto;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-right:240px;
-    &.noOfActions-4-width{
+    margin-right: 240px;
+
+    &.noOfActions-4-width {
       margin-left: 200px;
     }
-    &.noOfActions-3-width{
+
+    &.noOfActions-3-width {
       margin-left: 165px;
     }
-    &.noOfActions-2-width{
+
+    &.noOfActions-2-width {
       margin-left: 130px;
     }
-    &.noOfActions-1-width{
+
+    &.noOfActions-1-width {
       margin-left: 90px;
     }
-    &.noOfActions-0-width{
+
+    &.noOfActions-0-width {
       margin-left: 75px;
     }
-    &.noOfActions--width{
+
+    &.noOfActions--width {
       margin-left: 65px;
     }
-    @media (max-width : 1024px){
+
+    @media (max-width: 1024px) {
       margin-right: 170px;
     }
   }
-  table.treatments-details-table{
-    u{
+
+  table.treatments-details-table {
+    u {
       border: none !important;
       font-family: openSans !important;
     }
+
     thead tr {
       border: none !important;
     }
+
     thead tr th {
       text-align: center;
       white-space: nowrap;
@@ -139,55 +150,68 @@ If each of a table rows have multiple possible actions associated with them, use
       border-top: 1px $lightGray solid !important;
       white-space: nowrap;
     }
+
     //table-layout: fixed;
-    tr{
-      &.edited{
+    tr {
+      &.edited {
         border-bottom: none;
       }
-      &.medicationDrugNotes{
+
+      &.medicationDrugNotes {
         border-top: 2px solid $clinicalNotesColor;
         background: $clinicalNotesColor;
-        td{
+
+        td {
           text-align: right;
-          padding-right:10px;
-          .additionalInstructions{
-            padding-left:10px;
+          padding-right: 10px;
+
+          .additionalInstructions {
+            padding-left: 10px;
           }
         }
       }
-      &.formStopReason{
-        td{
+
+      &.formStopReason {
+        td {
           padding-block-start: 4px;
           padding-block-end: 7px;
           padding-inline-start: 5px;
           padding-inline-end: 5px;
         }
+
         .form-field {
           font-size: 12px;
           border-bottom: none;
           padding-bottom: 0px;
         }
-        .form-field .field-attribute{
-          font-size: 12px;         width: auto;
+
+        .form-field .field-attribute {
+          font-size: 12px;
+          width: auto;
         }
-        .form-field .field-attribute label{
+
+        .form-field .field-attribute label {
           margin-top: 3px !important;
+
           @media (max-width: 1024px) {
             margin-top: 7px !important;
           }
         }
+
         .form-field .field-value {
-          input[type="date"], select, textarea{
+          input[type="date"], select, textarea {
             margin-top: 0 !important;
           }
-          input[type="date"]{
+
+          input[type="date"] {
             width: 120px;
             padding-block-start: 2px !important;
             padding-block-end: 2px !important;
             padding-inline-start: 10px !important;
             padding-inline-end: 10px !important;
           }
-          select{
+
+          select {
             width: 140px;
             min-width: 140px;
             color: #363463;
@@ -202,7 +226,8 @@ If each of a table rows have multiple possible actions associated with them, use
             background-color: #FFF;
             border: 1px solid #DDD;
           }
-          textarea{
+
+          textarea {
             width: 131px !important;
             padding-block-start: 2px;
             padding-block-end: 2px;
@@ -210,138 +235,162 @@ If each of a table rows have multiple possible actions associated with them, use
             padding-inline-end: 10px;
             border: 1px solid #DDD;
           }
+
           @media (max-width: 1024px) {
-            textarea{
+            textarea {
               width: 400px !important;
               height: 32px !important;
             }
-            select{
+
+            select {
               width: 197px !important;
             }
           }
         }
       }
-
     }
-    th{
+
+    th {
       background: $lightestGray;
       background-image: none;
       color: $darkGray;
-      width:113px;
+      width: 113px;
       font-family: openSansSemiBold;
-      &.active-drugs{
-        width:25%;
+
+      &.active-drugs {
+        width: 25%;
       }
-      &.drugName{
+
+      &.drugName {
         width: 240px;
         text-align: right;
         position: absolute;
-        top:auto;
-        right:0;
+        top: auto;
+        right: 0;
         box-sizing: border-box;
         border-left: none;
-        height:100%;
+        height: 100%;
         padding-right: 10px;
-        @media (max-width : 1024px){
+
+        @media (max-width: 1024px) {
           width: 170px;
         }
-        span{
+
+        span {
           z-index: 999;
           position: static;
           width: 100%;
         }
       }
-      &.stopReason{
-        width:160px;
+
+      &.stopReason {
+        width: 160px;
       }
-      &.instructions{
-        width:168px;
+
+      &.instructions {
+        width: 168px;
       }
-      &.empty-header{
+
+      &.empty-header {
         position: absolute;
         left: 0;
         top: auto;
         box-sizing: border-box;
-        height:100%;
-        &.noOfActions-4-width{
+        height: 100%;
+
+        &.noOfActions-4-width {
           width: 200px;
         }
-        &.noOfActions-3-width{
+
+        &.noOfActions-3-width {
           width: 165px;
         }
-        &.noOfActions-2-width{
+
+        &.noOfActions-2-width {
           width: 130px;
         }
-        &.noOfActions-1-width{
+
+        &.noOfActions-1-width {
           width: 90px;
         }
-        &.noOfActions-0-width{
+
+        &.noOfActions-0-width {
           width: 75px;
         }
-        &.noOfActions--width{
+
+        &.noOfActions--width {
           width: 65px;
         }
       }
     }
-    td{
+
+    td {
       text-align: center;
       padding-block-start: 6px;
       padding-block-end: 7px;
       padding-inline-start: 5px;
       padding-inline-end: 5px;
       vertical-align: middle;
-      &.drugName{
+
+      &.drugName {
         text-align: right;
         padding-right: 10px;
         width: 240px;
         text-align: right;
         position: absolute;
-        top:auto;
-        right:0;
+        top: auto;
+        right: 0;
         box-sizing: border-box;
         background: #EFEFF2;
         border-bottom: 1px solid $lighterGray;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @media (max-width : 1024px){
+
+        @media (max-width: 1024px) {
           width: 170px;
         }
-        span{
+
+        span {
           z-index: 999;
           position: static;
           width: 100%;
         }
-        .orderSetStagingAreaCheckbox{
+
+        .orderSetStagingAreaCheckbox {
           margin-block-start: 1px;
           margin-block-end: 0;
           margin-inline-start: 0;
           margin-inline-end: 7px;
-          transform:scale(1.2);
+          transform: scale(1.2);
         }
       }
-      &.drugNameStopForm{
+
+      &.drugNameStopForm {
         padding-block-start: 6px;
         padding-block-end: 43px;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
       }
-      &.drugNameAddNote{
+
+      &.drugNameAddNote {
         padding-block-start: 6px;
         padding-block-end: 31px;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
       }
-      &.drugNameStopFormAddNote{
+
+      &.drugNameStopFormAddNote {
         padding-block-start: 6px;
         padding-block-end: 85px;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
       }
-      &.buttonColumn{
+
+      &.buttonColumn {
         position: absolute;
-        left:0;
-        top:auto;
+        left: 0;
+        top: auto;
         padding-block-start: 2px;
         padding-block-end: 2px;
         padding-inline-start: 5px;
@@ -350,68 +399,83 @@ If each of a table rows have multiple possible actions associated with them, use
         background: #EFEFF2;
         box-sizing: border-box;
       }
-      &.buttonColumnStopForm{
+
+      &.buttonColumnStopForm {
         padding-block-start: 2px;
         padding-block-end: 38px;
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
-      &.buttonColumnAddNote{
+
+      &.buttonColumnAddNote {
         padding-block-start: 2px;
         padding-block-end: 26px;
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
-      &.buttonColumnStopFormAddNote{
+
+      &.buttonColumnStopFormAddNote {
         padding-block-start: 2px;
         padding-block-end: 82px;
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
-      &.noActionColumn{
+
+      &.noActionColumn {
         padding-block-start: 3px;
         padding-block-end: 3px;
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
-      &.noOfActions-4-width{
+
+      &.noOfActions-4-width {
         width: 200px;
       }
-      &.noOfActions-3-width{
+
+      &.noOfActions-3-width {
         width: 165px;
       }
-      &.noOfActions-2-width{
+
+      &.noOfActions-2-width {
         width: 130px;
       }
-      &.noOfActions-1-width{
+
+      &.noOfActions-1-width {
         width: 90px;
       }
-      &.noOfActions-0-width{
+
+      &.noOfActions-0-width {
         width: 75px;
       }
-      &.noOfActions--width{
+
+      &.noOfActions--width {
         width: 65px;
       }
-      &.noActionColumnAddNote{
+
+      &.noActionColumnAddNote {
         padding-block-start: 3px;
         padding-block-end: 27px;
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
-      &.drug-stop-container{
+
+      &.drug-stop-container {
         padding: 0;
       }
-      .button-group-wrapper{
+
+      .button-group-wrapper {
         width: auto;
-        padding:0 !important;
+        padding: 0 !important;
         position: static;
-        button,button:hover{
-          i{
+
+        button, button:hover {
+          i {
             font-size: 1.8em;
-            padding:0 !important;
+            padding: 0 !important;
           }
         }
-        .button-group{
+
+        .button-group {
           float: right;
         }
       }

@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 html {
- direction: rtl;
+  direction: rtl;
 }
-
 
 /*BAHMNI css files*/
 @import "vendor-rtl/normalize";
@@ -40,7 +39,6 @@ html {
 @import "common-rtl/directives";
 @import "common-rtl/angularFix";
 @import "common-rtl/noTouch";
-
 
 @import "bahmni-layout-rtl/layout";
 @import "bahmni-layout-rtl/retroMode";

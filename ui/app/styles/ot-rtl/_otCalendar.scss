@@ -3,6 +3,7 @@
   height: calc(100vh - 157px);
   background: #fff;
   position: relative;
+
   .calendar-overflow-hiding {
     width: 80px;
     height: 36px;
@@ -12,6 +13,7 @@
     background: #FFF;
     z-index: 999;
   }
+
   .calendar-location {
     padding-right: 80px;
     overflow: hidden;
@@ -21,6 +23,7 @@
     z-index: 20;
     background: #fff;
     width: 94%;
+
     .heading-cell {
       width: 300px;
       box-sizing: border-box;
@@ -34,6 +37,7 @@
       font-family: OpenSansSemiBold;
     }
   }
+
   .calendar-time-container {
     clear: right;
     position: absolute;
@@ -51,9 +55,11 @@
       font-family: OpenSansSemiBold;
     }
   }
+
   .table-block {
     .ot-block-container {
       display: block;
+
       .ot-block-wrapper {
         position: absolute;
         display: flex;
@@ -64,6 +70,7 @@
         width: calc(100% - 90px);
         left: 0;
       }
+
       .calendar-cell {
         border-bottom: 0.5px solid lightgrey;
         border-left: 0.5px solid lightgrey;
@@ -72,12 +79,14 @@
         height: 120px;
         box-sizing: border-box;
       }
+
       .ot-block {
         width: 300px;
         float: right;
         position: relative;
         padding-bottom: 20px;
         overflow: hidden;
+
         .surgical-block {
           width: calc(100% - 10px);
           position: absolute;
@@ -86,11 +95,13 @@
           margin-inline-start: 5px;
           margin-inline-end: 5px;
           border: 0.5px solid #1976D2;
+
           &:focus {
             border-color: #1976D2 !important;
           }
         }
       }
+
       .current-day-line {
         color: #f00;
         background: #f00;
@@ -118,6 +129,7 @@
   border-left: 1px solid #ddd;
   box-sizing: border-box;
   overflow: auto;
+
   h4 {
     font-weight: bold;
     color: #000;
@@ -126,12 +138,14 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
+
   .ot-filter-items {
     margin-bottom: 5px;
     padding-block-start: 0;
     padding-block-end: 10px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+
     &.location-block {
       h4 {
         margin-block-start: 0;
@@ -139,17 +153,21 @@
         margin-inline-start: 0;
         margin-inline-end: 0;
       }
+
       border-bottom: 1px solid #ddd;
     }
+
     &.patient-block {
       p {
         position: relative;
+
         input[type=text] {
           width: 100%;
           padding: 5px;
           box-sizing: border-box;
           font-size: 14px;
         }
+
         i {
           position: absolute;
           left: 5px;
@@ -160,6 +178,7 @@
         }
       }
     }
+
     &.surgeon-block, &.status-block {
       p {
         span {
@@ -169,6 +188,7 @@
           padding-inline-end: 5px;
           border-radius: 3px;
         }
+
         input[type=checkbox] {
           visibility: hidden;
           width: 0;
@@ -176,27 +196,34 @@
         }
       }
     }
+
     p {
       font-size: 15px;
       margin-bottom: 10px;
+
       label {
         float: left;
       }
     }
+
     .selected-values-wrapper {
       margin-top: 10px;
     }
   }
+
   .provider-tag-selector {
     margin-bottom: 10px;
+
     .tags {
       box-shadow: none;
       border: 1px solid #ddd;
       border-radius: 5px;
+
       input {
         width: 100% !important;
         box-sizing: border-box;
       }
+
       .tag-list {
         li {
           display: none;
@@ -215,6 +242,7 @@
   padding-top: 10px;
   background: #fff;
   border-top: 1px solid lightgrey;
+
   button {
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -236,6 +264,7 @@
   margin-inline-start: 5px;
   margin-inline-end: 5px;
   border-radius: 3px;
+
   .surgical-block-appointment {
     border: 1px solid #1976D2;
     padding: 5px;
@@ -243,15 +272,19 @@
     position: relative;
     overflow: hidden;
     border-radius: 3px;
+
     &:focus {
       border-color: #1976D2 !important;
     }
+
     &.hide-surgical-appointment {
       visibility: hidden;
     }
+
     &.expanded {
       z-index: 1;
     }
+
     i {
       position: absolute;
       left: 5px;
@@ -260,13 +293,16 @@
       border: none;
       outline: none;
       padding: 0;
+
       &:hover {
         opacity: 1;
       }
     }
+
     p {
       font-size: 12px;
     }
+
     .surgicalblock-patientname {
       font-weight: 600;
       color: #000;
@@ -276,12 +312,14 @@
       padding-inline-start: 1px;
       padding-inline-end: 10px;
     }
+
     p {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
+
   .surgicalblock-surgeon-name {
     position: absolute;
     bottom: 3px;
@@ -291,6 +329,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   &.exceed .surgicalblock-surgeon-name {
     position: relative;
     top: 6px;
@@ -304,29 +343,35 @@
     padding-inline-start: 8px;
     padding-inline-end: 15px;
   }
+
   p {
     margin-block-start: 22px;
     margin-block-end: 22px;
     margin-inline-start: 0;
     margin-inline-end: 0;
+
     label {
       width: 120px;
       text-align: left;
       display: inline-block;
     }
+
     input, select {
       width: calc(100% - 200px);
       height: 30px;
       border-radius: 5px;
     }
+
     input {
       border: 1px solid #ddd;
       padding-right: 10px;
     }
   }
+
   .center {
     text-align: center;
   }
+
   button {
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -338,11 +383,12 @@
     margin-inline-end: 15px;
   }
 }
-.ui-tooltip{
-    width: auto;
-    height: auto;
-    line-height: 1.5;
-    padding: 0.3%;
-    border-radius: 4px;
-    position: absolute;
+
+.ui-tooltip {
+  width: auto;
+  height: auto;
+  line-height: 1.5;
+  padding: 0.3%;
+  border-radius: 4px;
+  position: absolute;
 }

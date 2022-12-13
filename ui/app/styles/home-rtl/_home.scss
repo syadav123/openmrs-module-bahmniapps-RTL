@@ -27,17 +27,23 @@ $total-width: 100%;
 .form-field-inline {
   .form-field {
     float: right;
+
     @include column(6);
+
     margin-bottom: 10px;
   }
-  @include clearfix();
+
+  @include clearfix;
 }
 
 .form-field {
   margin-bottom: 10px;
-  @include clearfix();
+
+  @include clearfix;
+
   .field-attribute {
     float: right;
+
     label {
       width: 11em;
       line-height: 20px;
@@ -50,9 +56,11 @@ $total-width: 100%;
       font-size: 14px;
     }
   }
+
   .field-value {
     float: right;
     font-size: 14px;
+
     input[type="text"], input[type="password"] {
       float: right;
       width: 12.5em;
@@ -61,6 +69,7 @@ $total-width: 100%;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
+
     input[type="number"] {
       width: 8em;
       padding-block-start: 5px;
@@ -68,6 +77,7 @@ $total-width: 100%;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
+
     span.text-only {
       display: inline-block;
       margin-block-start: 8px;
@@ -84,6 +94,7 @@ $total-width: 100%;
 
 .input-prepend {
   float: right;
+
   input {
     display: inline-block;
     margin-bottom: 0;
@@ -91,8 +102,10 @@ $total-width: 100%;
     float: right;
     margin: 0px !important;
   }
+
   .add-on {
     @extend input;
+
     border-radius: 3px;
     height: 21px;
     min-width: 17px;
@@ -103,7 +116,6 @@ $total-width: 100%;
     background-color: $lightestGray;
     border: 1px solid $lightGray;
   }
-
 }
 
 .input-prepend .add-on:first-child, .input-prepend .btn:first-child {
@@ -119,6 +131,7 @@ $total-width: 100%;
 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
   cursor: not-allowed;
   background-color: $lightestGray;
+
   &:focus {
     cursor: not-allowed;
     background-color: $lightestGray;
@@ -134,6 +147,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .simple-form-ui {
   form {
     background: $white;
+
     section {
       display: block;
       padding: 0px;
@@ -169,7 +183,7 @@ p.caution {
 
 button[disabled], button[disabled]:hover, button.disabled, button.disabled:hover {
   opacity: .65;
-  filter: alpha(opacity=65);
+  filter: alpha(opacity = 65);
   background: $lightestGray;
   border: 1px solid $lightGray;
   color: $darkGray;
@@ -189,6 +203,7 @@ body {
 
 .reg-header {
   @include clearfix;
+
   height: 52px;
 }
 
@@ -204,7 +219,8 @@ body {
   height: 100%;
   top: 0px;
   right: 0px;
-  background: rgba(0, 0, 0, 0.6) url('../images/spinner.gif') no-repeat center center;
+  background: rgba(0, 0, 0, 0.6) url("../images/spinner.gif") no-repeat center center;
+
   div {
     width: 100%;
     height: 100%;
@@ -223,15 +239,18 @@ body {
   .inline-element, select, input, button {
     display: inline-block;
   }
+
   select {
     height: 35px;
   }
+
   header {
     color: $lightGray;
     height: 52px;
     border-radius: 0;
     line-height: 1em;
     background: $bahmniSecondaryColor;
+
     .header-logo {
       display: block;
       width: 35px;
@@ -239,6 +258,7 @@ body {
       margin-block-end: 8px;
       margin-inline-start: auto;
       margin-inline-end: auto;
+
       img {
         display: block;
         width: 35px;
@@ -246,18 +266,22 @@ body {
         box-shadow: 0 8px 6px -7px $black;
       }
     }
+
     ul {
       //float:right;
       li {
         //margin:11px 15px 10px 0px;
         display: inline-block;
+
         a {
           color: $white;
           font-weight: bold;
           cursor: pointer;
           text-decoration: none;
+
           .nav-link {
             padding-right: 2px;
+
             &:hover {
               text-decoration: underline;
             }
@@ -266,18 +290,24 @@ body {
       }
     }
   }
+
   .reg-search-wrapper {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid $lightGray;
     background: $white;
     border-radius: 3px;
+
     .reg-search {
       margin-bottom: 10px;
+
       @include clearfix;
+
       .search-seperator-l {
         @include column(5);
+
         border-left: 2px dotted $lightGray;
+
         select {
           width: 80px;
           min-width: 80px;
@@ -287,31 +317,37 @@ body {
           padding-inline-end: 10px !important;
         }
       }
+
       .search-seperator-r {
         padding-block-start: 0px;
         padding-block-end: 10px;
         padding-inline-start: 20px;
         padding-inline-end: 0px;
+
         input {
           margin-left: 5px;
         }
+
         .reg-srch-btn {
           margin-top: 25px;
         }
       }
     }
+
     .note-container {
       text-align: right;
+
       .note {
         padding-block-start: 6px;
         padding-block-end: 6px;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
+
         .text {
           p {
             max-width: 100%;
             top: 0px;
-            margin-left: 0
+            margin-left: 0;
           }
         }
       }
@@ -322,8 +358,10 @@ body {
 /*** search page css end ***/
 .apps {
   text-align: center;
+
   li {
     display: inline-block;
+
     a {
       padding-block-start: 20px;
       padding-block-end: 20px;
@@ -336,10 +374,12 @@ body {
       margin: 10px;
       text-align: center;
       font-size: 1.3em;
+
       &:hover {
         background: $lightestGray;
         border: 1px solid $lightGray;
       }
+
       i {
         display: block;
         font-size: 50px;
@@ -366,10 +406,12 @@ body {
   margin: auto;
   font-size: 0.865em;
   max-width: 500px;
+
   form {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 10px -10px $mediumGray;
   }
+
   header {
     border-radius: 10px 10px 0 0;
     box-sizing: border-box;
@@ -381,14 +423,17 @@ body {
     padding-block-end: 0px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+
     .left {
       max-width: 150px;
       overflow: hidden;
     }
+
     .locale-wrapper {
       font-size: 14px;
       max-width: 300px;
       overflow: hidden;
+
       .locale-text {
         padding-left: 10px;
         max-width: 130px;
@@ -397,6 +442,7 @@ body {
         text-overflow: ellipsis;
         float: right;
       }
+
       select {
         background-color: #FFF;
         border: 1px solid $lighterGray;
@@ -407,9 +453,9 @@ body {
         padding-inline-start: 10px;
         padding-inline-end: 10px;
         margin: 0;
-
       }
     }
+
     a.back-btn {
       line-height: initial !important;
     }
@@ -421,27 +467,33 @@ body {
     padding-bottom: 10px;
     border-radius: 0 0 10px 10px;
     padding-top: 10px;
+
     p.caution {
       padding: 0px;
     }
+
     .note-container {
       width: 95.1%;
       margin: auto;
+
       .note {
         min-width: 10px;
         display: block;
         text-align: center;
+
         &.error {
           color: #ff0000;
         }
       }
     }
+
     .form-field {
       display: block;
       margin-block-start: 10px;
       margin-block-end: 10px;
       margin-inline-start: 17px;
       margin-inline-end: 13px;
+
       .field-attribute {
         label {
           text-align: right;
@@ -449,10 +501,12 @@ body {
           margin: 0;
         }
       }
+
       .field-value {
         clear: both;
         float: none;
         width: 100%;
+
         input[type="text"], input[type="password"] {
           width: 95%;
           display: block;
@@ -463,16 +517,19 @@ body {
           padding-inline-start: 10px;
           padding-inline-end: 4px;
         }
+
         select {
           width: 99%;
         }
       }
     }
+
     .form-footer {
       margin-block-start: 10px;
       margin-block-end: 10px;
       margin-inline-start: 17px;
       margin-inline-end: 13px;
+
       button.confirm {
         margin-block-start: 2px;
         margin-block-end: 2px;
@@ -485,18 +542,23 @@ body {
       }
     }
   }
+
   @media screen and (min-width: 1025px) {
     width: 500px;
+
     .login-body {
       padding-top: 10px;
+
       .note-container .note {
         margin-block-start: 0px;
         margin-block-end: 0px;
         margin-inline-start: auto;
         margin-inline-end: auto;
       }
+
       .form-field {
         padding: 0;
+
         .field-attribute {
           label {
             text-align: left;
@@ -507,10 +569,12 @@ body {
             width: 11em;
           }
         }
+
         .field-value {
           clear: none;
           float: right;
           width: auto;
+
           input[type="text"], input[type="password"] {
             width: 15em;
             display: inline-block;
@@ -518,13 +582,16 @@ body {
             min-width: 80%;
             padding: 4px;
           }
+
           select {
             width: 15.7em;
           }
         }
       }
+
       .form-footer {
         padding-right: 13.8em;
+
         button.confirm {
           display: inline-block;
           margin: 2px;
@@ -539,12 +606,14 @@ body {
   text-align: center;
   margin-top: 20px;
   color: #ffac2e;
+
   span {
     font-weight: bolder;
     font-size: 13px;
     display: inline-block;
     margin-bottom: 5px;
   }
+
   p {
     padding-block-start: 0;
     padding-block-end: 0;
@@ -552,6 +621,7 @@ body {
     padding-inline-end: 25px;
   }
 }
+
 .emr-login-text {
   text-align: center;
   font-size: 22px;
@@ -562,23 +632,27 @@ body {
   right: 0;
   width: 100%;
 }
+
 .bottom-logos-wrapper {
   @media screen and (min-width: 1025px) {
     width: 700px;
     margin-right: -20%;
   }
-  width:auto;
+
+  width: auto;
   text-align: center;
   margin-bottom: 15px;
   margin-top: 20px;
+
   img {
     height: 60px;
     padding-block-start: 0;
     padding-block-end: 0;
     padding-inline-start: 8px;
     padding-inline-end: 8px;
-  }  
+  }
 }
+
 .power-by {
   position: fixed;
   width: 100%;
@@ -588,6 +662,7 @@ body {
   padding-bottom: 5px;
   font-size: 12px;
   color: #898989;
+
   img {
     width: 55px;
     vertical-align: middle;
@@ -596,19 +671,23 @@ body {
     margin-inline-start: 1px;
     margin-inline-end: 1px;
   }
+
   a {
     color: #000;
   }
 }
+
 .clint-logo-wrapper {
   display: block;
   text-align: center;
   padding-top: 10px;
+
   img {
     max-width: 200px;
     vertical-align: middle;
     max-height: 120px;
   }
+
   span {
     vertical-align: middle;
     color: #888;
@@ -621,66 +700,80 @@ body {
 .login.change-password-wrap {
   width: auto;
   max-width: 765px;
+
   .change-password {
     width: 450px;
+
     .field-value-buttons {
       padding-block-start: 2px;
       padding-block-end: 2px;
       padding-inline-start: 2px;
       padding-inline-end: 0;
+
       button {
         padding-block-start: 7px !important;
         padding-block-end: 7px !important;
         padding-inline-start: 13px !important;
         padding-inline-end: 13px !important;
+
         &.confirm {
           margin-left: 0;
         }
       }
     }
+
     @media screen and (max-width: 830px) {
       width: 385px;
     }
+
     @media screen and (max-width: 720px) {
       float: none !important;
       clear: both;
     }
   }
+
   @media screen and (max-width: 830px) {
     max-width: 695px;
   }
+
   @media screen and (max-width: 720px) {
     max-width: 400px;
     height: auto;
   }
+
   .info {
     width: 295px;
     border-radius: 10px;
     padding: 10px;
     background: $white;
     border: 1px solid $lightGray;
-    @include box-shadow-for-section();
+
+    @include box-shadow-for-section;
+
     box-sizing: border-box;
+
     h3 {
       margin-block-start: 0;
       margin-block-end: 15px;
       margin-inline-start: 0;
       margin-inline-end: 0;
     }
+
     ol {
       line-height: 1.5;
       padding-right: 15px;
+
       li {
         padding-bottom: 4px;
       }
     }
+
     @media screen and (max-width: 720px) {
       float: none !important;
       clear: both;
       width: 385px;
       margin-top: 20px;
     }
-
   }
 }
 
@@ -689,6 +782,7 @@ body {
 
 .dashboard {
   position: relative;
+
   header {
     .btn-user-info {
       background: lighten($bahmniPrimaryColor, 10%);
@@ -698,14 +792,18 @@ body {
       padding-inline-end: 16px;
       border: none;
       border-radius: 0;
+
       &:focus {
         outline: 0;
       }
+
       i.mini {
         font-size: .9em;
       }
+
       & + ul {
         display: none;
+
         &.active {
           background: lighten($bahmniPrimaryColor, 10%);
           display: block;
@@ -713,6 +811,7 @@ body {
           left: 0;
           top: 50px;
         }
+
         li {
           float: right;
           clear: both;
@@ -724,8 +823,10 @@ body {
           padding-block-end: 10px;
           padding-inline-start: 5px;
           padding-inline-end: 10px;
+
           a.disabled {
             color: $lightGray;
+
             .fa-user {
               color: $lightGray;
             }
@@ -734,6 +835,7 @@ body {
       }
     }
   }
+
   .apps {
     ul {
       margin-block-start: 50px;
@@ -741,17 +843,22 @@ body {
       margin-inline-start: auto;
       margin-inline-end: auto;
       max-width: 520px;
+
       li {
         a {
           width: 130px;
-          @include box-shadow-for-section();
+
+          @include box-shadow-for-section;
+
           padding-block-start: 10px;
           padding-block-end: 20px;
           padding-inline-start: 10px;
           padding-inline-end: 10px;
+
           i {
             margin-bottom: 5px;
           }
+
           &.button {
             min-height: 115px !important;
           }
@@ -759,6 +866,7 @@ body {
       }
     }
   }
+
   @media screen and (max-width: 520px) {
     .apps {
       ul {
@@ -774,15 +882,19 @@ body {
       margin-block-end: 80px;
       margin-inline-start: auto;
       margin-inline-end: auto;
+
       //padding-bottom: 100px;
       ul {
         max-width: 600px;
+
         li {
           a {
             width: 140px;
+
             &.button {
               min-height: 115px !important;
             }
+
             i {
               margin-bottom: 5px;
             }
@@ -798,10 +910,11 @@ body {
   padding-block-end: 7px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
+
   select, select:focus {
     background: lighten($bahmniPrimaryColor, 10%);
     color: $white;
-    border: 1px solid lighten($bahmniPrimaryColor, 5%)
+    border: 1px solid lighten($bahmniPrimaryColor, 5%);
   }
 }
 
@@ -817,26 +930,31 @@ body {
   bottom: 13px;
   font-style: italic;
   color: #666;
+
   .message {
     font-style: normal;
   }
+
   .pending {
     color: #FDA319;
   }
+
   .fail {
     color: red;
   }
+
   .success {
     color: #53B76D;
   }
+
   .inProgress {
     color: black;
   }
+
   p {
     padding-bottom: 10px;
     margin: 0;
   }
-
 }
 
 button.button-Errorlog {
@@ -850,9 +968,11 @@ button.button-Errorlog {
   .form-field .field-attribute label {
     width: 7em;
   }
+
   .form-field .field-value input[type="password"] {
     min-width: initial;
   }
+
   .otp-button {
     padding-block-start: 6px;
     padding-block-end: 6px;
@@ -863,6 +983,7 @@ button.button-Errorlog {
     margin-inline-start: 10px;
     margin-inline-end: 0;
   }
+
   .form-footer {
     padding-right: 9.3em;
 
@@ -870,8 +991,8 @@ button.button-Errorlog {
       width: 220px;
     }
   }
+
   .error.error_resend {
     color: green;
   }
 }
-

@@ -8,11 +8,13 @@
   margin-inline-start: 10px !important;
   margin-inline-end: 10px !important;
   border-radius: 3px;
+
   &.active {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     font-family: OpenSans;
   }
 }
+
 /*------ page style-------*/
 
 .opd-wrapper.appointments-page-wrapper {
@@ -23,6 +25,7 @@
   padding-inline-end: 0;
   overflow: visible;
   background: #fff;
+
   .appointments-content-wrapper {
     max-width: 100%;
   }
@@ -40,6 +43,7 @@
   overflow: hidden;
   height: calc(100vh - 78px);
   background: #fff;
+
   .service-title {
     font-family: OpenSans, Arial, sans-serif;
     padding: 10px;
@@ -52,6 +56,7 @@
     background: #446565;
     position: relative;
     border-radius: 2px 2px 0 0;
+
     h2 {
       margin: 0;
       padding: 0;
@@ -59,6 +64,7 @@
       font-size: 16px;
     }
   }
+
   .add-service-btn, .service-save-btn {
     float: left;
     background: #99C915;
@@ -66,12 +72,14 @@
     outline: none;
     color: #fff;
   }
+
   .add-service-btn {
     margin-block-start: 0;
     margin-block-end: 10px;
     margin-inline-start: 0;
     margin-inline-end: 10px;
   }
+
   .service-save-btn {
     position: absolute;
     left: 5px;
@@ -83,11 +91,13 @@
     padding-inline-end: 20px;
   }
 }
+
 .app-patient-search {
   position: absolute;
   top: 63px;
   z-index: 10;
   left: 175px;
+
   input {
     color: #363463;
     padding-block-start: 2px;
@@ -105,6 +115,7 @@
     border-radius: 5px;
     width: 210px;
   }
+
   i {
     position: absolute;
     top: 0;

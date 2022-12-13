@@ -1,25 +1,30 @@
-.edit-drug-order-container{
-  .drug-type-title{
+.edit-drug-order-container {
+  .drug-type-title {
     color: #000;
     margin: 0;
     font-family: openSansSemiBold;
     margin-bottom: 5px;
     font-size: 15px;
   }
-  .type-of-drug-section{
-    @media (max-width : 1024px){
+
+  .type-of-drug-section {
+    @media (max-width: 1024px) {
       margin-right: 10px;
     }
   }
-  .default-drug-container{
+
+  .default-drug-container {
     margin-bottom: 25px;
-    &.multi-select-button-group{
+
+    &.multi-select-button-group {
       max-width: 100%;
     }
   }
-  .medication-drug-container{
+
+  .medication-drug-container {
     margin-bottom: 25px;
-    .accept-btn{
+
+    .accept-btn {
       margin-left: 5px;
       margin-top: 4px;
       padding-block-start: 6px;
@@ -27,63 +32,75 @@
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
-    .drug-name{
+
+    .drug-name {
       min-width: 330px;
       width: 330px;
       margin-left: 10px;
       float: right;
+
       @media screen and (max-width: 1024px) {
         width: 160px;
         min-width: 160px;
       }
     }
   }
+
   .edit-drug-order {
     background: $white;
     padding-block-start: 6px;
     padding-block-end: 6px;
     padding-inline-start: 8px;
     padding-inline-end: 5px;
-    .drug-options-wrapper{
-      textarea.drug-order-notes{
+
+    .drug-options-wrapper {
+      textarea.drug-order-notes {
         min-width: 330px;
         width: 330px;
         margin-left: 10px;
         float: right;
+
         @media screen and (max-width: 1024px) {
           width: 160px;
           min-width: 160px;
         }
       }
-      input[type="number"]{
+
+      input[type="number"] {
         width: 35px;
         min-width: 35px;
         margin-left: 2px;
         padding-right: 5px;
         padding-left: 5px;
         margin-left: 2px;
-        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
       }
-      #uniform-dose{
+
+      #uniform-dose {
         width: 105px;
       }
-      input[type="date"]{
+
+      input[type="date"] {
         padding-left: 0px;
         padding-right: 5px;
         width: 123px;
-        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+
+        &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
           -webkit-appearance: none;
           display: none;
         }
       }
-      .start-date-label{
+
+      .start-date-label {
         padding-block-start: 0;
         padding-block-end: 0;
         padding-inline-start: 10px;
         padding-inline-end: 5px;
+
         @media screen and (max-width: 1024px) {
           padding-block-start: 7px;
           padding-block-end: 0;
@@ -91,13 +108,15 @@
           padding-inline-end: 5px;
         }
       }
-      button{
-        &.exchange-btn,&.showInfo-btn{
+
+      button {
+        &.exchange-btn, &.showInfo-btn {
           margin-top: 4px;
           padding-block-start: 4px;
           padding-block-end: 5px;
           padding-inline-start: 8px;
           padding-inline-end: 8px;
+
           @media screen and (max-width: 1024px) {
             padding-block-start: 6px;
             padding-block-end: 7px;
@@ -105,32 +124,40 @@
             padding-inline-end: 10px;
           }
         }
-        &#SOS{
+
+        &#SOS {
           margin-left: 5px;
           line-height: .9em;
           margin-top: 4px;
+
           @media screen and (max-width: 1024px) {
             line-height: 1.3em;
           }
         }
-        &.exchange-btn{
+
+        &.exchange-btn {
           margin-left: 4px;
         }
       }
-      select{
+
+      select {
         width: auto;
       }
+
       select, input[type="date"] {
         min-width: 110px;
         margin-left: 2px;
+
         @media screen and (max-width: 1024px) {
           height: 32px;
         }
       }
-      .frequency-widget-wrapper{
+
+      .frequency-widget-wrapper {
         float: right;
-        .dosingUnitsFractions-container{
-          label{
+
+        .dosingUnitsFractions-container {
+          label {
             padding-block-start: 0;
             padding-block-end: 0;
             padding-inline-start: 3px;
@@ -138,11 +165,13 @@
           }
         }
       }
+
       .frequency-widget {
         width: auto;
         float: right;
-        &.uniform-frequency {
-        }
+
+        &.uniform-frequency {}
+
         &.variable-frequency {
           input[type="number"] {
             min-width: 32px;
@@ -151,41 +180,44 @@
           }
         }
       }
-      .duration-widget{
+
+      .duration-widget {
         float: right;
-        input[type="number"]{
+
+        input[type="number"] {
           width: 57px;
           min-width: 57px;
         }
       }
+
       .quantity-widget {
         float: right;
-        input[type="number"]{
+
+        input[type="number"] {
           width: 35px;
           min-width: 35px;
         }
       }
-
     }
-
   }
 }
 
-.medications-orderset-list{
-  .drug-details{
+.medications-orderset-list {
+  .drug-details {
     margin-bottom: 5px;
   }
-  .inpage .tabs{
-    .tab{
-      .tab-label{
+
+  .inpage .tabs {
+    .tab {
+      .tab-label {
         background: white;
         border-bottom-width: 0;
         padding-bottom: 11px;
       }
     }
-    .inpage-tab-panel{
+
+    .inpage-tab-panel {
       display: inline !important;
     }
   }
-
 }

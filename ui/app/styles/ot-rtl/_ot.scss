@@ -7,6 +7,7 @@
   background-color: white;
   box-shadow: 0px 0px 0px;
   border-bottom: 1px #cccecf solid;
+
   .ot-surgical-button {
     float: left;
     font-size: 14px;
@@ -22,7 +23,7 @@
   border-left: 1px solid #95989A;
 }
 
-.fa-angle-double-left{
+.fa-angle-double-left {
   color: #00ACC3;
   font-size: 21px;
   padding-right: 263px;
@@ -38,19 +39,23 @@
   margin-block-end: 0;
   margin-inline-start: 10px;
   margin-inline-end: 0;
+
   li {
     overflow: hidden;
     border-radius: 5px;
     margin-left: 10px;
     display: inline-block;
+
     &:last-child {
       margin: 0;
     }
+
     a {
       display: inline-block;
       color: #fff !important;
       padding: 10px;
     }
+
     &.active {
       background: rgba(0, 0, 0, 0.2);
     }
@@ -73,6 +78,7 @@ div[ng-app="ot"] {
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+
   input {
     font-size: 14px;
     border: none;
@@ -80,20 +86,24 @@ div[ng-app="ot"] {
     background: transparent;
     float: left;
     margin-right: 10px;
+
     &:hover {
       background: transparent;
       opacity: 0.8;
     }
+
     &.ot-nav-save {
       background: #99c915;
       border: 1px solid #99c915;
       color: #fff;
     }
+
     &.ot-nav-back {
       border: 1px solid #cccecf;
       color: #000;
     }
   }
+
   span {
     display: inline-block;
     padding-block-start: 10px;
@@ -107,9 +117,11 @@ div[ng-app="ot"] {
 
 .ngdialog.surgical-appointment-dialog {
   padding: 0;
+
   .ngdialog-overlay {
     background: transparent;
   }
+
   .ngdialog-content {
     width: 500px;
     top: 42px;
@@ -120,6 +132,7 @@ div[ng-app="ot"] {
     border-radius: 0;
     background: #eee;
     box-shadow: -4px 5px 21px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
     .appointment-title {
       font-size: 14px;
       font-weight: bold;
@@ -129,27 +142,32 @@ div[ng-app="ot"] {
       margin-inline-start: 0;
       margin-inline-end: 0;
     }
+
     .appointment-block {
       p {
         overflow: hidden;
         margin-bottom: 10px;
+
         label {
           width: 125px;
           float: right;
           text-align: left;
           margin-left: 10px;
         }
+
         .patient_name {
           display: inline-block;
           margin-top: 10px;
           text-decoration: underline;
         }
+
         input.add {
           background: #99c915;
           border: 1px solid #99c915;
           color: #fff;
           font-size: 15px;
         }
+
         input.cancel {
           background: #fff;
           border: 1px solid #cccecf;
@@ -160,18 +178,21 @@ div[ng-app="ot"] {
           margin-inline-start: 10px;
           margin-inline-end: 65px;
         }
+
         input[type=text] {
           width: calc(100% - 200px);
           padding: 10px;
           border-radius: 3px;
           position: relative;
         }
+
         > i {
           left: 85px;
           position: absolute;
           top: 57px;
           color: #cac9c9;
         }
+
         select {
           height: 35px;
           width: 273px;
@@ -185,6 +206,7 @@ div[ng-app="ot"] {
         font-size: 15px;
         margin-right: -20px;
       }
+
       input.cancel {
         background: #fff;
         border: 1px solid #cccecf;
@@ -192,17 +214,18 @@ div[ng-app="ot"] {
         font-size: 15px;
         margin-right: 10px;
       }
+
       textarea {
         width: calc(100% - 200px);
         padding: 10px;
         box-sizing: border-box;
         min-height: 80px;
+
         .text-section {
           overflow: auto !important;
         }
       }
     }
-
   }
 }
 
@@ -214,15 +237,18 @@ div[ng-app="ot"] {
   padding-inline-start: 0;
   padding-inline-end: 0;
   background: #fff;
+
   p {
     display: inline-block;
   }
+
   .calendar-day-navigation {
     float: right;
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
+
     button {
       background: #fff;
       opacity: 1;
@@ -237,6 +263,7 @@ div[ng-app="ot"] {
       margin-left: 2px;
     }
   }
+
   .calendar-current-day {
     margin: auto;
     position: absolute;
@@ -249,6 +276,7 @@ div[ng-app="ot"] {
     height: 20px;
     font-weight: 600;
   }
+
   .calendar-btn-container, .day-btn-container {
     label {
       -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -263,27 +291,33 @@ div[ng-app="ot"] {
       display: inline-block;
       background: #fff;
       border-radius: 3px;
+
       &:hover {
         background: #ececec;
         opacity: 1;
       }
     }
+
     input:checked + label {
       background: #d6d6d6;
     }
-    input[value = "List View"]:checked + label {
+
+    input[value="List View"]:checked + label {
       margin-left: 50px;
     }
+
     input {
       visibility: hidden;
       width: 0;
       height: 0;
     }
   }
+
   .calendar-btn-container {
     float: left;
     padding-left: 10px;
   }
+
   .day-btn-container {
     float: right;
   }
@@ -293,6 +327,7 @@ div[ng-app="ot"] {
   .ngdialog-content {
     width: 415px;
   }
+
   .ot-actual-time-person-display {
     font-size: 14px;
     font-weight: bold;
@@ -303,6 +338,7 @@ div[ng-app="ot"] {
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
+
   .ot-actual-time-label {
     text-align: center;
     padding-block-start: 15px;
@@ -310,10 +346,12 @@ div[ng-app="ot"] {
     padding-inline-start: 0px;
     padding-inline-end: 0px;
   }
+
   .ot-actual-datetime-input {
     text-align: center;
     display: block;
   }
+
   .ot-actual-time-input {
     word-spacing: 1px;
     font-size: 18px;
@@ -328,6 +366,7 @@ div[ng-app="ot"] {
     margin-inline-start: auto !important;
     margin-inline-end: auto !important;
   }
+
   .ot-actual-time-notes {
     min-height: 100px;
     min-width: 350px;
@@ -341,6 +380,7 @@ div[ng-app="ot"] {
 
   .ot-actual-time-buttons {
     text-align: center;
+
     .button {
       margin-block-start: 20px;
       margin-block-end: 5px;
@@ -354,12 +394,14 @@ div[ng-app="ot"] {
   .center, h4 {
     text-align: center;
   }
+
   button {
     margin-block-start: 20px;
     margin-block-end: 5px;
     margin-inline-start: 15px;
     margin-inline-end: 15px;
   }
+
   p {
     padding-right: 10px;
     padding-bottom: 5px;
@@ -370,12 +412,14 @@ div[ng-app="ot"] {
   .center, h4 {
     text-align: center;
   }
+
   button {
     margin-block-start: 20px;
     margin-block-end: 5px;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
   }
+
   p {
     padding-right: 10px;
     padding-bottom: 5px;
@@ -390,6 +434,7 @@ div[ng-app="ot"] {
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
     h4 {
       font-size: 14px;
       font-weight: bold;
@@ -413,9 +458,11 @@ div[ng-app="ot"] {
   .ot-cancel-dialog-label {
     margin-bottom: 15px;
   }
+
   .ot-cancel-dialog-actions {
     text-align: center;
     margin-bottom: 10px;
+
     label {
       display: inline-block;
       position: relative;
@@ -434,9 +481,11 @@ div[ng-app="ot"] {
       font-weight: normal;
       cursor: pointer;
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
       &:hover, &.selected {
         background: #d6d6d6;
       }
+
       input {
         opacity: 0;
         position: absolute;
@@ -448,6 +497,7 @@ div[ng-app="ot"] {
       }
     }
   }
+
   .ot-cancel-dialog-notes {
     min-height: 100px;
     width: 100%;
@@ -455,20 +505,24 @@ div[ng-app="ot"] {
     border-radius: 6px;
     margin-bottom: 10px;
   }
+
   .ot-cancel-dialog-buttons {
     text-align: center;
+
     input {
       border: 0;
       outline: 0;
       background: #f70909;
       color: #fff;
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
       &:hover {
         background: #f70909;
         opacity: 0.8;
       }
     }
   }
+
   .location {
     sup {
       color: #f70909;
@@ -484,24 +538,30 @@ div[ng-app="ot"] {
 .list-view-table-wrapper {
   overflow: auto;
   height: calc(100vh - 200px);
+
   table {
     tr {
       white-space: nowrap;
+
       &:focus {
         outline: none;
-        background: #B3E5FC ;
-        border: 1px solid #0277BD ;
+        background: #B3E5FC;
+        border: 1px solid #0277BD;
       }
     }
+
     .list-view-notes {
       white-space: normal;
     }
+
     .current-date {
-      background: #f0f5f5 ;
+      background: #f0f5f5;
     }
+
     .status-postponed {
       background: #fceab6;
     }
+
     .status-cancelled {
       background: #fcb6b6;
     }
@@ -523,6 +583,7 @@ div[ng-app="ot"] {
   margin-left: 0;
   display: inline-block;
   background: #fff;
+
   &:hover {
     background: #ececec;
     opacity: 1;
@@ -537,6 +598,6 @@ div[ng-app="ot"] {
   max-width: 1300px;
 }
 
-.ot-dialog.ngdialog.ngdialog-theme-default{
-  padding-top :160px;
+.ot-dialog.ngdialog.ngdialog-theme-default {
+  padding-top: 160px;
 }

@@ -36,8 +36,6 @@ Form is following the below structure:
 
 */
 
-
-
 /*doc
 ---
 title: Two column Layout Form
@@ -75,8 +73,6 @@ Form is following the below structure:
 
 
 */
-
-
 
 /*doc
 ---
@@ -131,159 +127,190 @@ category: Layout - Form
 
 /******** form element styling start********/
 
-fieldset { margin: 0; padding: 0; border: 0; }
-
-form, .form {
-    fieldset {
-        display: inline-block;
-        min-width: 60%;
-        border:none;
-        padding:0px;
-        width:100%;
-    }
-    .form-field {
-        @include clearfix();
-        .field-attribute{
-            float:right;
-            label {
-                width:15em;
-                float:right;
-                text-align:left;
-                margin-block-start:0.7em;
-                margin-block-end:0em;
-                margin-inline-start:0em;
-                margin-inline-end:0.8em;
-            }
-        }
-        .field-value {
-            float: right;
-            input[type="text"], input[type="password"],input[type="date"] {
-                float: right;
-                width: 12.5em;
-                @media (max-width : 800px) {
-                  width: 11.5em;
-                }
-                @media (max-width : 768px) {
-                  width: 12.5em;
-                }
-            }
-
-            input[type="number"] { width: 8em; }
-
-            .value-text-only {
-                display: inline-block;
-                margin-block-start: 0.5em;
-                margin-block-end: 0em;
-                margin-inline-start: 0em;
-                margin-inline-end: 0.8em;
-            }
-        }
-        .offset-label {
-            clear: both;
-            width: 100%;
-            box-sizing: border-box;
-            padding-right: 240px;
-        }
-        .add-more {
-            display: inline-block;
-            margin-right: 5px;
-            margin-top:9px;
-            float:right;
-            font-size: 13px;
-            button {
-              padding-block-start: 2px;
-              padding-block-end: 2px;
-              padding-inline-start: 0px;
-              padding-inline-end: 0px;
-              color: $black;
-              i {
-                color: green;
-                padding: 0;
-              }
-            }
-            @media screen and (max-width: 850px) and (min-width: 596px) {
-              margin-top:13px;
-            }
-          @media screen and (max-width: 1024px) {
-            margin-top: 0 ;
-          }
-        }
-        textarea {
-            height: 35px;
-            width: 807px;;
-            transition: height 0.1s ease;
-            box-sizing: border-box;
-            margin-top: 5px;
-            &:focus {
-                height: 75px;
-            }
-            &.consultation-img-comments {
-                width: 100%;
-            }
-            @media screen and (max-width: 1130px) {
-              width:600px;
-            }
-            @media screen and (max-width: 768px){
-              width:275px;
-
-            }
-        }
-    }
-    .input-prepend {
-        float:right;
-
-        input{
-            display: inline-block;
-            margin-bottom: 0;
-            vertical-align: middle;
-            float:right;
-            margin:0px !important;
-        }
-
-        .add-on{
-            @extend input;
-            border-radius: 3px;
-            height: 21px;
-            min-width: 17px;
-            padding-block-start: 4px;
-            padding-block-end: 4px;
-            padding-inline-start: 5px;
-            padding-inline-end: 5px;
-            background-color: $lightestGray;
-            border: 1px solid $lightGray;
-        }
-    }
-    .input-prepend .add-on:first-child, .input-prepend .btn:first-child {
-        border-radius: 4px 0 0 4px;
-    }
-    .input-prepend .add-on, .input-prepend .btn {
-      margin-left:-1px;
-    }
-    input[disabled], select[disabled], textarea[disabled], input[readonly],
-    select[readonly], textarea[readonly], .select-arrow select[disabled] {
-        cursor: not-allowed;
-        background-color: $lightestGray;
-        color: $mediumGray;
-        &:focus {
-            cursor: not-allowed;
-            background-color: $lightestGray;
-            outline: none;
-        }
-    }
-    .form-button-wrapper {
-        margin-top:10px;
-        padding-right:14em;
-    }
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
+form, .form {
+  fieldset {
+    display: inline-block;
+    min-width: 60%;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
 
-.transparent { opacity: 0.2; }
-.opaque { opacity: 1; }
+  .form-field {
+    @include clearfix;
 
+    .field-attribute {
+      float: right;
+
+      label {
+        width: 15em;
+        float: right;
+        text-align: left;
+        margin-block-start: 0.7em;
+        margin-block-end: 0em;
+        margin-inline-start: 0em;
+        margin-inline-end: 0.8em;
+      }
+    }
+
+    .field-value {
+      float: right;
+
+      input[type="text"], input[type="password"], input[type="date"] {
+        float: right;
+        width: 12.5em;
+
+        @media (max-width: 800px) {
+          width: 11.5em;
+        }
+
+        @media (max-width: 768px) {
+          width: 12.5em;
+        }
+      }
+
+      input[type="number"] {
+        width: 8em;
+      }
+
+      .value-text-only {
+        display: inline-block;
+        margin-block-start: 0.5em;
+        margin-block-end: 0em;
+        margin-inline-start: 0em;
+        margin-inline-end: 0.8em;
+      }
+    }
+
+    .offset-label {
+      clear: both;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 240px;
+    }
+
+    .add-more {
+      display: inline-block;
+      margin-right: 5px;
+      margin-top: 9px;
+      float: right;
+      font-size: 13px;
+
+      button {
+        padding-block-start: 2px;
+        padding-block-end: 2px;
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+        color: $black;
+
+        i {
+          color: green;
+          padding: 0;
+        }
+      }
+
+      @media screen and (max-width: 850px) and (min-width: 596px) {
+        margin-top: 13px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: 0;
+      }
+    }
+
+    textarea {
+      height: 35px;
+      width: 807px;
+      transition: height 0.1s ease;
+      box-sizing: border-box;
+      margin-top: 5px;
+
+      &:focus {
+        height: 75px;
+      }
+
+      &.consultation-img-comments {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1130px) {
+        width: 600px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 275px;
+      }
+    }
+  }
+
+  .input-prepend {
+    float: right;
+
+    input {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      float: right;
+      margin: 0px !important;
+    }
+
+    .add-on {
+      @extend input;
+
+      border-radius: 3px;
+      height: 21px;
+      min-width: 17px;
+      padding-block-start: 4px;
+      padding-block-end: 4px;
+      padding-inline-start: 5px;
+      padding-inline-end: 5px;
+      background-color: $lightestGray;
+      border: 1px solid $lightGray;
+    }
+  }
+
+  .input-prepend .add-on:first-child, .input-prepend .btn:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .input-prepend .add-on, .input-prepend .btn {
+    margin-left: -1px;
+  }
+
+  input[disabled], select[disabled], textarea[disabled], input[readonly],
+  select[readonly], textarea[readonly], .select-arrow select[disabled] {
+    cursor: not-allowed;
+    background-color: $lightestGray;
+    color: $mediumGray;
+
+    &:focus {
+      cursor: not-allowed;
+      background-color: $lightestGray;
+      outline: none;
+    }
+  }
+
+  .form-button-wrapper {
+    margin-top: 10px;
+    padding-right: 14em;
+  }
+}
+
+.transparent {
+  opacity: 0.2;
+}
+
+.opaque {
+  opacity: 1;
+}
 
 /********* form element styling end***********/
-
-
 
 form, .form {
   input, select, textarea, ul.select {
@@ -292,38 +319,45 @@ form, .form {
     padding-block-end: 2px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+
     @media (max-width: 1024px) {
       padding-block-start: 5px;
       padding-block-end: 5px;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
+
     @media (max-width: 768px) {
       padding-block-start: 7px;
       padding-block-end: 7px;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
+
     margin: 0;
     margin-top: 5px;
     background-color: #FFF;
     border: 1px solid #DDD;
+
     &:focus {
       outline: 2px solid $link;
       background: $focus;
     }
   }
-  input[type="date"]{
+
+  input[type="date"] {
     padding-block-start: 1px;
     padding-block-end: 1px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+
     @media (max-width: 1024px) {
       padding-block-start: 5px;
       padding-block-end: 5px;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
+
     @media (max-width: 768px) {
       padding-block-start: 7px;
       padding-block-end: 7px;
@@ -331,25 +365,28 @@ form, .form {
       padding-inline-end: 10px;
     }
   }
-
 
   select {
     min-width: 197px;
     width: 197px;
     height: 25px;
     font-family: $primaryFont;
-    @media (max-width : 1024px){
+
+    @media (max-width: 1024px) {
       height: 31px;
     }
-    @media (max-width : 800px){
+
+    @media (max-width: 800px) {
       min-width: 183px;
-      width:183px;
+      width: 183px;
     }
-    @media (max-width : 768px){
+
+    @media (max-width: 768px) {
       width: 210px;
       height: 36px;
       min-width: 210px;
     }
+
     float: right;
   }
 
@@ -404,8 +441,6 @@ form, .form {
   }
 
   fieldset {
-
-
     legend {
       text-align: right;
       padding-block-start: 0;
@@ -413,7 +448,9 @@ form, .form {
       padding-inline-start: 10px;
       padding-inline-end: 10px;
       font-weight: 300;
+
       //text-transform: uppercase;
+   
     }
   }
 
@@ -426,6 +463,7 @@ form, .form {
 
   p {
     text-align: right;
+
     strong {
       display: block;
       text-align: right;
@@ -445,9 +483,11 @@ form, .form {
       margin-block-end: 20px;
       margin-inline-start: 0;
       margin-inline-end: 10px;
+
       input {
         display: inline-block;
       }
+
       label {
         display: inline-block;
         margin: 0;
@@ -467,17 +507,20 @@ form, .form {
   input[type="checkbox"] {
     @include check-box;
   }
-  input[type="date"]{
+
+  input[type="date"] {
     padding-block-start: 1px !important;
     padding-block-end: 1px !important;
     padding-inline-start: 10px !important;
     padding-inline-end: 10px !important;
+
     @media (max-width: 1024px) {
       padding-block-start: 4px !important;
       padding-block-end: 4px !important;
       padding-inline-start: 10px !important;
       padding-inline-end: 10px !important;
     }
+
     @media (max-width: 768px) {
       padding-block-start: 6px !important;
       padding-block-end: 6px !important;
@@ -523,26 +566,32 @@ ul.select {
   }
 }
 
-form p strong, .form p strong { display: inline; }
-
-.computed-field {
-    background: $lightestGray;
-    border: 2px solid darken($bahmniPrimaryBtnColor, 5%);
-    box-sizing: border-box;
-    outline: 0;
-    &:focus {
-        background: $white;
-    }
+form p strong, .form p strong {
+  display: inline;
 }
 
-.compute-btn, .btn-small {color: darken($bahmniPrimaryBtnColor, 15%);}
-.btn-small{
-  color: $black;
-  i{
-    color: green;
+.computed-field {
+  background: $lightestGray;
+  border: 2px solid darken($bahmniPrimaryBtnColor, 5%);
+  box-sizing: border-box;
+  outline: 0;
+
+  &:focus {
+    background: $white;
   }
 }
 
+.compute-btn, .btn-small {
+  color: darken($bahmniPrimaryBtnColor, 15%);
+}
+
+.btn-small {
+  color: $black;
+
+  i {
+    color: green;
+  }
+}
 
 /* form invalid error */
 form.submitted-with-error {
@@ -560,9 +609,13 @@ form.submitted-with-error {
     outline: 0;
   }
 }
-buttons-radio.illegalValue { border: 0 !important; background: none !important;}
 
-.illegalValue{
+buttons-radio.illegalValue {
+  border: 0 !important;
+  background: none !important;
+}
+
+.illegalValue {
   &:focus {
     border: 2px solid darken($clinicalFormInvalid, 30%) !important;
     background: $clinicalFormInvalid !important;
@@ -570,12 +623,13 @@ buttons-radio.illegalValue { border: 0 !important; background: none !important;}
   }
 }
 
-input[type="time"]{
+input[type="time"] {
   padding-block-start: 1px;
   padding-block-end: 1px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   margin-right: 2px;
+
   @media (max-width: 768px) {
     padding-block-start: 7px;
     padding-block-end: 7px;
@@ -584,25 +638,28 @@ input[type="time"]{
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  form .form-field .add-more, .form .form-field .add-more{
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  form .form-field .add-more, .form .form-field .add-more {
     @media screen and (max-width: 850px) and (min-width: 596px) {
-      margin-top:24px;
+      margin-top: 24px;
     }
   }
 }
 
 div.duration.checkbox-inline {
   margin-top: -10px;
+
   @media screen and (max-width: 850px) and (min-width: 596px) {
     margin-top: 0;
     margin-right: 150px;
   }
+
   @media screen and (max-width: 595px) {
     margin-right: 10px;
     margin-top: 0;
     float: right;
   }
+
   input.duration-value {
     width: 52px;
     margin-block-start: 0;
@@ -612,6 +669,7 @@ div.duration.checkbox-inline {
     padding: 5px;
     box-sizing: border-box;
   }
+
   select.duration-unit {
     margin-right: 10px;
     min-width: 180px;
@@ -624,37 +682,46 @@ div.duration.checkbox-inline {
   padding-inline-start: 0;
   padding-inline-end: 0;
   float: right;
+
   @media screen and (max-width: 685px) and (min-width: 600px) {
     padding: 0;
     margin-right: 221px;
   }
+
   @media screen and (max-width: 595px) {
     float: left;
     margin-left: 16%;
     padding: 0;
   }
+
   input[type="checkbox"] {
-    margin-right: 10px!important;
+    margin-right: 10px !important;
   }
+
   span {
     display: inline-block;
     margin-top: 2px;
+
     &.for-separator {
       font-size: 12px;
       padding-top: 10px;
+
       @media screen and (max-width: 1024px) {
         padding-top: 16px;
       }
     }
   }
 }
+
 .grid-row {
   padding: 2px;
 }
+
 .grid-row-element {
   font-size: 12px;
   padding-right: 15px;
   padding-left: 15px;
+
   .fa-ok {
     display: none;
     padding-top: 0;
@@ -663,14 +730,15 @@ div.duration.checkbox-inline {
     line-height: inherit;
   }
 }
+
 .grid-row-element.active {
   color: $bahmniTertiaryColor;
   padding-right: 3px;
+
   .fa-ok {
     display: inline-block;
   }
 }
-
 
 #removeClonedObs.fa-remove {
   margin-top: 9px;
@@ -686,8 +754,9 @@ div.duration.checkbox-inline {
   box-sizing: border-box;
   font-size: 14px;
   text-align: center;
+
   @media screen and (max-width: 850px) and (min-width: 596px) {
-    margin-top:13px;
+    margin-top: 13px;
   }
 }
 
@@ -696,24 +765,25 @@ div.duration.checkbox-inline {
   margin-block-end: 0;
   margin-inline-start: 20px;
   margin-inline-end: 5px;
-  @media screen and (max-width: 1024px){
+
+  @media screen and (max-width: 1024px) {
     margin-block-start: 7px;
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 5px;
   }
-  button{
-    @media screen and (max-width: 768px){
+
+  button {
+    @media screen and (max-width: 768px) {
       padding-right: 6px;
       padding-left: 6px;
     }
   }
 }
 
-.accept-btn-wrap-smallScreen{
-   @media screen  and (max-width: 800px) and (min-width: 596px){
-      margin-right:176px;
-      clear:both;
-   }
+.accept-btn-wrap-smallScreen {
+  @media screen and (max-width: 800px) and (min-width: 596px) {
+    margin-right: 176px;
+    clear: both;
+  }
 }
-

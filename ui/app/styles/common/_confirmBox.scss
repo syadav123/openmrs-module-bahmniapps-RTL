@@ -1,12 +1,13 @@
-.confirm-box{
-  .message{
+.confirm-box {
+  .message {
     padding-bottom: 15px;
   }
-  .actions{
-    button{
+
+  .actions {
+    button {
       background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
       color: $white;
-      border:1px solid darken($bahmniSecondaryColor, 15%);
+      border: 1px solid darken($bahmniSecondaryColor, 15%);
       margin-right: 10px;
       text-transform: capitalize;
     }

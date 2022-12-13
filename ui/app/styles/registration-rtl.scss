@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 html {
- direction: rtl;
+  direction: rtl;
 }
-
 
 @import "vendor-rtl/normalize";
 
@@ -27,23 +26,14 @@ html {
 
 @import "bahmni-layout-rtl/layout";
 
-
 @import "common-rtl/bahmniGlobal";
 @import "common-rtl/notifications";
 @import "common-rtl/directives";
 @import "common-rtl/angularFix";
 @import "common-rtl/noTouch";
 
-
-
-
 //@import "clinical-rtl/observations";
 
 @import "registration-rtl/registration";
 
-
 //@import "common-rtl/noTouch";
-
-
-
-

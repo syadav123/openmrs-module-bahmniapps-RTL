@@ -19,8 +19,6 @@ use either a `<button>` or an `<a>` element:
 
 */
 
-
-
 /*doc
 ---
 title: Buttons With Icon
@@ -63,8 +61,6 @@ category: Layout - Button
 
 */
 
-
-
 /*doc
 ---
 title: Button Groups
@@ -95,8 +91,6 @@ category: Layout - Button
 ```
 
 */
-
-
 
 /*doc
 ---
@@ -132,14 +126,12 @@ category: Layout - Button
 
 */
 
-
-
-
 @mixin button($tcolor: #FFF, $bcolor: #DDD, $font: $text) {
   border-radius: 3px;
   background: linear-gradient(to bottom, $tcolor, $bcolor);
   background-color: $bcolor;
   border: $bcolor 1px solid;
+
   //padding: 8px 20px;
   padding-block-start: 6px;
   padding-block-end: 7px;
@@ -156,10 +148,11 @@ category: Layout - Button
   &:hover {
     background: lighten($bcolor, 2%);
     border-color: darken($bcolor, 5%);
-      @media screen and (max-width: 1024px) {
-        background: linear-gradient(to bottom, $tcolor, $bcolor);
-        border: $bcolor 1px solid;
-      }
+
+    @media screen and (max-width: 1024px) {
+      background: linear-gradient(to bottom, $tcolor, $bcolor);
+      border: $bcolor 1px solid;
+    }
   }
 
   &.active {
@@ -282,11 +275,11 @@ category: Layout - Button
   }
 }
 
-.button, button, input[type="submit"], input[type="button"],input[type="reset"], input[type="submit"], a.button {
+.button, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="submit"], a.button {
   @include button;
 
   &.task {
-    @include button(lighten($text,20%), lighten($text, 20%), white);
+    @include button(lighten($text, 20%), lighten($text, 20%), white);
 
     padding-block-start: 5px;
     padding-block-end: 5px;
@@ -310,6 +303,7 @@ category: Layout - Button
 
   &.confirm {
     @include button($success, darken($success, 8%), white);
+
     max-width: 250px;
     min-width: 0;
     margin-left: 10px;
@@ -317,180 +311,207 @@ category: Layout - Button
 
   &.cancel {
     @include button($error, darken($error, 8%), white);
+
     max-width: 250px;
     min-width: 0;
     margin-left: 10px;
   }
 
   &.no-color {
-    @include button();
+    @include button;
   }
 }
 
-
 /* button states - lvha */
-button:hover { opacity: 0.8; }
+button:hover {
+  opacity: 0.8;
+}
+
 button:focus, a:focus, .btn:focus {
   outline: 2px solid $clinicalFormFocus;
 }
-button[disabled] { opacity: 0.4; cursor: not-allowed; }
 
+button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 /*backButton:*/
 a.back-btn, button.back-btn {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  z-index: 1;
+  margin-block-start: 6px;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 6px;
+  color: $white;
+  border-right: 0;
+  float: right;
+  font-size: 16px;
+  border-radius: 3px;
+
+  &:hover {
     text-decoration: none;
-    z-index: 1;
-    margin-block-start: 6px;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 6px;
     color: $white;
-    border-right: 0;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &.dashboard-link img {
+    height: 26px;
+    width: 26px;
+    border-radius: 100%;
     float: right;
-    font-size: 16px;
-    border-radius: 3px;
-    &:hover {
-        text-decoration: none;
-        color: $white;
-        cursor: pointer;
-        opacity: 0.8;
+    margin-left: 5px;
+  }
+
+  .patient-info {
+    float: right;
+    font-size: 12px;
+    color: $white;
+    line-height: 1.1;
+
+    .patient-id {
+      display: block;
+      color: $lightGray;
+      font-size: 11px;
     }
 
-    &.dashboard-link img {
-        height: 26px;
-        width: 26px;
-        border-radius: 100%;
-        float: right;
-        margin-left: 5px;
-    }
-    .patient-info {
-          float: right;
-          font-size: 12px;
-          color: $white;
-            line-height: 1.1;
-          .patient-id {
-            display: block;
-            color: $lightGray;
-            font-size: 11px;
-          }
-          .patient-name {
-            width: 100px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: block;
-            @media screen and (max-width: 1024px) {
-              width: 75px;
-            }
-          }
+    .patient-name {
+      width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+
+      @media screen and (max-width: 1024px) {
+        width: 75px;
       }
+    }
+  }
 }
 
 ul li a.back-btn, ul li a.back-btn:hover, button.back-btn, a.back-btn {
-    padding-block-start: 4px;
-    padding-block-end: 5px;
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
-    border: 1px solid darken($bahmniSecondaryColor, 15%);
-    background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
+  padding-block-start: 4px;
+  padding-block-end: 5px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  border: 1px solid darken($bahmniSecondaryColor, 15%);
+  background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
 
-    i {
-      font-size: 30px;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-      @media screen and(max-width:470px){
-        font-size: 22px;
+  i {
+    font-size: 30px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 470px) {
+      font-size: 22px;
+    }
+  }
+
+  &.dashboard-link {
+    padding-block-start: 6px;
+    padding-block-end: 5px;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+  }
+
+  &.back-icon {
+    padding-right: 30px;
+
+    &:before {
+      font-family: FontAwesome;
+      content: "\F0A8";
+      position: absolute;
+      right: 5px;
+      top: 11px;
+      font-size: 20px;
+      font-weight: normal;
+
+      &:hover {
+        cursor: pointer;
       }
     }
-    &.dashboard-link {
-      padding-block-start:6px;
-      padding-block-end:5px;
-      padding-inline-start:8px;
-      padding-inline-end:8px;
-    }
-    &.back-icon {
-      padding-right: 30px;
-        &:before {
-          font-family: FontAwesome;
-          content: "\F0A8";
-          position: absolute;
-          right: 5px;
-          top: 11px;
-          font-size: 20px;
-          font-weight: normal;
-          &:hover {
-              cursor: pointer;
-          }
-      }
-    }
-  @media screen and(max-width:470px){
+  }
+
+  @media screen and (max-width: 470px) {
     padding-block-start: 4px;
     padding-block-end: 5px;
     padding-inline-start: 5px;
     padding-inline-end: 5px;
   }
 }
-button.back-btn {
-    box-shadow: none;
-    line-height: 1.1em;
-}
-.back-btn-link {
-    @include clearfix();
-    padding-block-start: 5px;
-    padding-block-end: 5px;
-    padding-inline-start: 8px;
-    padding-inline-end: 8px;
-    border: 1px solid darken($bahmniSecondaryColor, 15%);
-    background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
-    margin-top: 6px;
-    float: right;
-    display: inline-block;
-    border-radius: 2px;
-    &:hover {
-        text-decoration: none;
-        color: $white;
-        cursor: pointer;
-        opacity: 0.8;
-    }
-    img {
-        height: 26px;
-        width: 26px;
-        border-radius: 100%;
-        float: right;
-        margin-left: 5px;
 
-    }
-     .patient-info {
-          float: right;
-          font-size: 12px;
-          color: $white;
-            line-height: 1.1;
-          .patient-id {
-            display: block;
-            color: $lightGray;
-            font-size: 11px;
-          }
-          .patient-name {
-            width: 100px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: inline-block;
-            height:15px;
-            @media screen and (max-width: 1024px) {
-              width: 75px;
-            }
-          }
-      }
+button.back-btn {
+  box-shadow: none;
+  line-height: 1.1em;
 }
+
+.back-btn-link {
+  @include clearfix;
+
+  padding-block-start: 5px;
+  padding-block-end: 5px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  border: 1px solid darken($bahmniSecondaryColor, 15%);
+  background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
+  margin-top: 6px;
+  float: right;
+  display: inline-block;
+  border-radius: 2px;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  img {
+    height: 26px;
+    width: 26px;
+    border-radius: 100%;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .patient-info {
+    float: right;
+    font-size: 12px;
+    color: $white;
+    line-height: 1.1;
+
+    .patient-id {
+      display: block;
+      color: $lightGray;
+      font-size: 11px;
+    }
+
+    .patient-name {
+      width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      height: 15px;
+
+      @media screen and (max-width: 1024px) {
+        width: 75px;
+      }
+    }
+  }
+}
+
 /* multi select */
 .multi-select-button-group {
-  div.btn-tooltip-wrapper{
+  div.btn-tooltip-wrapper {
     position: relative;
   }
+
   button {
     float: right;
     margin-block-start: 0;
@@ -502,43 +523,51 @@ button.back-btn {
     text-overflow: ellipsis;
     text-align: right;
     height: 32px !important;
-    &.grid-row-element{
+
+    &.grid-row-element {
       font-size: 12px;
       padding-right: 15px;
       padding-left: 15px;
-      .fa-ok{
+
+      .fa-ok {
         display: none;
         padding-top: 0;
         padding-bottom: 0;
         font-size: 14px;
         line-height: inherit;
       }
-      &.active{
+
+      &.active {
         color: $bahmniTertiaryColor;
         padding-right: 3px;
+
         .fa-ok {
           display: inline-block;
         }
       }
     }
   }
+
   button:focus, a:focus, .btn:focus {
     border: 2px solid $clinicalFormFocus;
-    outline:0;
+    outline: 0;
   }
 }
-.illegalValue .multi-select-button-group { width: auto; }
+
+.illegalValue .multi-select-button-group {
+  width: auto;
+}
 
 .secondary-button,
 .secondary-button:hover,
 input[type="submit"].secondary-button,
-input[type="submit"].secondary-button:hover  {
-    background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
-    color: $white;
-    border:1px solid darken($bahmniSecondaryColor, 15%);
+input[type="submit"].secondary-button:hover {
+  background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
+  color: $white;
+  border: 1px solid darken($bahmniSecondaryColor, 15%);
 }
 
-.icon-button{
+.icon-button {
   padding-block-start: 6px;
   padding-block-end: 7px;
   padding-inline-start: 8px;
@@ -548,53 +577,61 @@ input[type="submit"].secondary-button:hover  {
 /* icon button */
 .comment-toggle {
   padding: 5px;
+
   @media (max-width: 1024px) {
     margin-block-start: 5px;
     margin-block-end: 0;
     margin-inline-start: 10px;
     margin-inline-end: 0;
   }
+
   .fa-file-text-o {
     display: none;
   }
+
   &.has-notes {
     .fa-file-text-o {
       display: block;
     }
+
     .fa-file-o {
       display: none;
     }
   }
+
   &.active {
     .fa-file-o {
       .fa-plus-circle {
         display: none;
       }
+
       .fa-minus-circle {
         display: block;
       }
     }
   }
+
   .fa-file-o {
     position: relative;
     font-size: 16px;
     color: $mediumGray;
+
     .fa-minus-circle {
       display: none;
     }
+
     .fa-plus-circle, .fa-ok-sign, .fa-plus, .fa-minus-circle {
       position: absolute;
       left: 2px;
       bottom: 2px;
       font-size: 10px;
-
       color: green;
       background: $white;
       border-radius: 8px;
       padding: 0;
     }
-
   }
+
   .fa-file-alt {
     font-size: 21px;
     color: orange;
@@ -605,16 +642,18 @@ input[type="submit"].secondary-button:hover  {
 
 .add-fav {
   cursor: pointer;
-  color:#fff;
+  color: #fff;
   margin-right: 12px;
   float: right;
-  @media screen and (max-width: 1024px){
+
+  @media screen and (max-width: 1024px) {
     margin-right: 21px;
   }
-  .fa-thumb-tack{
+
+  .fa-thumb-tack {
     font-size: 18px;
     padding: 0;
-    width:auto;
+    width: auto;
   }
 
   .fa-star-empty {
@@ -628,13 +667,16 @@ input[type="submit"].secondary-button:hover  {
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+
     & + .fa-thumb-tack {
       //color: $mediumGray;
       cursor: pointer;
-      &:hover{
-        opacity:0.5;
+
+      &:hover {
+        opacity: 0.5;
       }
     }
+
     &:checked + .fa-thumb-tack {
       color: orange;
       display: block;
@@ -649,79 +691,96 @@ input[type="submit"].secondary-button:hover  {
 
 /* split button - seperate scss file */
 
+.refill-btn, .stop-drug-btn {
+  padding: 10px !important;
+  font-family: $primaryBoldFont;
+  color: $mediumGray;
+}
 
-.refill-btn, .stop-drug-btn { padding: 10px!important; font-family: $primaryBoldFont; color: $mediumGray; }
-.refill-btn .fa-play { font-size: 1em!important; }
+.refill-btn .fa-play {
+  font-size: 1em !important;
+}
 
 .btn-small {
-    font-size: 14px; padding: 5px;
+  font-size: 14px;
+  padding: 5px;
 }
 
 .grouped-buttons {
-   overflow: hidden;
-   display: inline-block;
+  overflow: hidden;
+  display: inline-block;
+
   .btn--left, .btn--right {
     float: right;
   }
 }
 
-button.toggle{
-  .fa-angle-up{
+button.toggle {
+  .fa-angle-up {
     display: none;
   }
-  &.active{
+
+  &.active {
     background: none !important;
-    .fa-angle-up{
+
+    .fa-angle-up {
       display: block;
     }
-    .fa-angle-down{
+
+    .fa-angle-down {
       display: none;
     }
   }
 }
 
-.toggle-btn{
-  button.toggle{
-    .fa-angle-up{
+.toggle-btn {
+  button.toggle {
+    .fa-angle-up {
       display: none;
     }
   }
-  &.active{
-    button.toggle{
+
+  &.active {
+    button.toggle {
       background: none !important;
-      .fa-angle-up{
+
+      .fa-angle-up {
         display: block;
       }
-      .fa-angle-down{
+
+      .fa-angle-down {
         display: none;
       }
     }
   }
 }
 
-
-.toggle-buttons{
-  .show-after-active{
+.toggle-buttons {
+  .show-after-active {
     display: none;
   }
+
   &.active {
     .show-before-active {
       display: none;
     }
+
     .show-after-active {
       display: inline-block;
     }
   }
 }
-button.btn--add{
+
+button.btn--add {
   background: linear-gradient(to bottom, $bahmniSecondaryColor, darken($bahmniSecondaryColor, 10%));
   background-color: $bahmniSecondaryColor;
   border: darken($bahmniSecondaryColor, 15%) 1px solid;
   color: $white;
   font-size: 13px !important;
   padding: 7px !important;
-  margin-right:20px;
-  .fa-plus{
+  margin-right: 20px;
+
+  .fa-plus {
     color: $white;
     padding: 0;
     font-size: 16px;

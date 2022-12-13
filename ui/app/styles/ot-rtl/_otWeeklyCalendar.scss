@@ -13,6 +13,7 @@
       font-family: OpenSansSemiBold;
     }
   }
+
   .table-block {
     .ot-block-container {
       .weekly-calendar-cell {
@@ -23,15 +24,18 @@
         height: 120px;
         box-sizing: border-box;
       }
+
       .ot-weekly-block {
         float: right;
         position: relative;
         padding-bottom: 20px;
         overflow: hidden;
         width: calc(100% / 7);
+
         .surgical-block {
           width: calc(100% - 10px);
           border: 0.5px solid #1976D2;
+
           &:focus {
             border-color: #1976D2 !important;
           }
@@ -40,15 +44,18 @@
     }
   }
 }
+
 .surgical-block {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 1px;
   margin-inline-end: 1px;
+
   .surgical-block-appointment {
     .surgicalblock-patientname {
       word-break: break-word;
     }
+
     .surgicalblock-ot {
       color: #000;
       padding-left: 20px;
@@ -58,6 +65,7 @@
       margin-inline-end: 0;
     }
   }
+
   .surgicalblock-surgeon-name {
     word-break: break-word;
   }

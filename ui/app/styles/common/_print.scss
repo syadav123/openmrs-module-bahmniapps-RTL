@@ -1,25 +1,32 @@
 body, body pre {
-  font-family: arial, sans-serif!important;
+  font-family: arial, sans-serif !important;
   font-size: 10pt;
 }
+
 body pre {
   white-space: pre-wrap;
 }
 
 /** Start: Doesn't work on Chrome **/
 
-thead{
-  display:table-header-group;/*repeat table headers on each page*/
+thead {
+  display: table-header-group;
+
+  /*repeat table headers on each page*/
 }
-tbody{
-  display:table-row-group;
+
+tbody {
+  display: table-row-group;
 }
-tfoot{
-  display:table-footer-group;/*repeat table footers on each page*/
+
+tfoot {
+  display: table-footer-group;
+
+  /*repeat table footers on each page*/
 }
 
 tr {
-  page-break-inside:avoid;
+  page-break-inside: avoid;
 }
 
 /** End: Doesn't work on Chrome **/

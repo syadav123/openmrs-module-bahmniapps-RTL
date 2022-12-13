@@ -1,10 +1,12 @@
-.reg-header-wrapper{
-  .reg-header{
-    ul.top-nav{
+.reg-header-wrapper {
+  .reg-header {
+    ul.top-nav {
       float: left;
-      li{
+
+      li {
         display: inline-block;
-        a{
+
+        a {
           color: #fff;
           font-weight: 700;
           cursor: pointer;
@@ -14,6 +16,7 @@
         }
       }
     }
+
     .btn-user-info {
       background: lighten($bahmniPrimaryColor, 10%);
       padding: 17px 16px;
@@ -21,12 +24,18 @@
       border-radius: 0;
       margin: 0;
       color: $white;
-      &:focus {outline:0;}
+
+      &:focus {
+        outline: 0;
+      }
+
       i.mini {
         font-size: .9em;
       }
+
       & + ul {
         display: none;
+
         &.active {
           background: lighten($bahmniPrimaryColor, 10%);
           display: block;
@@ -34,10 +43,12 @@
           right: 0;
           top: 50px;
           z-index: 1000;
+
           @media screen and (max-width: $max-page-width) {
-            right:10px;
+            right: 10px;
           }
         }
+
         li {
           float: left;
           clear: both;
@@ -47,10 +58,13 @@
           margin: 0;
           padding: 10px 10px 10px 5px;
           color: $lightGray;
-          a{
+
+          a {
             color: $white;
+
             &.disabled {
               color: $lightGray;
+
               .fa-user {
                 color: $lightGray;
               }
@@ -60,36 +74,43 @@
       }
     }
   }
-  .split-button ul{
-    &.hidden-options{
+
+  .split-button ul {
+    &.hidden-options {
       @media (max-width: 768px) {
         width: 300px;
+
         li {
           margin-left: 50px;
         }
       }
     }
-    li{
-      &.primaryOption{
-        i{
+
+    li {
+      &.primaryOption {
+        i {
           display: none;
+
           @media (max-width: 768px) {
             display: inline-block;
           }
         }
-        span{
+
+        span {
           @media (max-width: 768px) {
             display: none;
           }
         }
-        .buttonClass{
+
+        .buttonClass {
           @media (max-width: 768px) {
             max-width: 60px;
             float: right;
             margin-right: 100px;
             height: 36px;
             padding: 0;
-            i.fa-print{
+
+            i.fa-print {
               font-size: 23px;
               padding-top: 5px;
             }

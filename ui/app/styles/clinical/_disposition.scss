@@ -1,27 +1,31 @@
-.disposition-wrapper{
+.disposition-wrapper {
   .disposition-tab {
     label {
       float: left;
       margin-right: 10px;
     }
-    .dispositionNotesWrap{
-      @include clearfix();
+
+    .dispositionNotesWrap {
+      @include clearfix;
+
       clear: both;
-      label{
+
+      label {
         float: none;
       }
+
       textarea {
         margin: 10px 0;
         width: 98.1%;
-        @media (max-width : 1024px) {
-          width:97.7%;
+
+        @media (max-width: 1024px) {
+          width: 97.7%;
         }
-        @media (max-width : 768px) {
+
+        @media (max-width: 768px) {
           width: 94.9%;
         }
       }
     }
   }
 }
-
-

@@ -6,13 +6,15 @@
 @import "bahmni-components/typography";
 @import "common/angularFix";
 
-body{
-  pre{
+body {
+  pre {
     margin: 0;
   }
 }
+
 .print-wrapper {
   clear: both;
+
   ul, ol, li {
     margin: 0;
     padding: 0;
@@ -25,10 +27,18 @@ body{
   ul {
     list-style: none;
   }
-  .fl, .left {float: left;}
-  .fr, .right {float: right;}
-  section.block, .dashboard-section{
+
+  .fl, .left {
+    float: left;
+  }
+
+  .fr, .right {
+    float: right;
+  }
+
+  section.block, .dashboard-section {
     margin: 10px 0;
   }
 }
+
 @import "print";

@@ -4,6 +4,7 @@
   color: #666;
   margin-bottom: 10px;
   position: relative;
+
   button {
     position: absolute;
     top: 0;
@@ -17,15 +18,18 @@
     border: 1px solid #cccecf;
     color: #000;
     height: 40px;
+
     &:hover {
       background: transparent;
       opacity: 0.8;
     }
   }
 }
+
 .new-surgical-appointment {
   display: block;
   overflow: hidden;
+
   p.new-surgical-appointment-note {
     font-size: 13px;
     color: #00529B;
@@ -38,19 +42,24 @@
     padding: 12px;
     width: 676px;
   }
+
   > section {
     padding: 10px;
     box-sizing: border-box;
+
     &.new-surgical-appointment-step1 {
       float: right;
       width: 500px;
+
       .create-surgical-title {
         margin-bottom: 30px;
       }
+
       .create-surgical-form {
         P {
           overflow: hidden;
           margin-bottom: 15px;
+
           label {
             display: inline-block;
             width: 110px;
@@ -58,20 +67,23 @@
             text-align: left;
             margin-left: 10px;
             line-height: 2;
+
             sup {
               color: #ff3030;
             }
           }
+
           select {
             width: calc(100% - 232px);
             height: 35px;
             display: inline-block;
             border-color: #929699;
-
           }
+
           .start-time {
             display: block;
             margin-bottom: 10px;
+
             input {
               width: calc(100% - 236px);
               height: 35px;
@@ -82,6 +94,7 @@
             }
           }
         }
+
         .location-block span label {
           border-radius: 11px;
           background: #e6e6e6;
@@ -101,15 +114,18 @@
           margin-inline-start: 0;
           margin-inline-end: 10px;
           position: relative;
+
           i {
             position: absolute;
             right: 5px;
             top: 2px;
           }
+
           &:hover, &.active {
             box-shadow: none;
             opacity: 1;
           }
+
           input {
             visibility: hidden;
             position: absolute;
@@ -117,6 +133,7 @@
           }
         }
       }
+
       .ot-cancel-appoinment {
         border: 0;
         outline: 0;
@@ -124,20 +141,24 @@
         color: #fff;
         margin-right: 120px;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
         &:hover {
           background: #f70909;
           opacity: 0.8;
         }
       }
     }
+
     &.new-surgical-appointment-step2 {
       float: right;
       width: calc(100% - 501px);
       min-height: 336px;
       border-right: 1px solid #cccecf;
+
       .create-surgical-title {
         margin-bottom: 35px;
       }
+
       .table {
         th {
           padding: 10px;
@@ -146,34 +167,42 @@
           text-align: center;
           border: 0;
         }
+
         td {
           border: 0;
           position: relative;
+
           > i {
             position: absolute;
             top: 33%;
             color: #ccc;
           }
+
           .surgery-details-wrapper {
             float: right;
             padding-right: 10px;
             margin-right: 20px;
             border-right: 1px solid #dddddd;
+
             .cancelled {
               background-color: lightgrey;
             }
           }
+
           h4 {
             color: #000;
             font-weight: 900;
             font-size: 14px;
             margin-bottom: 5px;
           }
+
           p {
             width: 590px;
+
             span {
               color: #444;
               font-size: 12px;
+
               b {
                 color: #000;
                 font-size: 13px;
@@ -181,14 +210,17 @@
             }
           }
         }
+
         tr.dndDraggingSource {
           display: none;
         }
+
         .dndPlaceholder {
           background-color: rgba(146, 221, 81, 0.11);
           display: block;
           min-height: 100px;
         }
+
         .appointment-edit {
           a {
             margin-block-start: 0;
@@ -198,14 +230,17 @@
           }
         }
       }
+
       .cancelled {
         opacity: 0.3;
       }
+
       .unsaved .surgery-details-wrapper {
         opacity: 0.3;
       }
     }
   }
+
   .add-new-appointment {
     display: inline;
     float: right;

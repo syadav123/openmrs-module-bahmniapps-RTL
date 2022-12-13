@@ -6,9 +6,9 @@
   margin-block-end: 20px;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  background-image: url('../images/loader.gif');
-  background-repeat:no-repeat;
-  background-position:center;
+  background-image: url("../images/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #overlay {
@@ -19,9 +19,10 @@
   height: 100%;
   top: 0px;
   right: 0px;
-  background: rgba(0,0,0,0.6) url('../images/spinner.gif') no-repeat center center;
-  div{
-    width:100%;
+  background: rgba(0, 0, 0, 0.6) url("../images/spinner.gif") no-repeat center center;
+
+  div {
+    width: 100%;
     height: 100%;
   }
 }

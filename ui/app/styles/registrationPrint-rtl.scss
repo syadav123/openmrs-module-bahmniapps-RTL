@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 html {
- direction: rtl;
+  direction: rtl;
 }
-
 
 /*BAHMNI css files*/
 
@@ -11,13 +10,15 @@ html {
 @import "bahmni-components-rtl/typography";
 @import "common-rtl/angularFix";
 
-body{
-  pre{
+body {
+  pre {
     margin: 0;
   }
 }
+
 .print-wrapper {
   clear: both;
+
   ul, ol, li {
     margin: 0;
     padding: 0;
@@ -30,13 +31,21 @@ body{
   ul {
     list-style: none;
   }
-  .fl, .left {float: left;}
-  .fr, .right {float: right;}
-  section.block, .dashboard-section{
+
+  .fl, .left {
+    float: left;
+  }
+
+  .fr, .right {
+    float: right;
+  }
+
+  section.block, .dashboard-section {
     margin-block-start: 10px;
     margin-block-end: 10px;
     margin-inline-start: 0;
     margin-inline-end: 0;
   }
 }
+
 @import "print-rtl";

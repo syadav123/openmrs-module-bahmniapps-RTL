@@ -6,14 +6,17 @@
 
 .provider-tag-selector {
   margin-bottom: 10px;
+
   .tags {
     box-shadow: none;
     border: 1px solid #ddd;
     border-radius: 5px;
+
     input {
       width: 100% !important;
       box-sizing: border-box;
     }
+
     .tag-list {
       li {
         display: none;
@@ -25,20 +28,25 @@
     }
   }
 }
+
 .selected-values-wrapper {
   margin-top: 10px;
 }
+
 .appointment-filter-items {
   margin-bottom: 5px;
   padding: 0 20px 10px;
+
   &.provider-block, &.status-block {
     label {
       color: #292929;
       font-weight: bold;
     }
+
     p {
       padding: 0;
       margin-bottom: 5px;
+
       span {
         padding: 5px;
         border-radius: 3px;
@@ -51,6 +59,7 @@
         box-sizing: border-box;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       }
+
       input[type=checkbox] {
         visibility: hidden;
         width: 0;
@@ -58,6 +67,7 @@
       }
     }
   }
+
   p {
     label {
       position: absolute;
@@ -65,12 +75,14 @@
       line-height: 2;
       margin: 0;
       cursor: pointer;
+
       i {
         margin: 0;
         padding: 0;
       }
     }
   }
+
   .selected-values-wrapper {
     margin-top: 10px;
   }

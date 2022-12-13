@@ -1,26 +1,33 @@
-.error-log-wrapper{
-  table{
+.error-log-wrapper {
+  table {
     table-layout: fixed;
-    tr{
+
+    tr {
       background: #fff;
     }
-    th{
-      &:nth-child(1){
+
+    th {
+      &:nth-child(1) {
         width: 20%;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         width: 10%;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         width: 10%;
       }
     }
-    td{
+
+    td {
       word-wrap: break-word;
-      .stackTrace{
+
+      .stackTrace {
         overflow: hidden;
         max-height: 30px;
-        &.stackTraceMore{
+
+        &.stackTraceMore {
           overflow: auto;
           padding-bottom: 15px;
           max-height: 900px;
@@ -29,18 +36,21 @@
           transition: max-height 1.5s ease-in-out;
         }
       }
-      .read-wrap{
+
+      .read-wrap {
         background: #fff;
         padding-block-start: 9px;
         padding-block-end: 5px;
         padding-inline-start: 0;
         padding-inline-end: 0;
-        .read-wrap-ellipse{
+
+        .read-wrap-ellipse {
           display: block;
           text-align: center;
         }
       }
-      button.readButton{
+
+      button.readButton {
         padding-block-start: 2px;
         padding-block-end: 3px;
         padding-inline-start: 10px;
@@ -48,17 +58,21 @@
         background: #fff;
         font-size: 12px;
         margin-top: -14px;
-        &:hover{
+
+        &:hover {
           background: #DDD;
         }
-        .more{
-          display:none;
+
+        .more {
+          display: none;
         }
-        &.active{
-          .more{
-            display:block;
+
+        &.active {
+          .more {
+            display: block;
           }
-          .less{
+
+          .less {
             display: none;
           }
         }

@@ -3,45 +3,56 @@
   margin-block-end: 10px !important;
   margin-inline-start: 20px !important;
   margin-inline-end: 20px !important;
-  @media (max-width : 768px){
+
+  @media (max-width: 768px) {
     margin-block-start: 20px !important;
     margin-block-end: 10px !important;
     margin-inline-start: 0px !important;
     margin-inline-end: 0px !important;
   }
+
   .row {
     float: right;
     width: 100%;
+
     .col {
       width: 33%;
-      @media (max-width : 990px){
-        width:40%;
+
+      @media (max-width: 990px) {
+        width: 40%;
       }
-      @media (max-width : 768px){
-        @include column(12)
+
+      @media (max-width: 768px) {
+        @include column(12);
       }
+
       float: right;
     }
-    .col3{
-      @media (max-width : 990px){
-        width:15%;
+
+    .col3 {
+      @media (max-width: 990px) {
+        width: 15%;
       }
-      @media (max-width : 768px){
-        @include column(12)
+
+      @media (max-width: 768px) {
+        @include column(12);
       }
     }
   }
-  .till-text{
+
+  .till-text {
     margin-block-start: 5px;
     margin-block-end: 7px;
     margin-inline-start: 0px;
     margin-inline-end: 0.8em;
     display: inline-block;
   }
-  .isDeadChkBox{
+
+  .isDeadChkBox {
     margin-top: 8px;
     margin-left: 10px;
-    @media (max-width : 768px){
+
+    @media (max-width: 768px) {
       margin-right: 0;
     }
   }

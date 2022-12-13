@@ -1,78 +1,97 @@
-.program-dashboard{
+.program-dashboard {
   color: $black;
-  strong{
+
+  strong {
     font-family: openSansSemiBold;
   }
+
   .typeOfPrograms {
     background: $lightGray;
     font-family: openSansSemiBold;
     font-size: 15px;
     padding: 10px;
   }
-  .program-basic-details{
-    @include clearfix();
+
+  .program-basic-details {
+    @include clearfix;
+
     background: $lightestGray;
     padding-block-start: 5px;
     padding-block-end: 5px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
-    .program-name{  }
-    .program-start-date{
+
+    .program-name {}
+
+    .program-start-date {
       padding-left: 50px;
     }
-    .outcome-container{
-      @include clearfix();
+
+    .outcome-container {
+      @include clearfix;
+
       text-align: left;
       padding-top: 6px;
     }
   }
-  .program-attributes{
+
+  .program-attributes {
     padding-block-start: 20px;
     padding-block-end: 20px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
-    .program-attribute{
+
+    .program-attribute {
       padding-bottom: 5px;
       clear: both;
-      .program-attribute-tilte{
-          text-align: left;
+
+      .program-attribute-tilte {
+        text-align: left;
       }
-      .program-attribute-title{
-        width:12em;
+
+      .program-attribute-title {
+        width: 12em;
         display: inline-block;
       }
-      .program-attribute-value{
-          text-align: right;
-          padding-right: 10px;
+
+      .program-attribute-value {
+        text-align: right;
+        padding-right: 10px;
       }
-      &:last-child{
+
+      &:last-child {
         padding-bottom: 0;
       }
     }
   }
-  .program-table{
+
+  .program-table {
     padding-block-start: 0;
     padding-block-end: 35px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
-    table{
-      tr{
+
+    table {
+      tr {
         border: none !important;
-        th{
+
+        th {
           background: #fff !important;
           border: none !important;
           font-family: openSansSemiBold;
           border-bottom: 2px $lightGray solid !important;
           padding-right: 0;
         }
-        td{
+
+        td {
           border: none !important;
           padding-right: 0;
         }
       }
     }
   }
-  .program-timeline{
+
+  .program-timeline {
     padding-block-start: 0;
     padding-block-end: 0;
     padding-inline-start: 15px;
@@ -80,27 +99,33 @@
     width: 95%;
   }
 }
+
 .app-dashboard-integration {
   .section-title a {
     color: #fff;
     text-decoration: underline;
   }
+
   h4 {
     font-size: 16px;
     color: #0a0a0a;
     padding-right: 5px;
     font-weight: bold;
   }
+
   table {
     width: 100%;
+
     th, td {
       font-size: 85%;
       width: 18%;
       text-align: center;
-      @media all and (max-width: 1025px){
+
+      @media all and (max-width: 1025px) {
         font-size: 65%;
       }
     }
+
     td {
       padding-block-start: 5px;
       padding-block-end: 5px;

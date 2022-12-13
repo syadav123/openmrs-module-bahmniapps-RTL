@@ -22,25 +22,31 @@
   padding-inline-end: 10px;
   overflow: auto;
   height: calc(100% - 95px);
+
   table {
     border-color: #0a0a0a;
+
     .service-disc-tablecell {
       min-width: 310px;
       max-width: 310px;
     }
+
     th, td {
       text-align: center;
       border-color: #ddd;
       color: #313131;
       font-size: 13px;
+
       &:first-child {
         text-align: right;
       }
     }
+
     th {
       background: #e2e1e1;
       border-color: #e2e1e1;
     }
+
     td {
       a {
         display: inline-block;
@@ -50,6 +56,7 @@
         margin-inline-end: 5px;
       }
     }
+
     tr:nth-child(even) {
       background: #F2F1F1;
     }
@@ -61,6 +68,7 @@
 .add-service-content {
   overflow-y: auto;
   height: calc(100vh - 123px);
+
   .add-service, .add-availability {
     width: 500px;
     float: right;
@@ -71,13 +79,16 @@
     padding-inline-end: 10px;
     box-sizing: border-box;
   }
+
   .add-availability {
     width: calc(100% - 500px);
   }
+
   .add-service {
     p {
       padding: 0;
       margin-bottom: 15px;
+
       label {
         display: inline-block;
         min-width: 103px;
@@ -85,8 +96,8 @@
         text-align: left;
         color: #656161;
         margin-left: 10px;
-
       }
+
       input, textarea, select {
         display: inline-block;
         width: 300px;
@@ -100,17 +111,21 @@
         font-size: 13px;
         color: #656161;
       }
+
       textarea {
         min-height: 50px;
       }
+
       select {
         float: none;
         height: 36px;
       }
+
       &.time-wrapper {
         .max-load, .end-time {
           min-width: 63px;
         }
+
         input {
           width: 110px;
           margin-right: 0;
@@ -118,35 +133,43 @@
         }
       }
     }
+
     .create-service-type {
-      input[type = text] {
+      input[type=text] {
         width: 120px;
       }
+
       .duration-label {
         min-width: 10%;
       }
+
       .duration-box {
         width: 47px;
         margin-left: 1%;
         padding-left: 0;
       }
+
       button {
         @extend .serviceButton;
       }
+
       &.disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         input, label, button {
           cursor: not-allowed;
         }
       }
     }
+
     .newly-added-service-wrapper {
       overflow: auto;
       max-height: 170px;
       width: 300px;
       margin-right: 112px;
       margin-bottom: 0;
+
       .newly-added-service {
         display: inline-block;
         background: #DDDDDD;
@@ -161,6 +184,7 @@
         margin-inline-end: 5px;
         font-size: 12px;
         color: #787A7B;
+
         i {
           float: left;
           cursor: pointer;
@@ -175,34 +199,41 @@
           border: 1px solid #95989A;
         }
       }
+
       .disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         input, label, button {
           cursor: not-allowed;
         }
       }
-
     }
+
     fieldset {
       p.disabled, &.disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         input, label {
           cursor: not-allowed;
         }
       }
     }
   }
+
   .add-availability {
     padding-left: 0;
+
     h3, > p, ul {
       padding-right: 10px;
     }
+
     ul {
       min-height: 350px;
       border-right: 1px solid #95989A;
     }
+
     .app-ava-btn-container {
       left: 5px;
       position: absolute;
@@ -210,39 +241,49 @@
       top: 0;
       bottom: 0;
       height: 25px;
+
       button {
         @extend .serviceButton;
+
         font-size: 12px;
         padding: 5px;
+
         i {
           padding: 0;
           line-height: 1;
           font-size: 12px;
         }
+
         &.edit-ava {
           color: #1976D2;
         }
+
         &.update-ava {
           color: #388E3C;
         }
+
         &.delete-ava, &.cancel-ava {
           color: #BF360C;
         }
       }
+
       .disabled {
         opacity: 0.5;
         cursor: not-allowed;
+
         input, label, button {
           cursor: not-allowed;
         }
       }
     }
   }
+
   .color-picker-wrapper {
     position: relative;
     display: inline-block;
     vertical-align: middle;
     margin: 0;
+
     .color-box-trigger {
       span {
         height: 17px;
@@ -251,6 +292,7 @@
         float: right;
         border: 1px solid transparent;
       }
+
       i {
         float: right;
         line-height: 19px;
@@ -261,12 +303,14 @@
         font-size: 17px;
         color: #1a1a1a;
       }
+
       margin: 0;
       overflow: hidden;
       padding: 3px;
       border: 1px solid #ddd;
       border-radius: 3px;
     }
+
     .color-box {
       background: #fff;
       z-index: 90;
@@ -277,6 +321,7 @@
       padding: 1px;
       top: 100%;
       right: 0;
+
       p {
         display: inline-block;
         padding: 0;
@@ -303,7 +348,8 @@
   border-radius: 5px;
   position: relative;
   margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
   fieldset label {
     display: inline-block;
     float: right;
@@ -312,6 +358,7 @@
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 5px;
+
     input {
       padding-block-start: 5px;
       padding-block-end: 5px;
@@ -319,15 +366,18 @@
       padding-inline-end: 0;
       margin: 0;
       border-radius: 3px;
+
       &.max-load {
         width: 35px;
       }
     }
   }
+
   .weekday-selector-wrapper {
     p.service-ava-days {
       float: right;
       margin-top: 1px;
+
       span {
         float: right;
         cursor: pointer;
@@ -344,6 +394,7 @@
         height: 20px;
         line-height: 19px;
         border-radius: 5px;
+
         &.is-selected {
           background: #27AE60;
           border-color: #27AE60;
@@ -351,12 +402,14 @@
         }
       }
     }
+
     @media all and (max-width: 1300px) {
       clear: right;
       padding-top: 10px;
       overflow: hidden;
     }
   }
+
   .unsaved {
     opacity: 0.5;
   }

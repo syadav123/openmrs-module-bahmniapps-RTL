@@ -1,585 +1,582 @@
 .treatment-page-container {
+  font-size: 12px;
+
+  .dashboard-section-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+    }
+  }
+
+  .drug-details {
+    line-height: 1.5em;
+    padding-right: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 769px) {
+      width: 58%;
+      float: right;
+    }
+  }
+
+  div.start-date span {
+    line-height: 1em;
+    padding-top: 7px;
+    font-family: OpenSansItalic;
     font-size: 12px;
+    color: $mediumGray;
+    display: block;
+    width: 130px;
+    text-align: right;
 
-    .dashboard-section-wrapper {
-        position: static;
-        display: flex;
-        flex-direction: column;
+    &.stop-date {
+      padding-bottom: 7px;
+    }
+  }
 
-        @media screen and (min-width: 769px) {
-            flex-direction: row;
-        }
+  .table-mimic {
+    font-size: 12px;
+  }
+
+  .footer-note .time-stamp {
+    display: inline-block;
+    padding-left: 5px;
+  }
+
+  .button-group-wrapper {
+    padding-block-start: 3px;
+    padding-block-end: 3px;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+
+    @media screen and (min-width: 769px) {
+      float: left;
+      width: 215px;
     }
 
-    .drug-details {
-        line-height: 1.5em;
-        padding-right: 10px;
-        margin-top: 5px;
-        width: 100%;
-        box-sizing: border-box;
-
-        @media screen and (min-width: 769px) {
-            width: 58%;
-            float: right;
-        }
+    button.toggle.has-notes {
+      background: none !important;
     }
 
-    div.start-date span {
-        line-height: 1em;
-        padding-top: 7px;
-        font-family: OpenSansItalic;
-        font-size: 12px;
+    .button-group {
+      float: left;
+    }
+
+    button,
+    button:hover {
+      padding: 0;
+      margin: 0;
+      float: right;
+      margin-left: 2px;
+
+      i {
+        font-size: 1.3em;
         color: $mediumGray;
-        display: block;
-        width: 130px;
-        text-align: right;
-
-        &.stop-date {
-            padding-bottom: 7px;
-        }
-    }
-
-    .table-mimic {
-        font-size: 12px;
-    }
-
-    .footer-note .time-stamp {
-        display: inline-block;
-        padding-left: 5px;
-    }
-
-    .button-group-wrapper {
         padding-block-start: 3px;
         padding-block-end: 3px;
-        padding-inline-start: 0;
-        padding-inline-end: 0;
-
-        @media screen and (min-width:769px) {
-            float: left;
-            width: 215px;
-        }
-
-        button.toggle.has-notes {
-            background: none !important;
-        }
-
-        .button-group {
-            float: left;
-        }
-
-        button,
-        button:hover {
-            padding: 0;
-            margin: 0;
-            float: right;
-            margin-left: 2px;
-
-            i {
-                font-size: 1.3em;
-                color: $mediumGray;
-                padding-block-start: 3px;
-                padding-block-end: 3px;
-                padding-inline-start: 0.2em;
-                padding-inline-end: 0.2em;
-            }
-        }
-
-        .refill-btn,
-        .stop-drug-btn {
-            padding: 6px !important;
-
-            @media screen and (max-width: 1024px) {
-                padding-block-start: 4px !important;
-                padding-block-end: 4px !important;
-                padding-inline-start: 6px !important;
-                padding-inline-end: 6px !important;
-            }
-        }
-
-        button.dispense-btn {
-            font-family: OpenSansBold;
-            color: $bahmniTertiaryColor;
-            padding-block-start: 0;
-            padding-block-end: 0;
-            padding-inline-start: 7px;
-            padding-inline-end: 7px;
-            width: auto;
-            height: 24px;
-
-            &:hover {
-                padding-block-start: 0;
-                padding-block-end: 0;
-                padding-inline-start: 7px;
-                padding-inline-end: 7px;
-            }
-
-            i {
-                color: $bahmniTertiaryColor;
-                font-size: 1.2em;
-                padding: 0;
-            }
-        }
+        padding-inline-start: 0.2em;
+        padding-inline-end: 0.2em;
+      }
     }
 
-    .add-drug-btn,
-    .reset-drug-form {
-        margin-top: 4px;
-        margin-right: 5px;
+    .refill-btn,
+    .stop-drug-btn {
+      padding: 6px !important;
 
-        &.move-add-drug-btn {
-            margin-top: 52px;
+      @media screen and (max-width: 1024px) {
+        padding-block-start: 4px !important;
+        padding-block-end: 4px !important;
+        padding-inline-start: 6px !important;
+        padding-inline-end: 6px !important;
+      }
+    }
+
+    button.dispense-btn {
+      font-family: OpenSansBold;
+      color: $bahmniTertiaryColor;
+      padding-block-start: 0;
+      padding-block-end: 0;
+      padding-inline-start: 7px;
+      padding-inline-end: 7px;
+      width: auto;
+      height: 24px;
+
+      &:hover {
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 7px;
+        padding-inline-end: 7px;
+      }
+
+      i {
+        color: $bahmniTertiaryColor;
+        font-size: 1.2em;
+        padding: 0;
+      }
+    }
+  }
+
+  .add-drug-btn,
+  .reset-drug-form {
+    margin-top: 4px;
+    margin-right: 5px;
+
+    &.move-add-drug-btn {
+      margin-top: 52px;
+    }
+  }
+
+  @import "addNewDrug";
+
+  .drug-orders-history {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 769px) {
+        display: block;
+      }
+
+      .tab {
+        order: 1;
+
+        &.selected-tab {
+          order: 0;
         }
+      }
     }
+  }
 
-    @import "addNewDrug";
+  .drug-stop-container {
+    font-size: 14px;
+    width: 100%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-bottom: 10px;
 
-    .drug-orders-history {
-        margin-block-start: 10px;
-        margin-block-end: 10px;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-
-        .tabs {
-            display: flex;
-            flex-direction: column;
-
-            @media screen and (min-width: 769px) {
-                display: block;
-            }
-
-            .tab {
-                order: 1;
-                &.selected-tab {
-                    order: 0;
-                }
-            }
+    .field-attribute {
+      &.stop-date-label {
+        .control-label {
+          width: auto;
         }
+      }
     }
 
-    .drug-stop-container {
-        font-size: 14px;
-        width: 100%;
-        padding-right: 10px;
-        box-sizing: border-box;
-        padding-left: 10px;
-        padding-bottom: 10px;
+    .field-value {
+      margin-left: 5px;
 
-        .field-attribute {
-            &.stop-date-label {
-                .control-label {
-                    width: auto;
-                }
-            }
-        }
+      textarea {
+        height: 25px;
+        width: 540px;
+      }
+    }
+  }
 
-        .field-value {
-            margin-left: 5px;
+  .new-drug-order {
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
 
-            textarea {
-                height: 25px;
-                width: 540px;
-            }
-        }
+  .highlight {
+    background: $clinicalHighlight;
+    border: 1px solid darken($clinicalHighlight, 10%);
+  }
+
+  .active-drug {
+    border-right: 5px solid orange;
+  }
+
+  .scheduled-drug {
+    border-right: 5px solid green;
+  }
+
+  .refill-drugs-btn,
+  .dispense-all-btn {
+    font-size: 14px;
+    margin-left: 0;
+    display: none;
+
+    i {
+      padding: 0;
+      font-size: 14px;
     }
 
-    .new-drug-order {
-        margin-block-start: 0px;
-        margin-block-end: 10px;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
+    @media screen and (max-width: 768px) {
+      padding-block-start: 6px;
+      padding-block-end: 6px;
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+    }
+  }
+
+  .dispense-all-btn {
+    margin-left: 5px;
+  }
+
+  .bulk-edit-options-container {
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    background-color: $lightestGray;
+    border-bottom: 1px $primarySectionGridBorder solid;
+    margin-bottom: 4px;
+    box-shadow: 1px 2px 7px $lightGray;
+
+    .bulk-btn-container {
+      .stepper__btn {
+        height: 26px;
+      }
     }
 
-    .highlight {
-        background: $clinicalHighlight;
-        border: 1px solid darken($clinicalHighlight, 10%);
+    .select-all-chkBox {
+      top: 6px;
     }
 
-    .active-drug {
-        border-right: 5px solid orange;
+    .duration.bulkDuration {
+      min-width: 80px;
+      display: inline-block;
+      width: 80px;
+      margin-top: 0;
     }
 
-    .scheduled-drug {
-        border-right: 5px solid green;
+    select.bulk-duration-unit {
+      min-width: 110px;
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 5px;
     }
 
-    .refill-drugs-btn,
-    .dispense-all-btn {
-        font-size: 14px;
-        margin-left: 0;
-        display: none;
+    .bulk-update-btn {
+      margin-right: 15px;
+    }
+  }
 
-        i {
-            padding: 0;
-            font-size: 14px;
-        }
+  .tabs .tab [type=radio]:checked ~ .dispense-all-btn,
+  .tabs .tab [type=radio]:checked ~ .refill-drugs-btn {
+    display: inline-block;
+    line-height: 14px;
+  }
 
-        @media screen and (max-width: 768px) {
-            padding-block-start: 6px;
-            padding-block-end: 6px;
-            padding-inline-start: 12px;
-            padding-inline-end: 12px;
-        }
+  .invalid {
+    background: lightcoral;
+    border: 1px solid #ff0000;
+  }
+
+  .show-invalid .ng-invalid:enabled {
+    border: 2px solid darken($clinicalFormInvalid, 30%);
+    background: $clinicalFormInvalid;
+  }
+
+  .revise-refill-modal-wrapper {
+    outline: 0;
+  }
+
+  .treatment-section-left {
+    width: 100%;
+
+    @media screen and (min-width: 769px) {
+      width: 24%;
+      min-width: 312px;
     }
 
-    .dispense-all-btn {
-        margin-left: 5px;
+    .treatment-data-container,
+    .order-set-container {
+      background: #fff;
+      border-radius: 3px;
+      box-sizing: border-box;
+      z-index: 999;
+
+      @include box-shadow-for-section;
+
+      width: 100%;
     }
 
-    .bulk-edit-options-container {
+    .order-set-container {
+      margin-top: 20px;
+    }
+
+    .order-section-container {
+      padding: 10px;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 1024px) {
         padding-block-start: 10px;
         padding-block-end: 10px;
-        padding-inline-start: 10px;
-        padding-inline-end: 10px;
-        background-color: $lightestGray;
-        border-bottom: 1px $primarySectionGridBorder solid;
-        margin-bottom: 4px;
-        box-shadow: 1px 2px 7px $lightGray;
+        padding-inline-start: 5px;
+        padding-inline-end: 5px;
+      }
 
-        .bulk-btn-container {
-            .stepper__btn {
-                height: 26px;
-            }
-        }
+      .Order-section-orderDrug {
+        margin-block-start: 0;
+        margin-block-end: 30px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
 
-        .select-all-chkBox {
-            top: 6px;
-        }
+        .unit-wrap {
+          position: relative;
 
-        .duration.bulkDuration {
-            min-width: 80px;
-            display: inline-block;
-            width: 80px;
-            margin-top: 0;
-        }
+          .exchange-btn {
+            position: absolute;
+            padding-block-start: 4px;
+            padding-block-end: 3px;
+            padding-inline-start: 3px;
+            padding-inline-end: 3px;
+            line-height: initial;
+            margin-top: 5px;
 
-        select.bulk-duration-unit {
-            min-width: 110px;
-            display: inline-block;
-            margin-top: 0;
-            margin-left: 5px;
-        }
-
-        .bulk-update-btn {
-            margin-right: 15px;
-        }
-    }
-
-    .tabs .tab [type=radio]:checked~.dispense-all-btn,
-    .tabs .tab [type=radio]:checked~.refill-drugs-btn {
-        display: inline-block;
-        line-height: 14px;
-    }
-
-
-    .invalid {
-        background: lightcoral;
-        border: 1px solid #ff0000;
-    }
-
-    .show-invalid .ng-invalid:enabled {
-        border: 2px solid darken($clinicalFormInvalid, 30%);
-        background: $clinicalFormInvalid;
-    }
-
-    .revise-refill-modal-wrapper {
-        outline: 0;
-    }
-
-    .treatment-section-left {
-        width: 100%;
-
-        @media screen and (min-width: 769px) {
-            width: 24%;
-            min-width: 312px;
-        }
-
-        .treatment-data-container,
-        .order-set-container {
-            background: #fff;
-            border-radius: 3px;
-            box-sizing: border-box;
-            z-index: 999;
-            @include box-shadow-for-section();
-            width: 100%;
-        }
-
-        .order-set-container {
-            margin-top: 20px;
-        }
-
-        .order-section-container {
-            padding: 10px;
-            box-sizing: border-box;
-
-            @media screen and (max-width: 1024px) {
-                padding-block-start: 10px;
-                padding-block-end: 10px;
-                padding-inline-start: 5px;
-                padding-inline-end: 5px;
-            }
-
-            .Order-section-orderDrug {
-                margin-block-start: 0;
-                margin-block-end: 30px;
-                margin-inline-start: 0;
-                margin-inline-end: 0;
-
-                .unit-wrap {
-                    position: relative;
-
-                    .exchange-btn {
-                        position: absolute;
-                        padding-block-start: 4px;
-                        padding-block-end: 3px;
-                        padding-inline-start: 3px;
-                        padding-inline-end: 3px;
-                        line-height: initial;
-                        margin-top: 5px;
-
-                        @media (max-width: 1024px) {
-                            padding-block-start: 7px;
-                            padding-block-end: 6px;
-                            padding-inline-start: 6px;
-                            padding-inline-end: 6px;
-                        }
-
-                        @media screen and (max-width: 768px) {
-                            top: -31px;
-                            left: 0;
-                            margin-top: 0;
-                        }
-                    }
-                }
-
-                .variable-frequency {
-                    .dose-cell {
-                        margin-right: 0px;
-                    }
-                }
-
-                h2.section-title {
-                    margin-block-start: 0;
-                    margin-block-end: 10px;
-                    margin-inline-start: 0;
-                    margin-inline-end: 0;
-
-                    @media screen and (max-width: 1024px) {
-                        font-size: 14px;
-                    }
-
-                    @media screen and (max-width: 768px) {
-                        font-size: 13px;
-                    }
-                }
-            }
-
-            h3.orderSet-additional-info {
-                font-family: OpenSansBold;
-                color: $darkGray;
-                font-size: 13px;
-                border-bottom: 1px solid $lightGray;
-                padding-block-start: 20px;
-                padding-block-end: 5px;
-                padding-inline-start: 0;
-                padding-inline-end: 0;
-                margin-block-start: 0;
-                margin-block-end: 10px;
-                margin-inline-start: 0;
-                margin-inline-end: 0;
-            }
-
-            #SOS {
-                margin-left: 5px;
-                line-height: .9em;
-                margin-top: 4px;
-                padding-block-start: 6px;
-                padding-block-end: 6px;
-                padding-inline-start: 20px;
-                padding-inline-end: 20px;
-
-                @media screen and (max-width: 1024px) {
-                    line-height: 1.3em;
-                    padding-block-start: 7px;
-                    padding-block-end: 7px;
-                    padding-inline-start: 20px;
-                    padding-inline-end: 20px;
-                }
-            }
-        }
-
-        form .form-field,
-        .form .form-field {
-
-            input,
-            select {
-                padding-block-start: 4px;
-                padding-block-end: 3px;
-                padding-inline-start: 10px;
-                padding-inline-end: 10px;
-                width: 185px;
-                min-width: 185px;
-                box-sizing: border-box;
-
-                @media (max-width: 1024px) {
-                    padding-block-start: 6px;
-                    padding-block-end: 6px;
-                    padding-inline-start: 10px;
-                    padding-inline-end: 10px;
-                    width: 142px;
-                    min-width: 142px;
-                    height: 31px;
-                }
-
-            }
-
-            .field-attribute label {
-                width: 7.6em;
-
-                @media screen and (max-width: 768px) {
-                    float: none;
-                    width: 11em;
-                    clear: both;
-                    text-align: right;
-                }
-            }
-        }
-
-        .edit-drug-order-container .accept-btn {
-            margin-right: 5px;
-            margin-top: 4px;
-            padding-block-start: 7px;
-            padding-block-end: 7px;
-            padding-inline-start: 10px;
-            padding-inline-end: 10px;
-            width: 77px;
-            clear: both;
-            float: left;
-
-            @media screen and (max-width: 1024px) {
-                padding-block-start: 8px;
-                padding-block-end: 7px;
-                padding-inline-start: 10px;
-                padding-inline-end: 10px;
+            @media (max-width: 1024px) {
+              padding-block-start: 7px;
+              padding-block-end: 6px;
+              padding-inline-start: 6px;
+              padding-inline-end: 6px;
             }
 
             @media screen and (max-width: 768px) {
-                margin-left: 41px;
+              top: -31px;
+              left: 0;
+              margin-top: 0;
             }
+          }
         }
 
-        input[type="date"] {
-            padding-block-start: 2px !important;
-            padding-block-end: 3px !important;
-            padding-inline-start: 10px !important;
-            padding-inline-end: 10px !important;
-
-            @media screen and (max-width: 1024px) {
-                padding-block-start: 6px !important;
-                padding-block-end: 6px !important;
-                padding-inline-start: 10px !important;
-                padding-inline-end: 10px !important;
-            }
+        .variable-frequency {
+          .dose-cell {
+            margin-right: 0px;
+          }
         }
 
-        textarea {
-            width: 185px;
+        h2.section-title {
+          margin-block-start: 0;
+          margin-block-end: 10px;
+          margin-inline-start: 0;
+          margin-inline-end: 0;
 
-            @media (max-width: 1024px) {
-                width: 142px;
-            }
-        }
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
 
-        .operations {
-            margin-top: 10px;
-        }
-
-        .dose-cell {
-            margin-right: 5px;
-
-            input[type="number"] {
-                min-width: 59.6px;
-                width: 59.6px;
-                padding-block-start: 4px !important;
-                padding-block-end: 3px !important;
-                padding-inline-start: 8px !important;
-                padding-inline-end: 0px !important;
-                text-align: center;
-
-                @media (max-width: 1024px) {
-                    min-width: 45px;
-                    width: 45px;
-                    padding-block-start: 7px !important;
-                    padding-block-end: 7px !important;
-                    padding-inline-start: 8px !important;
-                    padding-inline-end: 0px !important;
-                }
-
-                @media (max-width: 768px) {
-                    width: 44px;
-                    min-width: 44px;
-
-                }
-            }
-        }
-
-        h3.orderSet-additional-info {
-            font-family: OpenSansBold;
-            color: $darkGray;
+          @media screen and (max-width: 768px) {
             font-size: 13px;
-            border-bottom: 1px solid $lightGray;
-            padding-block-start: 20px;
-            padding-block-end: 5px;
-            padding-inline-start: 0;
-            padding-inline-end: 0;
-            margin-block-start: 0;
-            margin-block-end: 10px;
-            margin-inline-start: 0;
-            margin-inline-end: 0;
+          }
         }
+      }
 
-        #SOS {
-            margin-left: 5px;
-            line-height: .9em;
-            margin-top: 4px;
-            padding-block-start: 6px;
-            padding-block-end: 6px;
-            padding-inline-start: 20px;
-            padding-inline-end: 20px;
+      h3.orderSet-additional-info {
+        font-family: OpenSansBold;
+        color: $darkGray;
+        font-size: 13px;
+        border-bottom: 1px solid $lightGray;
+        padding-block-start: 20px;
+        padding-block-end: 5px;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        margin-block-start: 0;
+        margin-block-end: 10px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+      }
 
-            @media screen and (max-width: 1024px) {
-                line-height: 1.3em;
-                padding-block-start: 7px;
-                padding-block-end: 7px;
-                padding-inline-start: 20px;
-                padding-inline-end: 20px;
-            }
+      #SOS {
+        margin-left: 5px;
+        line-height: .9em;
+        margin-top: 4px;
+        padding-block-start: 6px;
+        padding-block-end: 6px;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+
+        @media screen and (max-width: 1024px) {
+          line-height: 1.3em;
+          padding-block-start: 7px;
+          padding-block-end: 7px;
+          padding-inline-start: 20px;
+          padding-inline-end: 20px;
         }
+      }
     }
 
-    .treatment-section-right {
-        flex-grow: 1;
+    form .form-field,
+    .form .form-field {
+      input,
+      select {
+        padding-block-start: 4px;
+        padding-block-end: 3px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        width: 185px;
+        min-width: 185px;
+        box-sizing: border-box;
 
-        @media screen and (min-width: 769px) {
-            max-width: calc(100% - 332px);
+        @media (max-width: 1024px) {
+          padding-block-start: 6px;
+          padding-block-end: 6px;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+          width: 142px;
+          min-width: 142px;
+          height: 31px;
         }
+      }
 
-        .dashboard-section {
-            position: relative;
-            clear: both;
-            margin-top: 0;
-            border-radius: 3px 3px 0 0;
+      .field-attribute label {
+        width: 7.6em;
+
+        @media screen and (max-width: 768px) {
+          float: none;
+          width: 11em;
+          clear: both;
+          text-align: right;
         }
-
-        @media screen and (min-width: 769px) {
-            margin-right: 20px;
-        }
-
+      }
     }
 
-    .frequencyField {
-        clear: both;
+    .edit-drug-order-container .accept-btn {
+      margin-right: 5px;
+      margin-top: 4px;
+      padding-block-start: 7px;
+      padding-block-end: 7px;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      width: 77px;
+      clear: both;
+      float: left;
+
+      @media screen and (max-width: 1024px) {
+        padding-block-start: 8px;
+        padding-block-end: 7px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-left: 41px;
+      }
     }
 
+    input[type="date"] {
+      padding-block-start: 2px !important;
+      padding-block-end: 3px !important;
+      padding-inline-start: 10px !important;
+      padding-inline-end: 10px !important;
+
+      @media screen and (max-width: 1024px) {
+        padding-block-start: 6px !important;
+        padding-block-end: 6px !important;
+        padding-inline-start: 10px !important;
+        padding-inline-end: 10px !important;
+      }
+    }
+
+    textarea {
+      width: 185px;
+
+      @media (max-width: 1024px) {
+        width: 142px;
+      }
+    }
+
+    .operations {
+      margin-top: 10px;
+    }
+
+    .dose-cell {
+      margin-right: 5px;
+
+      input[type="number"] {
+        min-width: 59.6px;
+        width: 59.6px;
+        padding-block-start: 4px !important;
+        padding-block-end: 3px !important;
+        padding-inline-start: 8px !important;
+        padding-inline-end: 0px !important;
+        text-align: center;
+
+        @media (max-width: 1024px) {
+          min-width: 45px;
+          width: 45px;
+          padding-block-start: 7px !important;
+          padding-block-end: 7px !important;
+          padding-inline-start: 8px !important;
+          padding-inline-end: 0px !important;
+        }
+
+        @media (max-width: 768px) {
+          width: 44px;
+          min-width: 44px;
+        }
+      }
+    }
+
+    h3.orderSet-additional-info {
+      font-family: OpenSansBold;
+      color: $darkGray;
+      font-size: 13px;
+      border-bottom: 1px solid $lightGray;
+      padding-block-start: 20px;
+      padding-block-end: 5px;
+      padding-inline-start: 0;
+      padding-inline-end: 0;
+      margin-block-start: 0;
+      margin-block-end: 10px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+
+    #SOS {
+      margin-left: 5px;
+      line-height: .9em;
+      margin-top: 4px;
+      padding-block-start: 6px;
+      padding-block-end: 6px;
+      padding-inline-start: 20px;
+      padding-inline-end: 20px;
+
+      @media screen and (max-width: 1024px) {
+        line-height: 1.3em;
+        padding-block-start: 7px;
+        padding-block-end: 7px;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+      }
+    }
+  }
+
+  .treatment-section-right {
+    flex-grow: 1;
+
+    @media screen and (min-width: 769px) {
+      max-width: calc(100% - 332px);
+    }
+
+    .dashboard-section {
+      position: relative;
+      clear: both;
+      margin-top: 0;
+      border-radius: 3px 3px 0 0;
+    }
+
+    @media screen and (min-width: 769px) {
+      margin-right: 20px;
+    }
+  }
+
+  .frequencyField {
+    clear: both;
+  }
 }
 
 @import "customDrugOrderHistory";

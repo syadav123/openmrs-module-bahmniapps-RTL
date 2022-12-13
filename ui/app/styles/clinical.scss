@@ -36,10 +36,8 @@
 @import "common/angularFix";
 @import "common/mobileHeader";
 
-
 @import "bahmni-layout/layout";
 @import "bahmni-layout/retroMode";
-
 
 @import "document-upload/upload";
 
@@ -58,10 +56,9 @@
 @import "clinical/patientSearchDesktop";
 @import "clinical/observationsDesktop";
 @import "clinical/_draggableDiv";
+
 //@import "clinical/treatmentDesktop";
 @import "clinical/drugOrderTemplate";
-
-
 
 @import "reports/reports";
 

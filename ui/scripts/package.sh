@@ -29,7 +29,7 @@ XVFB_PID=$!
 echo "Starting Xvfb process $XVFB_PID"
 
 yarn web
-cd app && zip -r ../target/${ZIP_FILE_NAME}.zip *
+cd dist && zip -r ../target/${ZIP_FILE_NAME}.zip *
 
 
 echo "Killing Xvfb process $XVFB_PID"

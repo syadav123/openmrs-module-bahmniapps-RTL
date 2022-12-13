@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 html {
- direction: rtl;
+  direction: rtl;
 }
-
 
 /*BAHMNI css files*/
 @import "vendor-rtl/normalize";
@@ -31,7 +30,6 @@ html {
 @import "bahmni-components-rtl/patientControlPanel";
 @import "bahmni-components-rtl/tooltip";
 @import "bahmni-components-rtl/splitButton";
-
 
 @import "common-rtl/bahmniGlobal";
 @import "common-rtl/angularFix";
