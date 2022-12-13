@@ -11,9 +11,9 @@ mkdir -p $ROOT_DIR/target
 rm -rf $ROOT_DIR/target/${ZIP_FILE_NAME}*.zip
 
 yarn install --frozen-lock-file
-# yarn bundle
-yarn build
-# yarn uglify-and-rename
+yarn bundle
+# yarn build
+yarn uglify-and-rename
 
 cd $ROOT_DIR
 

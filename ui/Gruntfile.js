@@ -529,8 +529,13 @@ module.exports = function (grunt) {
         'bundle'
     ]);
 
+    grunt.registerTask('uglify-and-rename', [
+        'uglify',
+        'rename:minified'
+    ]);
+
     grunt.registerTask('dev', ['build']);
-    grunt.registerTask('default', ['bundle', 'preprocess:web']);
+    grunt.registerTask('default', ['bundle', 'uglify-and-rename', 'preprocess:web']);
     grunt.registerTask('web', ['preprocess:web']);
 
     grunt.registerTask('yarn-install', 'install dependencies using yarn', function () {
