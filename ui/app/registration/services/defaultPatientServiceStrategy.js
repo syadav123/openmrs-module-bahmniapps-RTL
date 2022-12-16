@@ -14,24 +14,10 @@ angular.module('bahmni.registration')
             var onResults = function (result) {
                 defer.resolve(result);
             };
-            // $http.get(patientSearchUrl, config).success(onResults)
-                // .error(function (error) {
-                    // defer.reject(error);
-                // });
-            $http.get(Bahmni.Common.Constants.bahmniCommonsSearchUrl + "/patient/lucene", {
-                method: "GET",
-                params: {
-                    filterOnAllIdentifiers: true,
-                    q: config.params.q || config.params.identifier,
-                    startIndex: config.params.startIndex || 0,
-                    identifier: config.params.identifier,
-                    loginLocationUuid: config.params.loginLocationUuid
-                },
-                withCredentials: true
-            }).success(onResults)
-              .error(function (error) {
-                  defer.reject(error);
-              });
+            $http.get(patientSearchUrl, config).success(onResults)
+                .error(function (error) {
+                    defer.reject(error);
+                });
             return defer.promise;
         };
 
