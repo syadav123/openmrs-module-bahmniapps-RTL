@@ -107,6 +107,7 @@ category: Layout - Table
 /*old styles - visit - diagnosis, diagnosis tab*/
 .table {
   border: 0;
+  direction: rtl;
 
   @include font-size(0.9);
 
@@ -245,7 +246,7 @@ table.h-scroll {
 
   thead {
     display: block;
-    float: left;
+    float: right;
   }
 
   tbody {
