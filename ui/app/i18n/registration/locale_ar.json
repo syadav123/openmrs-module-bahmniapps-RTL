@@ -122,7 +122,12 @@
     "_BLOOD_GROUP": "فصيلة الدم",
     "_SECONDARY_CONTACT": "الاتصال الثانوي",
     "_MOTHERS_NAME": "اسم الأم",
-    "_EMAIL_ID": "عنوان الايميل"
+    "_EMAIL_ID": "عنوان الايميل",
+    "givenNameLocal": "الاسم المحلي",
+    "middleNameLocal": "الاسم المحلي الأوسط", 
+    "familyNameLocal": "الاسم المحلي للعائلة",
+    "Gram Panchayat": "غرام بانشايات",
+    "National ID" : "الهوية الوطنية"
 	
 	
 	

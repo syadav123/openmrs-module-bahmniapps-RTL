@@ -314,5 +314,21 @@
     "INVESTIGATIONS_PANELS_HEADER_LABEL": "لجنة الاستشاريين",
     "INVESTIGATIONS_SELECTIONS_HEADER_LABEL": "اختيارات",
     "CLINICAL_GO_TO_DASHBOARD_LABEL": "إذهب إلى الصفحة الرئيسية للقسم ",
-    "NO_FORM_FOUND_FOR_PATIENT": "لا يوجد استمارة لهذا المريض"
+    "NO_FORM_FOUND_FOR_PATIENT": "لا يوجد استمارة لهذا المريض",
+    "CLINICAL_ACCEPT": "قبول",
+    "Inactive": "غير نشط",
+    "PRESUMED": "مفترض",
+    "SECONDARY": "ثانوي",
+    "CONFIRMED": "مؤكد",
+    "PRIMARY" : "أساسي",
+    "CONSULTATION_PAD_EMPTY_MESSAGE": "لوحة الاستشارة فارغة",
+    "LAB_ORDERS_KEY": "أوامر المعمل,",
+    "CLINICAL_VISIT_NAME": "اسم",
+    "Village/Town": "قرية/  بلدة",
+    "Visit_Date": "تاريخ الزيارة",
+    "Visit_District": "منطقة",
+    "Visit_Age": "سن",
+    "Visit_Registration_No": "رقم التسجيل",
+    "P.O": "رمز بريدي"
+
 }
