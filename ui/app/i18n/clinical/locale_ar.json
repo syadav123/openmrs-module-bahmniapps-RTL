@@ -329,6 +329,13 @@
     "Visit_District": "منطقة",
     "Visit_Age": "سن",
     "Visit_Registration_No": "رقم التسجيل",
-    "P.O": "رمز بريدي"
+    "P.O": "رمز بريدي",
+    "CLINICAL_DIAGNOSIS_ORDER_PRIMARY": "أساسي",
+    "Laboratory": " معمل",
+    "Panels": "الألواح",
+    "Lab Tests": "فحوصات مخبرية",
+    "Radiology Orders": "أوامر الأشعة",
+    "Radiology":" الأشعة",
+    "MEDICATION_LABEL_START_DATE": "تاريخ البدء"
 
 }

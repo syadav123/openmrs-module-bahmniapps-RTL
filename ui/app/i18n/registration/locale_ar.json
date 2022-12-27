@@ -127,8 +127,15 @@
     "middleNameLocal": "الاسم المحلي الأوسط", 
     "familyNameLocal": "الاسم المحلي للعائلة",
     "Gram Panchayat": "غرام بانشايات",
-    "National ID" : "الهوية الوطنية"
-	
+    "National ID" : "الهوية الوطنية",
+    "Overweight": "زيادة الوزن",
+    "Very Severely Underweight": "نقص شديد في الوزن",
+    "Severely Underweight": "نقص الوزن الشديد",
+    "Underweight":"نقص الوزن",
+    "Normal":"طبيعي",
+    "Obese":"سمين",
+    "Severely Obese":"السمنة المفرطة",
+    "Very Severely Obese":"شديد السمنة"
 	
 	
 	

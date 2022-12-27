@@ -30,7 +30,7 @@
                         <div ng-repeat="conceptSet in ::availableConceptSets" class="concept-set-group">
                             <div class="registraion_legend">
                                 <span class="mylegend" ng-if="::conceptSet.options.translationKey">{{::conceptSet.options.translationKey | translate}}</span>
-                                <span class="mylegend" ng-if="::!conceptSet.options.translationKey">{{::conceptSet.label}}</span>
+                                <span class="mylegend" ng-if="::!conceptSet.options.translationKey">{{::conceptSet.label | translate}}</span>
                             </div>
                             <div class="clearfix">
                                 <article ng-if="!isFormTemplate(conceptSet)" class="fl obs-section-form">

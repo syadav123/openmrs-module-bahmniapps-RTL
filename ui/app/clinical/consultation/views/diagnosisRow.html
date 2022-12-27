@@ -8,9 +8,9 @@
 
     <div ng-show="diagnosis.firstDiagnosis.revised" class="col col2">
         <div class="view">
-            <span class="certainty">{{diagnosis.firstDiagnosis.certainty}}</span>
-            <span class="order">{{diagnosis.firstDiagnosis.order}}</span>
-            <span class="status">{{diagnosis.firstDiagnosis.diagnosisStatus}}</span>
+            <span class="certainty">{{diagnosis.firstDiagnosis.certainty | translate}}</span>
+            <span class="order">{{diagnosis.firstDiagnosis.order | translate}}</span>
+            <span class="status">{{diagnosis.firstDiagnosis.diagnosisStatus | translate}}</span>
         </div>
         <div>
       <span class="time-stamp">
@@ -25,9 +25,9 @@
     <div ng-show="!diagnosis.firstDiagnosis.revised" class="col col2"></div>
     <div class="col col3">
         <div class="view">
-            <span class="certainty">{{diagnosis.certainty}}</span>
-            <span class="order">{{diagnosis.order}}</span>
-            <span class="status">{{diagnosis.diagnosisStatus}}</span>
+            <span class="certainty">{{diagnosis.certainty | translate}}</span>
+            <span class="order">{{diagnosis.order | translate}}</span>
+            <span class="status">{{diagnosis.diagnosisStatus | translate}}</span>
         </div>
         <div>
       <span class="time-stamp">

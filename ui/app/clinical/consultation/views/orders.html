@@ -9,7 +9,7 @@
                 <h2 class="order-title">
                     <i class="fa fa-caret-right" ng-show="activeTab != tab"></i>
                     <i class="fa fa-caret-down ng-hide" ng-show="activeTab == tab"></i>
-                    {{tab.name}}
+                    {{tab.name | translate}}
                 </h2>
             </div>
             <div ng-if="activeTab === tab" class="dashboard-section">
