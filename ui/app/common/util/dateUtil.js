@@ -79,8 +79,8 @@ Bahmni.Common.Util.DateUtil = {
     },
 
     getDateWithoutTime: function (datetime) {
-		var locMoment = moment(datetime);
-		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        var locMoment = moment(datetime);
+        locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
         return datetime ? locMoment.format("YYYY-MM-DD") : null;
     },
 
@@ -90,8 +90,8 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-		var locMoment = moment(dateRepresentation);
-		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        var locMoment = moment(dateRepresentation);
+        locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
         return dateRepresentation ? locMoment.format(format) : null;
     },
 
@@ -100,8 +100,8 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return datetime;
         }
-		var locMoment = moment(dateRepresentation);
-		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        var locMoment = moment(dateRepresentation);
+        locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
         return dateRepresentation ? locMoment.format("DD MMM YY h:mm a") : null;
     },
 
@@ -110,8 +110,8 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-		var locMoment = moment(dateRepresentation);
-		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        var locMoment = moment(dateRepresentation);
+        locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
         return dateRepresentation ? locMoment.format("DD MMM YY") : null;
     },
 
@@ -131,8 +131,8 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-		var locMoment = moment(dateRepresentation);
-		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        var locMoment = moment(dateRepresentation);
+        locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
         return dateRepresentation ? locMoment.format("h:mm a") : null;
     },
 
