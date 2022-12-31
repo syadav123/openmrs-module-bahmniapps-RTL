@@ -1,6 +1,7 @@
 <html>
 <head>
-    <link rel="stylesheet" href="../styles/clinicalPrint.css" media="print"/>
+    <link rel="stylesheet" href="../styles/clinicalPrint.css" media="print" ng-if="!userLanguageDirRtl"/>
+    <link rel="stylesheet" href="../styles/clinicalPrint-rtl.css" media="print" ng-if="userLanguageDirRtl"/>
 </head>
 <body>
     <div class="print-wrapper print-patient-summary">

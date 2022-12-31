@@ -79,7 +79,9 @@ Bahmni.Common.Util.DateUtil = {
     },
 
     getDateWithoutTime: function (datetime) {
-        return datetime ? moment(datetime).format("YYYY-MM-DD") : null;
+		var locMoment = moment(datetime);
+		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        return datetime ? locMoment.format("YYYY-MM-DD") : null;
     },
 
     getDateInMonthsAndYears: function (date, format) {
@@ -88,7 +90,9 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-        return dateRepresentation ? moment(dateRepresentation).format(format) : null;
+		var locMoment = moment(dateRepresentation);
+		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        return dateRepresentation ? locMoment.format(format) : null;
     },
 
     formatDateWithTime: function (datetime) {
@@ -96,7 +100,9 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return datetime;
         }
-        return dateRepresentation ? moment(dateRepresentation).format("DD MMM YY h:mm a") : null;
+		var locMoment = moment(dateRepresentation);
+		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        return dateRepresentation ? locMoment.format("DD MMM YY h:mm a") : null;
     },
 
     formatDateWithoutTime: function (date) {
@@ -104,7 +110,9 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-        return dateRepresentation ? moment(dateRepresentation).format("DD MMM YY") : null;
+		var locMoment = moment(dateRepresentation);
+		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        return dateRepresentation ? locMoment.format("DD MMM YY") : null;
     },
 
     formatDateInStrictMode: function (date) {
@@ -123,7 +131,9 @@ Bahmni.Common.Util.DateUtil = {
         if (!moment(dateRepresentation).isValid()) {
             return date;
         }
-        return dateRepresentation ? moment(dateRepresentation).format("h:mm a") : null;
+		var locMoment = moment(dateRepresentation);
+		locMoment.locale(window.localStorage["NG_TRANSLATE_LANG_KEY"] || "en");
+        return dateRepresentation ? locMoment.format("h:mm a") : null;
     },
 
     getDate: function (dateTime) {

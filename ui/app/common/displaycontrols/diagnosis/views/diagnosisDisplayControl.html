@@ -40,7 +40,7 @@
                         <span id="certainty" ng-hide="::(config.showCertainty == false)" class="certainty">
                             {{::translateDiagnosisLabels(diagnosis.latestDiagnosis.certainty, 'CERTAINTY') |translate}}</span>
                 <span id="order" ng-hide="::(config.showOrder == false)"
-                      class="order">{{::diagnosis.latestDiagnosis.order}}</span>
+                      class="order">{{::diagnosis.latestDiagnosis.order | translate}}</span>
                 <span id="status" class="status">{{::translateDiagnosisLabels(diagnosis.latestDiagnosis.diagnosisStatus , 'STATUS') |translate}}</span>
                 <span class="toggle-btn-date-wrapper">
                     <span ng-if="::!config.hideVisitDate" id="diagnosisDate" class="date">{{::diagnosis.latestDiagnosis.diagnosisDateTime | bahmniDate}}</span>

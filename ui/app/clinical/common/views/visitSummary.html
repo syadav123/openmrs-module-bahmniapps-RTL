@@ -1,3 +1,11 @@
+
+<style ng-if="userLanguageDirRtl">
+h2 {
+  text-align: right !important;
+  float: right !important;
+}
+</style>
+
 <section class="visits-navbar-section">
     <div visit-paginator next-fn="::loadVisit" previous-fn="::loadVisit" current-visit-uuid="::visitUuid"
          visits="::visitHistory.visits"

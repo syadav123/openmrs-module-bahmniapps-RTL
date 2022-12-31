@@ -135,7 +135,14 @@
     "Normal":"طبيعي",
     "Obese":"سمين",
     "Severely Obese":"السمنة المفرطة",
-    "Very Severely Obese":"شديد السمنة"
+    "Very Severely Obese":"شديد السمنة",
+    "General Ward" : "جناح العام",
+    "Labour Ward": "جناح الولادة",
+    "OPD-1": "قسم العيادات الخارجية",
+    "Registration Desk": "مكتب التسجيل",
+    "Subcenter 1 (BAM)": "المركز الفرعي 1 (بام)",
+    "Subcenter 2 (SEM)": "المركز الفرعي 2 (SEM)",
+    "Subcenter 3 (SIV)": "المركز الفرعي 3 (SIV)"
 	
 	
 	
