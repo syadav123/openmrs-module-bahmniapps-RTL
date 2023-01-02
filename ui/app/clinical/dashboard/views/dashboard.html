@@ -1,3 +1,9 @@
+<style ng-if="userLanguageDirRtl">
+h2 {
+  text-align: right !important;
+  float: right important;
+}
+</style>
 <patient-context patient="patient" show-name-and-image="tabBeingPrinted.printing.showNameAndImage" class="dashboard-consultation"></patient-context>
 <dashboard ng-show ="stateChange()" patient="::patient" config="::isDashboardPrinting ? tabBeingPrinted : clinicalDashboardConfig.currentTab"
            disease-templates="diseaseTemplates" section-groups="sectionGroups" visit-history="visitHistory"
