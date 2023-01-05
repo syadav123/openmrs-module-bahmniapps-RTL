@@ -344,6 +344,13 @@
     "Subcenter 1 (BAM)": "المركز الفرعي 1 (بام)",
     "Subcenter 2 (SEM)": "المركز الفرعي 2 (SEM)",
     "Subcenter 3 (SIV)": "المركز الفرعي 3 (SIV)",
-    "DISPOSITION_ADMIT_PATIENT":"اعترف بالمريض"
+    "DISPOSITION_ADMIT_PATIENT":"اعترف بالمريض",
+    "for": "إلى عن على",
+    "Male": "الذكر",
+    "Female": "أنثى",
+    "National ID": "الهوية الوطنية",
+    "class": "صف دراسي",
+    "General": "عام",
+    "Weeks": "أسابيع"
 
 }
