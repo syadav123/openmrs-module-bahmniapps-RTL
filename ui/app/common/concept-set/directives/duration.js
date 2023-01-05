@@ -58,7 +58,7 @@ angular.module('bahmni.common.conceptSet')
             },
             link: link,
             template: '<span><input tabindex="1" style="float: left;" type="number" min="0" class="duration-value" ng-class="{\'illegalValue\': illegalValue}" ng-model=\'measureValue\' ng-disabled="disabled"/></span>' +
-            '<span><select tabindex="1" ng-model=\'unitValue\' class="duration-unit" ng-class="{\'illegalValue\': illegalValue}" ng-options="displayUnit.value as displayUnit.name for displayUnit in displayUnits" ng-disabled="disabled"><option value=""></option>>' +
+            '<span><select tabindex="1" ng-model=\'unitValue\' class="duration-unit" ng-class="{\'illegalValue\': illegalValue}" ng-options="displayUnit.value as (displayUnit.name |translate) for displayUnit in displayUnits" ng-disabled="disabled"><option value=""></option>>' +
             '</select></span>'
         };
     }]);
