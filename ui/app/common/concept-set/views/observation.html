@@ -150,7 +150,7 @@
                 </div>
                 <div class="checkbox-inline" ng-if="::observation.durationObs"
                      ng-class="{'duration': observation.durationObs, 'computed-field': observation.isComputedAndEditable()}">
-                    <span class="for-separator fl">for</span>
+                    <span class="for-separator fl">{{'for' |translate }}</span>
                     <duration ng-model="observation.durationObs.value" disabled="!observation.primaryObs.hasValue()"
                               illegal-value="observation.isDurationRequired() && observation.doesNotHaveDuration()"></duration>
                 </div>
