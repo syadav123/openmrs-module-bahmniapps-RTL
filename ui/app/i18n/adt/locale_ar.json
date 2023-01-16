@@ -61,5 +61,9 @@
     "BED_LABEL": "سرير",
     "ASSIGN_BED_LABEL": "خصص",
     "TRANSFER_BED_LABEL": "انقل",
-    "EMPTY_WARD_MESSAGE": "لا يوجد مرضي بهذا الجناح"
+    "EMPTY_WARD_MESSAGE": "لا يوجد مرضى بهذا الجناح",
+    
+    "GENDER_MALE_KEY": "الذكر",
+    "GENDER_FEMALE_KEY": "أنثى",
+    "GENDER_OTHER_KEY": "آخر"
 }
