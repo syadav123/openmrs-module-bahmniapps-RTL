@@ -146,7 +146,9 @@
     "Subcenter 3 (SIV)": "المركز الفرعي 3 (SIV)",
     "Male": "ذكر",
     "Female": "أنثى",
-    "Other": "آخر"
+    "Other": "آخر",
+    "UPLOAD_PATIENTS_PHOTO": "تحميل صورة المريض",
+    "Patient Identifier":"معرف المريض"
 	
 	
 	
