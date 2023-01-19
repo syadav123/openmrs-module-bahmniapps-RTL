@@ -56,14 +56,14 @@
     "PATIENT_MOVEMENT_LABEL": "حركة المريض",
     "PATIENT_MOVEMENT_SELECT_LABEL": "اختر",
     "WARD_LIST_LABEL": "قائمة الأجنحة",
-    "TOTAL_BEDS_LABEL": "العدد الكلي للسراير",
-    "AVAILABLE_BEDS_LABEL": "السراير المتاحة",
+    "TOTAL_BEDS_LABEL": "العدد الكلي للأسرّة",
+    "AVAILABLE_BEDS_LABEL": "الأسرّة المتاحة ",
     "BED_LABEL": "سرير",
     "ASSIGN_BED_LABEL": "خصص",
     "TRANSFER_BED_LABEL": "انقل",
     "EMPTY_WARD_MESSAGE": "لا يوجد مرضى بهذا الجناح",
     
-    "GENDER_MALE_KEY": "الذكر",
+    "GENDER_MALE_KEY": "ذكر",
     "GENDER_FEMALE_KEY": "أنثى",
     "GENDER_OTHER_KEY": "آخر"
 }
