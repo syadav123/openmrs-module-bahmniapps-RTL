@@ -1,7 +1,7 @@
 {
-    "SEARCH_NAME_PLACEHOLDER_KEY": "Search Name/{{ primaryIdentifier }}  ...",
+    "SEARCH_NAME_PLACEHOLDER_KEY": "البحث بالاسم/{{ primaryIdentifier }}  ...",
     "MESSAGE_DIALOG_OPTION_COPY" : "خطأ في النسخ",
-    "MESSAGE_DIALOG_OPTION_OKAY": "حسنا",
+    "MESSAGE_DIALOG_OPTION_OKAY": "حسناً",
     "DOB_LABEL": "تاريخ الولادة",
     "NO_RESULTS_FOUND": "لم يتم العثور على نتائج",
     "PRIVILEGE_REQUIRED": "تم تسجيل دخول المستخدم ولكن ليس لديه الامتياز المناسب",
