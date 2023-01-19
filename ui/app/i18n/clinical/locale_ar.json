@@ -358,8 +358,8 @@
     "Months": "شهور",
     "Years": "سنوات",
     "Dispensed": "الاستغناء عن كل شيء",
-    "All":"",
-    "Immediately": "فورا",
+    "All":"الكل",
+	"Immediately": "فورا",
     "Once a day":"مرة في اليوم",
     "Twice a day":"مرتين فى اليوم",
     "Thrice a day":"ثلاث مرات في اليوم",
@@ -422,5 +422,4 @@
     "In the evening":"فى الليل",
     "At bedtime":"في وقت النوم",
     "As directed":"وفقا لتوجيهات"
-
 }
